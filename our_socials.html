@@ -1,58 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Our Socials || Meisophant Company</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Socials || Meisophant Company</title>
 
-    <!-- ✅ Font Awesome (for icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Font Awesome (for online users) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-
-        .social-container {
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            text-align: center;
-            max-width: 400px;
-        }
-        
-        .social-container a {
-            margin: 20px;
-            font-size: 36px;
-            color: #555;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .social-container a:hover {
-            transform: translateY(-10%);
-            color: #007bff;
-        }
-
-        .social-container i {
-            vertical-align: middle;
-        }
-    </style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background:#f4f6f8;
+      margin:0;
+      padding:30px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+    }
+    .social-container {
+      background:#fff;
+      border:1px solid #e0e0e0;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      border-radius:12px;
+      padding:28px;
+      text-align:center;
+      max-width:420px;
+      width:90%;
+    }
+    .social-container a {
+      display:inline-block;
+      margin: 0 18px;
+      font-size:36px;
+      color:#444;
+      text-decoration:none;
+      transition: transform 0.28s ease, color 0.28s ease;
+      vertical-align:middle;
+    }
+    .social-container a:hover {
+      transform:translateY(-6px);
+      color:#1da1f2;
+    }
+    /* Hide SVG fallbacks by default */
+    .social-container svg {
+      width:36px;
+      height:36px;
+      display:none;
+    }
+    /* Show SVG fallback if Font Awesome didn’t load */
+    .no-fa .fa { display:none; }
+    .no-fa svg { display:inline-block; }
+  </style>
 </head>
 <body>
-    <div class="social-container">
-        <a href="https://www.instagram.com/meisophant_company" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.tiktok.com/@meisophant_company" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-tiktok" aria-hidden="true"></i>
-        </a>
-    </div>
+  <div class="social-container">
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/meisophant_company"
+       target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <!-- Font Awesome Icon -->
+      <i class="fab fa-instagram" aria-hidden="true"></i>
+
+      <!-- Inline SVG Fallback -->
+      <svg viewBox="0 0 512 512" aria-hidden="true">
+        <path fill="#E1306C" d="M349.33 69.33H162.67A93.34 93.34 0 0 0 69.33 162.67v186.66A93.34 93.34 0 0 0 162.67 442.67h186.66A93.34 93.34 0 0 0 442.67 349.33V162.67A93.34 93.34 0 0 0 349.33 69.33z"/>
+        <circle cx="256" cy="256" r="72" fill="#fff"/>
+        <circle cx="380" cy="132" r="20" fill="#fff"/>
+      </svg>
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@meisophant_company"
+       target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+      <!-- Font Awesome Icon -->
+      <i class="fab fa-tiktok" aria-hidden="true"></i>
+
+      <!-- Inline SVG Fallback -->
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#000" d="M12 2v11.55A4.5 4.5 0 1 0 16.5 18V7h3V2h-7z"/>
+      </svg>
+    </a>
+  </div>
+
+  <script>
+    // Detect if Font Awesome loaded; if not, show SVGs
+    window.addEventListener('load', () => {
+      const test = document.createElement('i');
+      test.className = 'fa';
+      document.body.appendChild(test);
+      const faLoaded = window.getComputedStyle(test).fontFamily.includes('Font Awesome');
+      document.body.removeChild(test);
+      if (!faLoaded) document.body.classList.add('no-fa');
+    });
+  </script>
 </body>
 </html>
