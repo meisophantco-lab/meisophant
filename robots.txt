@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://meisophantco-lab.github.io/meisophant.github.io/sitemap.xml
