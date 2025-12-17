@@ -309,6 +309,40 @@ header{
   transition: 0.3s;
 }
 
+.urls2{
+    width: calc(100% - 20%);
+    background-color: white;
+        align-items: center;
+        text-align: center;
+         background-color: white;
+    color: white;
+    margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            align-self: center;
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            align-content: center;
+            align-items: center;
+            
+}
+.urls2 a{
+  padding: 4px;
+  text-decoration: none;
+  font-size: normal;
+  color: mediumpurple;
+  transition: 0.3s;
+}
+
+.urls2 a:hover{
+    color: purple;
+    transition: 0.3s;
+}
+
 .other-pages{
         width: calc(100% - 10%);
                background-color: mediumpurple;
