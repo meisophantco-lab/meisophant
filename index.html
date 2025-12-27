@@ -103,5 +103,15 @@
             <p>&copy; Copyright Meisophant Digital Services 2025. All Rights Reserved.</p>
         </footer>
     </div>
+    <script>
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('.urls');
+    if (window.scrollY > 50) { // Scroll threshold
+        nav.classList.add('shrink');
+    } else {
+        nav.classList.remove('shrink');
+    }
+});
+</script>
 </body>
 </html>
