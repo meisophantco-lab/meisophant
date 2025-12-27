@@ -1,187 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Socials || Meisophant Group Of Companies</title>
-<link rel="shortcut icon" href="./favicon1.png" type="image/png">
-<!-- Structured Data: Meisophant Company (Extended Version) -->
-  <link href="./favicon1.png" rel="icon" type="image/png" />
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Our Socials || Meisophant Group Of Companies</title>
+    <link rel="icon" href="./favicon1.png" type="image/png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background:#f4f6f8;
-      margin:0;
-      padding:0;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      min-height:100vh;
-    }
+        .urls {
+            background-color: mediumpurple;
+            text-align: center;
+            padding: 20px;
+        }
 
-    .social-container {
-      background:#fff;
-      border:1px solid #e0e0e0;
-      box-shadow:0 6px 18px rgba(0,0,0,0.06);
-      border-radius:12px;
-      padding:28px;
-      text-align:center;
-      max-width:420px;
-      width:90%;
-      margin-top:40px;
-    }
+        .urls a {
+            color: white;
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    .social-container a {
-      display:inline-block;
-      margin:0 18px;
-      font-size:36px;
-      color:#444;
-      text-decoration:none;
-      transition:transform 0.28s ease, color 0.28s ease;
-      vertical-align:middle;
-    }
+        .social-container {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+            max-width: 420px;
+            margin: 40px auto;
+        }
 
-    .social-container a:hover {
-      transform:translateY(-6px);
-      color:#1da1f2;
-    }
+        .social-container a {
+            display: inline-block;
+            margin: 0 18px;
+            font-size: 36px;
+            color: #444;
+            text-decoration: none;
+            transition: transform 0.28s ease, color 0.28s ease;
+            vertical-align: middle;
+        }
 
-    /* SVG fallback hidden by default */
-    .social-container svg {
-      width:36px;
-      height:36px;
-      display:none;
-    }
+        .social-container a.instagram:hover {
+            color: #E1306C;
+            transform: translateY(-6px);
+        }
 
-    /* Show SVG if Font Awesome fails */
-    .no-fa .fa { display:none; }
-    .no-fa svg { display:inline-block; }
+        .social-container a.tiktok:hover {
+            color: #000;
+            transform: translateY(-6px);
+        }
 
-    /* Thank you note */
-    .container-2 {
-      background:#fff;
-      border-radius:10px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      padding:15px 25px;
-      text-align:center;
-      margin:30px 0;
-      max-width:320px;
-    }
+        .social-container svg {
+            width: 36px;
+            height: 36px;
+            display: none;
+        }
 
-    .container-2 p {
-      margin:0;
-      font-weight:500;
-      font-size:16px;
-      color:#333;
-    }
+        .no-fa .fa { display: none; }
+        .no-fa svg { display: inline-block; }
 
-    footer {
-      text-align:center;
-      font-size:14px;
-      color:#555;
-      margin-bottom:30px;
-      line-height:1.5;
-    }
+        .container-2 {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 15px 25px;
+            text-align: center;
+            margin: 30px auto;
+            max-width: 320px;
+        }
 
-    footer a {
-      color:#007bff;
-      text-decoration:none;
-    }
+        .container-2 p {
+            margin: 0;
+            font-weight: 500;
+            font-size: 16px;
+            color: #333;
+        }
 
-    footer a:hover {
-      text-decoration:underline;
-    }
+        footer {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
 
-    .other-pages {
-      text-align:center;
-      margin:40px 0;
-    }
+        .other-pages {
+            text-align: center;
+            margin: 40px 0;
+        }
 
-    .other-pages h2 {
-      font-size:20px;
-      color:#222;
-      margin-bottom:15px;
-    }
+        .other-pages h2 {
+            font-size: 20px;
+            color: #222;
+            margin-bottom: 15px;
+        }
 
-    .other-pages a {
-      display:inline-block;
-      margin:6px 12px;
-      padding:8px 14px;
-      border-radius:6px;
-      background:#fff;
-      border:1px solid #ddd;
-      text-decoration:none;
-      color:#333;
-      transition:all 0.3s ease;
-    }
+        .other-pages a {
+            display: inline-block;
+            margin: 6px 12px;
+            padding: 8px 14px;
+            border-radius: 6px;
+            background: #fff;
+            border: 1px solid #ddd;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
 
-    .other-pages a:hover {
-      background: mediumpurple;
-      color:#fff;
-      transform:translateY(-2px);
-    }
-  </style>
+        .other-pages a:hover {
+            background: mediumpurple;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
+    <div class="urls">
+        <a href="./">HOME</a>
+        <a href="./our-services.html">OUR SERVICES</a>
+        <a href="./our-catalogue.html">OUR CATALOGUE</a>
+        <a href="./contact-us.html">CONTACT US</a>
+        <a href="./about-us.html">ABOUT US</a>
+        <a href="./promo.html">PROMO🚀</a>
+    </div>
 
-  <!-- Social media icons -->
-  <div class="social-container">
-    <a href="https://www.instagram.com/meisophant_company" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-      <i class="fab fa-instagram" aria-hidden="true"></i>
-      <svg viewBox="0 0 512 512" aria-hidden="true">
-        <path fill="#E1306C" d="M349.33 69.33H162.67A93.34 93.34 0 0 0 69.33 162.67v186.66A93.34 93.34 0 0 0 162.67 442.67h186.66A93.34 93.34 0 0 0 442.67 349.33V162.67A93.34 93.34 0 0 0 349.33 69.33z"/>
-        <circle cx="256" cy="256" r="72" fill="#fff"/>
-        <circle cx="380" cy="132" r="20" fill="#fff"/>
-      </svg>
-    </a>
+    <br><br>
 
-    <a href="https://www.tiktok.com/@meisophant_company" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-      <i class="fab fa-tiktok" aria-hidden="true"></i>
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="#000" d="M12 2v11.55A4.5 4.5 0 1 0 16.5 18V7h3V2h-7z"/>
-      </svg>
-    </a>
-  </div>
+    <div class="social-container">
+        <a href="https://www.instagram.com/meisophant_company" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+            <svg viewBox="0 0 512 512" aria-hidden="true">
+                <path fill="#E1306C" d="M349.33 69.33H162.67A93.34 93.34 0 0 0 69.33 162.67v186.66A93.34 93.34 0 0 0 162.67 442.67h186.66A93.34 93.34 0 0 0 442.67 349.33V162.67A93.34 93.34 0 0 0 349.33 69.33z"/>
+                <circle cx="256" cy="256" r="72" fill="#fff"/>
+                <circle cx="380" cy="132" r="20" fill="#fff"/>
+            </svg>
+        </a>
 
-  <!-- Thank you note -->
-  <div class="container-2">
-    <p>Thank You for Choosing Our Services.</p>
-  </div>
+        <a href="https://www.tiktok.com/@meisophant_company" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="tiktok">
+            <i class="fab fa-tiktok" aria-hidden="true"></i>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="#000" d="M12 2v11.55A4.5 4.5 0 1 0 16.5 18V7h3V2h-7z"/>
+            </svg>
+        </a>
+    </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>
-      &copy; 2025 Meisophant Group Of Companies.<br>
-      All Rights Reserved.
-    </p>
-  </footer>
+    <br><br>
 
-  <!-- Other pages -->
-  <div class="other-pages">
-    <h2>Other Pages On This Site</h2>
-    <a href="./index.html">HOME</a>
-    <a href="./our-services.html">OUR SERVICES</a>
-    <a href="./contact-us.html">CONTACT US</a>
-    <a href="./about-us.html">ABOUT US</a>
-  </div>
+    <div class="container-2">
+        <p>Thank You for Choosing Our Services.</p>
+    </div>
 
-  <script>
-    // Detect if Font Awesome loaded; if not, show SVGs
-    window.addEventListener('load', () => {
-      const test = document.createElement('i');
-      test.className = 'fa';
-      document.body.appendChild(test);
-      const faLoaded = window.getComputedStyle(test).fontFamily.includes('Font Awesome');
-      document.body.removeChild(test);
-      if (!faLoaded) document.body.classList.add('no-fa');
-    });
-  </script>
+    <footer>
+        <p>
+            &copy; 2025 Meisophant Group Of Companies.<br>
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <div class="other-pages">
+        <h2>Other Pages On This Site</h2>
+        <a href="./index.html">HOME</a>
+        <a href="./our-services.html">OUR SERVICES</a>
+        <a href="./contact-us.html">CONTACT US</a>
+        <a href="./about-us.html">ABOUT US</a>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const test = document.createElement('i');
+            test.className = 'fa';
+            document.body.appendChild(test);
+            const faLoaded = window.getComputedStyle(test).fontFamily.includes('Font Awesome');
+            document.body.removeChild(test);
+            if (!faLoaded) document.body.classList.add('no-fa');
+        });
+    </script>
 </body>
 </html>
