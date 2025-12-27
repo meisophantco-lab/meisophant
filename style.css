@@ -1,23 +1,22 @@
-* {
-    margin: 0 auto;
-    margin-bottom: 0 auto;
-    box-sizing: border-box;
+*{
+    margin: 0px auto;
+    margin-bottom: 0px auto;
 }
 
-body {
+body{
     background-color: #f9f9f9;
-    width: 100%;
-    font-family: Arial, sans-serif;
+    width: calc(100% - 0%);
 }
 
-header {
-    width: 90%;
+header{
+    min-width: calc(100% - 15%);
+    text-align: center;
+    text-decoration: wavy;
     margin: 40px auto;
     padding: 20px;
-    text-align: center;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
@@ -37,8 +36,8 @@ header {
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 10px;
-    max-width: 90%;
     text-align: center;
+    max-width: calc(100% - 15%);
 }
 
 .get_started-button,
@@ -47,102 +46,76 @@ header {
     background-color: mediumpurple;
     color: white;
     border: 1px solid #ddd;
-    padding: 15px 25px;
-    margin: 20px auto;
+    padding: 20px;
+    margin: 40px auto;
     border-radius: 10px;
-    cursor: pointer;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.get_started-button:hover,
-#subscribe-button:hover,
-.whatsapp-us:hover {
-    background-color: purple;
-}
-
-.e-mail {
+.e-mail{
     background-color: transparent;
     color: white;
     padding: 10px;
     border-radius: 20%;
     border: 1px solid black;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
 }
 
-/* ==== Sticky Shrinkable Navigation ==== */
-.urls {
+.urls{
     background-color: mediumpurple;
     color: white;
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
     width: 95%;
-    padding: 20px 15px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    z-index: 999;
-    transition: all 0.3s ease;
 }
 
-.urls.shrink {
-    padding: 8px 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-.urls a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    transition: color 0.3s ease;
-}
-
-.urls a:hover {
-    color: #eee;
-}
-
-.urls2 {
-    width: 95%;
-    background-color: white;
-    align-items: center;
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
-}
-
-.urls2 a {
-    padding: 4px;
-    text-decoration: none;
-    color: mediumpurple;
-    transition: 0.3s;
-}
-
-.urls2 a:hover {
-    color: purple;
-}
-
-.other-pages {
-    width: 90%;
-    background-color: mediumpurple;
-    color: white;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.other-pages a {
+.urls a{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     color: white;
-    transition: 0.3s;
+}
+
+.urls2{
+    width: calc(100% - 20%);
+    background-color: white;
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.urls2 a{
+    padding: 4px;
+    text-decoration: none;
+    color: mediumpurple;
+}
+
+.urls2 a:hover{
+    color: purple;
+}
+
+.other-pages{
+    width: calc(100% - 10%);
+    background-color: mediumpurple;
+    color: white;
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.other-pages a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: white;
 }
 
 .image,
@@ -152,16 +125,16 @@ img {
     border-bottom-right-radius: 50%;
 }
 
-html {
+html{
+    text-align: center;
     scroll-behavior: smooth;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .urls {
+    .urls{
         flex-direction: column;
-        gap: 5px;
-        padding: 15px 10px;
+        padding: 15px;
     }
     .get_started-button,
     #subscribe-button,
