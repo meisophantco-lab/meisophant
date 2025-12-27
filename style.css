@@ -1,17 +1,15 @@
-*{
-    margin: 0px auto;
-    margin-bottom: 0px auto;
+* {
+    margin: 0 auto;
 }
 
-body{
+body {
     background-color: #f9f9f9;
-    width: calc(100% - 0%);
+    width: 100%;
 }
 
-header{
-    min-width: calc(100% - 15%);
+header {
+    min-width: 85%;
     text-align: center;
-    text-decoration: wavy;
     margin: 40px auto;
     padding: 20px;
     background-color: #f9f9f9;
@@ -25,19 +23,19 @@ header{
 .dev-service,
 .container,
 .container-1,
-.container-2,
-.container-3,
-.our-services-container,
-.footer_div,
-.sub-container {
+.our-services-container {
     margin: 40px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    max-width: 85%;
     text-align: center;
-    max-width: calc(100% - 15%);
+}
+
+.dev-service {
+    max-width: 75%;
 }
 
 .get_started-button,
@@ -45,77 +43,154 @@ header{
 .whatsapp-us {
     background-color: mediumpurple;
     color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
     margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     cursor: pointer;
 }
 
-.e-mail{
+.footer_div {
+    max-width: 90%;
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.sub-container {
+    max-width: 85%;
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: mediumpurple;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.container-2,
+.container-3 {
+    max-width: 70%;
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: mediumpurple;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidenav a {
+    padding: 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-button☰ {
+    width: 20%;
+    background-color: mediumpurple;
+    color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    transition: 0.3s;
+}
+
+.urls {
+    background-color: mediumpurple;
+    text-align: center;
+    color: white;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.urls a {
+    padding: 8px 32px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.urls2 {
+    width: 80%;
+    background-color: white;
+    text-align: center;
+    color: mediumpurple;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.urls2 a {
+    padding: 4px;
+    text-decoration: none;
+    color: mediumpurple;
+    transition: 0.3s;
+}
+
+.urls2 a:hover {
+    color: purple;
+}
+
+.other-pages {
+    width: 90%;
+    background-color: mediumpurple;
+    text-align: center;
+    color: white;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.other-pages a {
+    padding: 8px 32px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.e-mail {
     background-color: transparent;
     color: white;
     padding: 10px;
     border-radius: 20%;
     border: 1px solid black;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.urls{
-    background-color: mediumpurple;
-    color: white;
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
-    width: 95%;
-}
-
-.urls a{
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    color: white;
-}
-
-.urls2{
-    width: calc(100% - 20%);
-    background-color: white;
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.urls2 a{
-    padding: 4px;
-    text-decoration: none;
-    color: mediumpurple;
-}
-
-.urls2 a:hover{
-    color: purple;
-}
-
-.other-pages{
-    width: calc(100% - 10%);
-    background-color: mediumpurple;
-    color: white;
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.other-pages a{
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
 }
 
 .image,
@@ -123,23 +198,5 @@ img {
     width: 80%;
     border-top-left-radius: 50%;
     border-bottom-right-radius: 50%;
-}
-
-html{
     text-align: center;
-    scroll-behavior: smooth;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .urls{
-        flex-direction: column;
-        padding: 15px;
-    }
-    .get_started-button,
-    #subscribe-button,
-    .whatsapp-us {
-        padding: 12px 20px;
-        margin: 15px auto;
-    }
 }
