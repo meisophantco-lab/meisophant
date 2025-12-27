@@ -1,108 +1,90 @@
-/* ================================
-   Global Reset & Base Styles
-================================= */
+/* ====== Global Reset ====== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
     width: 100%;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 15px;
-}
-
-/* ================================
-   Header
-================================= */
+/* ====== Header ====== */
 header {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    margin: 20px auto;
+    width: 90%;
     max-width: 1200px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin: 20px auto 40px auto; /* top margin small, bottom bigger */
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    color: mediumpurple;
-    margin-bottom: 10px;
+    font-size: 2.2rem;
+    color: #4B0082;
 }
 
-header h3 {
+header .container-3 h3 {
     font-size: 1.2rem;
     color: #555;
+    margin-top: 10px;
 }
 
-/* ================================
-   Navigation
-================================= */
+/* ====== Navigation ====== */
 .urls {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     background-color: mediumpurple;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 1200px;
     padding: 15px;
+    border-radius: 10px;
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .urls a {
     color: #fff;
     text-decoration: none;
-    padding: 10px 20px;
-    transition: background 0.3s, color 0.3s;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 .urls a:hover {
-    background-color: #6a0dad;
-    color: #fff;
+    background-color: purple;
+    border-radius: 5px;
 }
 
-/* ================================
-   Main Content
-================================= */
+/* ====== Main Content ====== */
 .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    max-width: 1200px;
-    margin: 40px auto;
+    width: 90%;
+    max-width: 1100px;
+    margin: 20px auto;
     padding: 20px;
 }
 
-.container, .container-1, .container-2, .container-3 {
+.container {
+    margin-bottom: 30px;
+    padding: 20px;
     background-color: #fff;
-    border-radius: 15px;
-    padding: 30px 20px;
-    max-width: 100%;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 10px;
 }
 
-.container h4, .container-1 h4, .container-2 h4 {
-    color: mediumpurple;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+.container h4 {
+    font-size: 1.4rem;
+    color: #4B0082;
+    margin-bottom: 10px;
 }
 
 .container p {
@@ -110,97 +92,104 @@ header h3 {
     color: #555;
 }
 
-/* ================================
-   Buttons
-================================= */
-.get_started-button,
-#subscribe-button,
-.whatsapp-us {
+/* ====== Buttons ====== */
+.get_started-button, .whatsapp-us, #subscribe-button {
+    display: inline-block;
     background-color: mediumpurple;
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 1rem;
-    font-weight: bold;
+    color: white;
     border: none;
+    padding: 15px 25px;
+    margin: 20px auto;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 15px auto;
-    display: inline-block;
+    transition: 0.3s;
+    font-size: 1rem;
 }
 
 .get_started-button:hover,
-#subscribe-button:hover,
-.whatsapp-us:hover {
-    background-color: #6a0dad;
-    transform: translateY(-2px);
+.whatsapp-us:hover,
+#subscribe-button:hover {
+    background-color: purple;
 }
 
-/* ================================
-   Forms
-================================= */
+/* ====== Forms ====== */
 .e-mail {
-    padding: 10px 15px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.e-mail:focus {
-    border-color: mediumpurple;
-    box-shadow: 0 0 10px rgba(128,0,128,0.2);
-}
-
-/* ================================
-   Footer
-================================= */
-.footer_div {
-    background-color: #fff;
-    padding: 40px 20px;
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
     border-radius: 20px;
-    max-width: 1200px;
-    margin: 40px auto;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid #333;
+    outline: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ====== Footer ====== */
+.footer_div {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
     text-align: center;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .footer_div h2 {
-    color: mediumpurple;
-    margin-bottom: 20px;
+    color: #4B0082;
+    margin-bottom: 15px;
 }
 
 .footer_div p {
     color: #555;
-    font-size: 0.9rem;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
-/* ================================
-   Responsive Layouts
-================================= */
-@media (max-width: 992px) {
-    header h1 { font-size: 2rem; }
-    header h3 { font-size: 1rem; }
-}
-
-@media (max-width: 768px) {
-    .urls { flex-direction: column; }
-    .urls a { padding: 10px; margin: 5px 0; }
-    .main-content { padding: 10px; gap: 20px; }
-    .container, .container-1, .container-2, .container-3 { padding: 20px; }
-}
-
-@media (max-width: 480px) {
-    header h1 { font-size: 1.5rem; }
-    header h3 { font-size: 0.9rem; }
-    .get_started-button, #subscribe-button, .whatsapp-us {
-        padding: 12px 20px;
-        font-size: 0.9rem;
+/* ====== Responsive ====== */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
     }
-    .e-mail { width: 100%; max-width: 100%; }
+
+    header .container-3 h3 {
+        font-size: 1rem;
+    }
+
+    .urls {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .get_started-button, .whatsapp-us, #subscribe-button {
+        width: 90%;
+    }
+
+    .e-mail {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .container h4 {
+        font-size: 1.2rem;
+    }
+
+    .container p {
+        font-size: 0.95rem;
+    }
 }
