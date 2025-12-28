@@ -1,209 +1,220 @@
-/* ==== Base Styles ==== */
+/* ==========================
+   General Reset
+========================== */
 * {
-    margin: 0px auto;
-    margin-bottom: 0px auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
     background-color: #f9f9f9;
-    width: calc(100% - 0%);
+    color: #333;
+    line-height: 1.6;
 }
 
+/* ==========================
+   Navigation URLs Bar
+========================== */
+.urls {
+    background-color: mediumpurple;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    z-index: 1000;
+}
+
+.urls a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.urls a:hover {
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+/* ==========================
+   Header
+========================== */
 header {
-    min-width: calc(100% - 15%);
     text-align: center;
-    margin: 40px auto;
+    margin: 100px auto 40px auto; /* top margin accounts for fixed nav */
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: calc(100% - 15%);
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 80%;
 }
 
-.main-content {
+header h1 {
+    margin-bottom: 10px;
+}
+
+header .container-3 h3 {
+    font-size: 18px;
+    color: #555;
+}
+
+/* ==========================
+   Main Content Containers
+========================== */
+.our-services-container,
+.main-content,
+.container-1,
+.container-2,
+.container-3 {
     margin: 40px auto;
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-width: calc(100% - 15%);
-    max-width: calc(100% - 15%);
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 85%;
     text-align: center;
 }
 
-.container, .container-1, .container-2, .container-3 {
-    max-width: calc(100% - 30%);
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
+/* ==========================
+   Lists
+========================== */
+ul, ol {
+    margin: 15px 0;
+    padding-left: 20px;
 }
 
-.get_started-button, .whatsapp-us, #subscribe-button {
+ul li, ol li {
+    margin: 6px 0;
+}
+
+/* ==========================
+   Buttons
+========================== */
+.subscribe-button,
+.whatsapp-us,
+.get_started-button {
     background-color: mediumpurple;
     color: white;
-    margin: 40px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 25px;
+    border: none;
     border-radius: 10px;
     cursor: pointer;
-    text-align: center;
+    margin: 10px auto;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-.footer_div {
-    max-width: calc(100% - 10%);
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+.subscribe-button:hover,
+.whatsapp-us:hover,
+.get_started-button:hover {
+    transform: translateY(-2px);
 }
 
-.sub-container {
-    max-width: calc(100% - 15%);
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: mediumpurple;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-}
-
+/* ==========================
+   Form Inputs
+========================== */
 .e-mail {
     background-color: transparent;
     color: white;
     padding: 10px;
     border-radius: 20%;
     border: 1px solid black;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    margin: 10px auto;
 }
 
-.image, img {
-    width: 80%;
-    border-top-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    justify-content: center;
-    text-align: center;
-}
-
-/* ==== Navigation ==== */
-.urls {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: mediumpurple;
-    align-items: center;
-    text-align: center;
-    color: white;
+/* ==========================
+   Footer
+========================== */
+.footer_div {
     margin: 40px auto;
     padding: 20px;
+    background-color: #f9f9f9;
     border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    position: fixed;
-    top: 0;
-    width: 95%;
-    justify-content: center;
-    z-index: 1000;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 85%;
+    text-align: center;
 }
 
-.urls a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
+.sub-container {
+    background-color: mediumpurple;
     color: white;
-    transition: 0.3s;
-}
-
-/* ==== Hot Sales Slider ==== */
-.hot-sales {
-    background: #f5f5f5;
+    border-radius: 20px;
     padding: 20px;
-    border-radius: 10px;
-    margin-top: 150px; /* to avoid overlapping fixed nav */
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.hot-sales h2 {
+/* ==========================
+   Social Icons
+========================== */
+.social-container {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+    max-width: 420px;
+    width: 90%;
+    margin-top: 40px;
+}
+
+.social-container a {
+    display: inline-block;
+    margin: 0 18px;
+    font-size: 36px;
+    color: #444;
+    text-decoration: none;
+    transition: transform 0.28s ease, color 0.28s ease;
+}
+
+.social-container a:hover {
+    transform: translateY(-6px);
+    color: #1da1f2;
+}
+
+/* ==========================
+   Other Pages Links
+========================== */
+.other-pages {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.other-pages h2 {
+    font-size: 20px;
+    color: #222;
     margin-bottom: 15px;
 }
 
-.slider {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding-bottom: 10px;
+.other-pages a {
+    display: inline-block;
+    margin: 6px 12px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: #fff;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
 }
 
-.slider::-webkit-scrollbar {
-    display: none;
-}
-.slider {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.card {
-    min-width: 200px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    text-align: center;
-    cursor: pointer;
-    overflow: hidden;
-    flex-shrink: 0;
-    transition: transform 0.2s;
-}
-
-.card:hover { transform: scale(1.05); }
-
-.card img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-}
-
-.card p {
-    margin: 10px 0;
-    font-weight: bold;
-}
-
-/* ==== MOBILE RESPONSIVENESS ==== */
-@media (max-width: 768px) {
-    /* Slider adjustments */
-    .card {
-        min-width: 150px;
-    }
-    .card img {
-        height: auto;
-    }
-    .slider {
-        gap: 10px;
-        padding-bottom: 5px;
-    }
-
-    /* Containers */
-    .main-content,
-    .container,
-    .container-1,
-    .container-2,
-    .container-3,
-    header {
-        max-width: 95%;
-        margin: 20px auto;
-        padding: 15px;
-    }
-
-    /* Navigation */
-    .urls a {
-        padding: 8px 12px;
-        font-size: 14px;
-    }
+.other-pages a:hover {
+    background: mediumpurple;
+    color: #fff;
+    transform: translateY(-2px);
 }
