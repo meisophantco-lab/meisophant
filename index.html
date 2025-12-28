@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meisophant Digital Services | Where Tech Becomes Reality</title>
-    
+
     <meta name="keywords" content="CEO-ADEWALE-EMMANUEL-JOMILOJU, Meisophant Digital Services, Meisophant Developers, Website Development, App Development, Youngest CEO, Tech, Nigeria">
     <meta name="description" content="Meisophant Digital Services is a remote digital services brand offering web and technology solutions, operated by an independent founder.">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Meisophant Digital Services | Where Tech Becomes Reality">
     <meta property="og:description" content="Meisophant Digital Services is a remote digital services brand offering web and technology solutions, operated by an independent founder.">
     <meta property="og:image" content="favicon1.png">
     <meta property="og:url" content="https://meisophantco-lab.github.io/meisophant.github.io/">
     <meta property="og:type" content="website">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Meisophant Digital Services | Where Tech Becomes Reality">
     <meta name="twitter:description" content="Innovating technology and creativity in Nigeria. Join Meisophant Digital Services—where tech becomes reality.">
     <meta name="twitter:image" content="favicon1.png">
-    
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon1.png" type="image/png">
 </head>
@@ -34,47 +34,46 @@
         <a href="./about-us.html">ABOUT US</a>
         <a href="./promo.html">PROMO🚀</a>
     </div>
-<script src="script.js"></script>
 
     <!-- Header -->
     <header>
-       <br><br>
+        <br><br>
         <h1>Meisophant Digital Services</h1>
         <div class="container-3">
             <h3>Where Tech Becomes Reality</h3>
         </div>
     </header>
 
-<div class="hot-sales">
-  <h2>🔥 Hot Sales</h2>
-  <div class="slider" id="slider">
-    <!-- Original slides -->
-    <a href="business.html" class="card">
-      <img src="./business-website.jpeg" alt="Business Website">
-      <p>Business Website<br>₦115,000</p>
-    </a>
-    <a href="portfolio.html" class="card">
-      <img src="./portfolio.jpeg" alt="Portfolio Website">
-      <p>Portfolio Website<br>₦100,000</p>
-    </a>
-    <a href="ecommerce.html" class="card">
-      <img src="./e-commerce.jpeg" alt="E-commerce Store">
-      <p>E-commerce Store<br>₦450,000</p>
-    </a>
-    <a href="blog.html" class="card">
-      <img src="./blog.jpeg" alt="Blog Site">
-      <p>Blog/Content Site<br>₦105,000</p>
-    </a>
-    <a href="landing.html" class="card">
-      <img src="./landing.jpeg" alt="Landing Page">
-      <p>Landing Page<br>₦100,000</p>
-    </a>
-    <a href="custom.html" class="card">
-      <img src="./custom.jpeg" alt="Custom Website">
-      <p>Custom Website<br>Contact Us</p>
-    </a>
-  </div>
-</div>
+    <!-- Hot Sales Section -->
+    <div class="hot-sales">
+        <h2>🔥 Hot Sales</h2>
+        <div class="slider" id="slider">
+            <a href="business.html" class="card">
+                <img src="./business-website.jpeg" alt="Business Website">
+                <p>Business Website<br>₦115,000</p>
+            </a>
+            <a href="portfolio.html" class="card">
+                <img src="./portfolio.jpeg" alt="Portfolio Website">
+                <p>Portfolio Website<br>₦100,000</p>
+            </a>
+            <a href="ecommerce.html" class="card">
+                <img src="./e-commerce.jpeg" alt="E-commerce Store">
+                <p>E-commerce Store<br>₦450,000</p>
+            </a>
+            <a href="blog.html" class="card">
+                <img src="./blog.jpeg" alt="Blog Site">
+                <p>Blog/Content Site<br>₦105,000</p>
+            </a>
+            <a href="landing.html" class="card">
+                <img src="./landing.jpeg" alt="Landing Page">
+                <p>Landing Page<br>₦100,000</p>
+            </a>
+            <a href="custom.html" class="card">
+                <img src="./custom.jpeg" alt="Custom Website">
+                <p>Custom Website<br>Contact Us</p>
+            </a>
+        </div>
+    </div>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -136,15 +135,65 @@
             <p>&copy; Copyright Meisophant Digital Services 2025. All Rights Reserved.</p>
         </footer>
     </div>
+
+    <!-- Hot Sales Slider Script -->
     <script>
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('.urls');
-    if (window.scrollY > 50) { // Scroll threshold
-        nav.classList.add('shrink');
-    } else {
-        nav.classList.remove('shrink');
+    const slider = document.getElementById("slider");
+    let isDragging = false;
+    let startX, scrollLeft;
+
+    // Clone slides for seamless scroll
+    [...slider.children].forEach(slide => slider.appendChild(slide.cloneNode(true)));
+
+    // Auto-scroll
+    function autoScroll() {
+        if (!isDragging) {
+            slider.scrollLeft += 1;
+            if (slider.scrollLeft >= slider.scrollWidth / 2) {
+                slider.scrollLeft = 0;
+            }
+        }
+        requestAnimationFrame(autoScroll);
     }
-});
-</script>
+    requestAnimationFrame(autoScroll);
+
+    // Drag / swipe
+    slider.addEventListener('mousedown', e => {
+        isDragging = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseup', () => isDragging = false);
+    slider.addEventListener('mouseleave', () => isDragging = false);
+    slider.addEventListener('mousemove', e => {
+        if (!isDragging) return;
+        e.preventDefault();
+        slider.scrollLeft = scrollLeft - (e.pageX - startX) * 2;
+    });
+
+    slider.addEventListener('touchstart', e => {
+        isDragging = true;
+        startX = e.touches[0].pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('touchend', () => isDragging = false);
+    slider.addEventListener('touchmove', e => {
+        if (!isDragging) return;
+        slider.scrollLeft = scrollLeft - (e.touches[0].pageX - startX) * 2;
+    });
+    </script>
+
+    <!-- Scroll nav shrink -->
+    <script>
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('.urls');
+        if (window.scrollY > 50) {
+            nav.classList.add('shrink');
+        } else {
+            nav.classList.remove('shrink');
+        }
+    });
+    </script>
+
 </body>
 </html>
