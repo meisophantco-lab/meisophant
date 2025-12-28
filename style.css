@@ -1,203 +1,150 @@
-/* ==========================
-   General Reset
-========================== */
+/* ==== GLOBAL STYLES ==== */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
+    font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
     line-height: 1.6;
+    padding-top: 80px; /* space for fixed nav */
 }
 
-/* ==========================
-   Navigation URLs Bar
-========================== */
+/* ==== NAVIGATION BAR ==== */
 .urls {
     background-color: mediumpurple;
-    text-align: center;
     color: white;
-    padding: 15px;
+    text-align: center;
+    padding: 15px 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     position: fixed;
-    top: 0;
-    left: 0;
-    width: calc(100% - 40px);
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1200px;
     z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .urls a {
     color: white;
-    margin: 0 12px;
     text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+    font-weight: bold;
+    padding: 10px 5px;
+    transition: color 0.3s ease;
 }
 
 .urls a:hover {
-    text-decoration: underline;
-    transform: translateY(-2px);
+    color: #ffeb3b; /* optional hover effect */
 }
 
-/* ==========================
-   Header
-========================== */
+/* ==== HEADER ==== */
 header {
     text-align: center;
-    margin: 100px auto 40px auto; /* top margin accounts for fixed nav */
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 80%;
+    margin: 40px auto 20px auto;
 }
 
 header h1 {
+    font-size: 2.5rem;
+    color: mediumpurple;
     margin-bottom: 10px;
 }
 
-header .container-3 h3 {
-    font-size: 18px;
-    color: #555;
-}
-
-/* ==========================
-   Main Content Containers
-========================== */
+/* ==== MAIN CONTENT ==== */
 .our-services-container,
 .main-content,
-.container-1,
-.container-2,
 .container-3 {
     margin: 40px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 85%;
+    max-width: 95%;
     text-align: center;
 }
 
-/* ==========================
-   Lists
-========================== */
-ul, ol {
-    margin: 15px 0;
+.our-services-container ul,
+.container-3 ul {
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding-left: 20px;
 }
 
-ul li, ol li {
-    margin: 6px 0;
+.our-services-container li,
+.container-3 li {
+    margin-bottom: 8px;
 }
 
-/* ==========================
-   Buttons
-========================== */
-.subscribe-button,
+/* ==== BUTTONS ==== */
+.get_started-button,
 .whatsapp-us,
-.get_started-button {
+#subscribe-button {
     background-color: mediumpurple;
     color: white;
     padding: 15px 25px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin: 10px auto;
-    display: inline-block;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    margin: 15px 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.subscribe-button:hover,
+.get_started-button:hover,
 .whatsapp-us:hover,
-.get_started-button:hover {
-    transform: translateY(-2px);
+#subscribe-button:hover {
+    background-color: rebeccapurple;
+    transform: translateY(-3px);
 }
 
-/* ==========================
-   Form Inputs
-========================== */
+/* ==== INPUTS ==== */
 .e-mail {
-    background-color: transparent;
-    color: white;
+    width: 80%;
     padding: 10px;
-    border-radius: 20%;
+    border-radius: 20px;
     border: 1px solid black;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    margin: 10px auto;
+    margin-bottom: 10px;
 }
 
-/* ==========================
-   Footer
-========================== */
+/* ==== FOOTER ==== */
 .footer_div {
+    max-width: 95%;
     margin: 40px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #fff;
+    border-radius: 20px;
     border: 1px solid #ddd;
-    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 85%;
     text-align: center;
 }
 
-.sub-container {
-    background-color: mediumpurple;
-    color: white;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+footer h2 {
+    margin-bottom: 20px;
+    color: mediumpurple;
 }
 
-/* ==========================
-   Social Icons
-========================== */
-.social-container {
-    background: #fff;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-    border-radius: 12px;
-    padding: 28px;
-    text-align: center;
-    max-width: 420px;
-    width: 90%;
-    margin-top: 40px;
+footer p {
+    font-size: 0.9rem;
+    color: #555;
 }
 
-.social-container a {
-    display: inline-block;
-    margin: 0 18px;
-    font-size: 36px;
-    color: #444;
-    text-decoration: none;
-    transition: transform 0.28s ease, color 0.28s ease;
-}
-
-.social-container a:hover {
-    transform: translateY(-6px);
-    color: #1da1f2;
-}
-
-/* ==========================
-   Other Pages Links
-========================== */
+/* ==== OTHER PAGES LINKS ==== */
 .other-pages {
     text-align: center;
     margin: 40px 0;
 }
 
 .other-pages h2 {
-    font-size: 20px;
-    color: #222;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
@@ -208,8 +155,8 @@ ul li, ol li {
     border-radius: 6px;
     background: #fff;
     border: 1px solid #ddd;
-    text-decoration: none;
     color: #333;
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
@@ -217,4 +164,23 @@ ul li, ol li {
     background: mediumpurple;
     color: #fff;
     transform: translateY(-2px);
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+    .urls {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .urls a {
+        padding: 8px 0;
+        font-size: 0.9rem;
+    }
+
+    .get_started-button,
+    .whatsapp-us,
+    #subscribe-button {
+        width: 80%;
+    }
 }
