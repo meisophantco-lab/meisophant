@@ -1,85 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Catalogue || Meisophant Digital Services</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./images/favicon1.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meisophant Hot Sales Slider</title>
+<link rel="stylesheet" href="./cat-styles.css">
+<!-- Navigation -->  
+    <div class="urls">  
+        <a href="./">HOME</a>  
+        <a href="./our-services.html">OUR SERVICES</a>  
+        <a href="./our-catalogue.html">OUR CATALOGUE</a>  
+        <a href="./contact-us.html">CONTACT US</a>  
+        <a href="./about-us.html">ABOUT US</a>  
+        <a href="./promo.html">PROMO🚀</a>  
+    </div>  
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="urls">
-        <a href="./">HOME</a>
-        <a href="./our-services.html">OUR SERVICES</a>       
-        <a href="./our-catalogue.html">OUR CATALOGUE</a>
-        <a href="./contact-us.html">CONTACT US</a>
-        <a href="./about-us.html">ABOUT US</a>
-        <a href="./promo.html">PROMO🚀</a>
+    <header>  
+   <br><br>  
+    <h1>Our Catalogue</h1>  
+    <div class="container-3">  
+        <h3>Where Tech Becomes Reality</h3>  
+    </div>  
+</header>
+<div class="hot-sales">
+    <br>
+  <h2>🔥 Hot Sales</h2>
+  <div class="slider" id="slider">
+    <!-- Original slides -->
+    <a href="business.html" class="card">
+      <img src="./business-website.jpeg" alt="Business Website">
+      <p>Business Website<br>₦115,000</p>
+    </a>
+    <a href="portfolio.html" class="card">
+      <img src="./portfolio.jpeg" alt="Portfolio Website">
+      <p>Portfolio Website<br>₦100,000</p>
+    </a>
+    <a href="ecommerce.html" class="card">
+      <img src="./e-commerce.jpeg" alt="E-commerce Store">
+      <p>E-commerce Store<br>₦450,000</p>
+    </a>
+    <a href="blog.html" class="card">
+      <img src="./blog.jpeg" alt="Blog Site">
+      <p>Blog/Content Site<br>₦105,000</p>
+    </a>
+    <a href="landing.html" class="card">
+      <img src="./landing.jpeg" alt="Landing Page">
+      <p>Landing Page<br>₦100,000</p>
+    </a>
+    <a href="custom.html" class="card">
+      <img src="./custom.jpeg" alt="Custom Website">
+      <p>Custom Website<br>Contact Us</p>
+    </a>
+  </div>
+</div>
+<div class="main-content">
+    <div class="collection">
+        <h2>What we create</h2>
     </div>
+</div>
+<div class="footer_div">  
+    <footer>  
+        <h2>Contact Us</h2>  
 
-    <!-- Header -->
-    <header>
-        <br><br>
-        <h1>Our Catalogue</h1>
-        <div class="container-3">
-            <h3>Where Tech Becomes Reality</h3>
-        </div>
-    </header>
-    <br><br>
+        <div class="subscribe_form">  
+            <div class="sub-container">  
+                <h2>Subscribe to our Newsletter</h2>  
+                <form action="mailto:meisophant.co@gmail.com" method="post">  
+                  <br><br> <h3>E-Mail:</h3>
+                    <br>
+                    <input type="email" name="Subscribe" placeholder="E-Mail" class="e-mail" required>  
+                    <button class="subscribe-button" id="subscribe-button">Subscribe</button>  
+                </form>  
+            </div>  
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <div class="container">
-            <p>
-                This page is still under development and maintenance. Our team of expert developers are working tirelessly on it, and we promise to make it available as soon as possible.
-            </p>
-        </div>
-        <br><br>
+            <div class="contact-us">  
+                <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services">  
+                    <button class="whatsapp-us">Whatsapp Us</button>  
+                </a>  
+                <a href="./our_socials.html">  
+                    <button class="get_started-button">Our Socials</button>  
+                </a>  
+            </div>  
 
-        <!-- Newsletter & Contact -->
-        <div class="footer_div">
-            <footer>
-                <h2>Contact Us</h2>
-                <div class="subscribe_form">
-                    <div class="sub-container">   
-                        <br><br>
-                        <h2>Subscribe to our newsletter</h2>
-                        <br>
-                        <form action="mailto:meisophant.co@gmail.com" method="post">
-                            <h3>E-Mail:</h3>
-                            <input type="text" name="Subscribe" placeholder="E-Mail" class="e-mail" required>
-                            <p></p>
-                            <button class="subscribe-button" id="subscribe-button">Subscribe</button>
-                        </form>
-                    </div> 
+            <div class="container-2">  
+                <p>Thank You for Choosing Our Services.</p>  
+            </div>  
+        </div>  
 
-                    <div class="contact-us">
-                        <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services">
-                            <button class="whatsapp-us">Whatsapp Us</button>
-                        </a>
-                        <a href="./our_socials.html">
-                            <button class="get_started-button">Our Socials</button>
-                        </a>
-                    </div>
+        <p>&copy; Copyright Meisophant Digital Services 2025. All Rights Reserved.</p>  
+    </footer>  
+</div>  
+<script>
+const slider = document.getElementById("slider");
+let isDragging = false;
+let startX;
+let scrollLeft;
 
-                    <br><br>
-                    <!-- Shapo Widgets -->
-                    <div id="shapo-widget-fdd03bf3374d52851659"></div>
-                    <div id="shapo-form-f8c0f00ca5"></div>
-                    <script src="https://cdn.shapo.io/js/embed.js" defer></script>
+// 1️⃣ Clone slides for seamless loop
+const slides = Array.from(slider.children);
+slides.forEach(slide => {
+  const clone = slide.cloneNode(true);
+  slider.appendChild(clone);
+});
 
-                    <div class="container-2">
-                        <p>Thank You for Choosing Our Services.</p>
-                    </div>
-                </div>
+// 2️⃣ Auto-scroll
+function autoScroll() {
+  if (!isDragging) {
+    slider.scrollLeft += 1;
+    // Loop seamlessly
+    if (slider.scrollLeft >= slider.scrollWidth / 2) {
+      slider.scrollLeft = 0;
+    }
+  }
+  requestAnimationFrame(autoScroll);
+}
+requestAnimationFrame(autoScroll);
 
-                <p>
-                    &copy; Meisophant Digital Services, 2025.<br>
-                    All Rights Reserved.
-                </p>
-            </footer>
-        </div>
-    </div>
+// 3️⃣ Drag / swipe
+slider.addEventListener('mousedown', e => {
+  isDragging = true;
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => isDragging = false);
+slider.addEventListener('mouseup', () => isDragging = false);
+slider.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+// Touch for mobile
+slider.addEventListener('touchstart', e => {
+  isDragging = true;
+  startX = e.touches[0].pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('touchend', () => isDragging = false);
+slider.addEventListener('touchmove', e => {
+  if (!isDragging) return;
+  const x = e.touches[0].pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2;
+  slider.scrollLeft = scrollLeft - walk;
+});
+</script>
+
 </body>
 </html>
