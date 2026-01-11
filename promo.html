@@ -63,15 +63,24 @@
     </style>
 </head>
 <body>
-    <div class="urls">
-        <a href="./">HOME</a>
-        <a href="./our-services.html">OUR SERVICES</a>       
-        <a href="./our-catalogue.html">OUR CATALOGUE</a>
-        <a href="./contact-us.html">CONTACT US</a>
-        <a href="./about-us.html">ABOUT US</a>
-        <a href="./promo.html">PROMO🚀</a>
-    </div>
+    <header class="header">
+  <div class="logo">Meisophant</div>
 
+  <!-- Menu Button -->
+  <div class="menu-btn" id="menuBtn">☰</div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navMenu">
+    <button class="back-btn" id="backBtn">← Back</button>
+
+    <a href="./index.html">Home</a>
+    <a href="./our-services.html">Our Services</a>
+    <a href="./our-catalogue.html">Catalogue</a>
+    <a href="./about-us.html">About Us</a>
+    <a href="./contact-us.html">Contact</a>
+    <a href="./promo.html">Promo</a>
+  </nav>
+</header>
     <header>
 <br><br>
         <h2>Unlock Your Earning Potential with Meisophant Digital Services Commission Program</h2>
@@ -126,5 +135,40 @@
         </div>
         <p>&copy; Meisophant Digital Services, 2024. All Rights Reserved.</p>
     </footer>
+<script>
+
+window.addEventListener('scroll', function() {
+const nav = document.querySelector('.urls');
+if (window.scrollY > 50) { // Scroll threshold
+nav.classList.add('shrink');
+} else {
+nav.classList.remove('shrink');
+}
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+    const backBtn = document.getElementById("backBtn");
+
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      menuBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
+    });
+
+    backBtn.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+      menuBtn.textContent = "☰";
+    });
+
+    document.querySelectorAll(".nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        menuBtn.textContent = "☰";
+      });
+    });
+  });
+</script>
 </body>
 </html>
