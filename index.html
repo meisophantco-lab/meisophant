@@ -113,6 +113,29 @@ nav.classList.remove('shrink');
 }
 });
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+    const backBtn = document.getElementById("backBtn");
 
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      menuBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
+    });
+
+    backBtn.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+      menuBtn.textContent = "☰";
+    });
+
+    document.querySelectorAll(".nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        menuBtn.textContent = "☰";
+      });
+    });
+  });
+</script>
 </body>  
 </html>
