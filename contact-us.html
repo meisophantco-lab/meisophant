@@ -1,64 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us || Meisophant Digital Services</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./images/favicon1.png" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us || Meisophant Digital Services</title>
+
+<meta name="description" content="Get in touch with Meisophant Digital Services for web development, app development, digital services, or inquiries. Subscribe to our newsletter or reach out via WhatsApp.">
+<meta name="keywords" content="Meisophant Digital Services, contact, email, WhatsApp, digital services, web development, app development, Nigeria">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Contact Us || Meisophant Digital Services">
+<meta property="og:description" content="Reach out to Meisophant Digital Services for inquiries, services, or collaborations.">
+<meta property="og:image" content="./images/favicon1.png">
+<meta property="og:url" content="https://meisophantco-lab.github.io/meisophant.github.io/contact-us.html">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Us || Meisophant Digital Services">
+<meta name="twitter:description" content="Get in touch with Meisophant Digital Services for web and digital solutions.">
+<meta name="twitter:image" content="./images/favicon1.png">
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="./images/favicon1.png" type="image/png">
+
+<!-- Structured Data: Contact & Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Meisophant Digital Services",
+  "url": "https://meisophantco-lab.github.io/meisophant.github.io/",
+  "logo": "https://meisophantco-lab.github.io/meisophant.github.io/images/favicon1.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+2349029673978",
+    "contactType": "customer support",
+    "areaServed": "NG",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://wa.me/2349029673978"
+  ]
+}
+</script>
+
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="urls">
-        <a href="./">HOME</a>
-        <a href="./our-services.html">OUR SERVICES</a>       
-        <a href="./our-catalogue.html">OUR CATALOGUE</a>
-        <a href="./contact-us.html">CONTACT US</a>
-        <a href="./about-us.html">ABOUT US</a>
-        <a href="./promo.html">PROMO🚀</a>
+
+<!-- Standard Header -->
+<header class="header">
+  <div class="logo">Meisophant</div>
+
+  <!-- Menu Button -->
+  <div class="menu-btn" id="menuBtn">☰</div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navMenu">
+    <button class="back-btn" id="backBtn">← Back</button>
+
+    <a href="./index.html">Home</a>
+    <a href="./our-services.html">Our Services</a>
+    <a href="./our-catalogue.html">Catalogue</a>
+    <a href="./about-us.html">About Us</a>
+    <a href="./contact-us.html">Contact</a>
+    <a href="./promo.html">Promo</a>
+  </nav>
+</header>
+
+<!-- Main Content / Contact Form -->
+<div class="main-content">
+    <div class="sub-container">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with Meisophant Digital Services latest services, promotions, and news. Enter your email below:</p>
+        <form action="mailto:meisophant.co@gmail.com" method="post">
+            <h3>E-Mail:</h3>
+            <input type="email" name="Subscribe" placeholder="E-Mail" class="e-mail" required>
+            <button class="subscribe-button" id="subscribe-button">Subscribe</button>
+        </form>
     </div>
 
-    <!-- Header -->
-    <header>
-        <br><br>
-        <h1>Contact Us</h1>
-    </header>
-
-    <!-- Main Content / Contact Form -->
-    <div class="main-content">
-        <div class="sub-container">
-            <h2>Subscribe to our Newsletter</h2>
-            <form action="mailto:meisophant.co@gmail.com" method="post">
-                <h3>E-Mail:</h3>
-                <input type="email" name="Subscribe" placeholder="E-Mail" class="e-mail" required>
-                <button class="subscribe-button" id="subscribe-button">Subscribe</button>
-            </form>
-        </div>
-
-        <div class="contact-us">
-            <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services">
-                <button class="whatsapp-us">Whatsapp Us</button>
-            </a>
-        </div>
-
-        <div class="container-2">
-            <p>Thank You for Choosing Our Services.</p>
-        </div>
+    <div class="contact-us">
+        <h2>Reach Out via WhatsApp</h2>
+        <p>Have questions or want to work with us? Chat with our team directly:</p>
+        <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services">
+            <button class="whatsapp-us">WhatsApp Us</button>
+        </a>
     </div>
 
-    <!-- Footer -->
-    <div class="footer_div">
-        <footer>
-            <p>&copy; Meisophant Digital Services, 2024. All Rights Reserved.</p>
-        </footer>
+    <div class="container-2">
+        <p>Thank you for choosing Meisophant Digital Services. We look forward to helping you grow your digital presence.</p>
     </div>
+</div>
 
-    <!-- Other Pages Links -->
-    <div class="other-pages">
-        <h2>Other Pages On This Site</h2>
-        <a href="./index.html">HOME</a>
-        <a href="./our-services.html">OUR SERVICES</a>
-        <a href="./about-us.html">ABOUT US</a>
-    </div>
+<!-- Footer -->
+<div class="footer_div">
+    <footer>
+        <p>&copy; Meisophant Digital Services, 2024. All Rights Reserved.</p>
+    </footer>
+</div>
+
+<!-- Other Pages Links -->
+<div class="other-pages">
+    <h2>Other Pages On This Site</h2>
+    <a href="./index.html">HOME</a>
+    <a href="./our-services.html">OUR SERVICES</a>
+    <a href="./about-us.html">ABOUT US</a>
+</div>
+
+<!-- Menu Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menuBtn");
+    const navMenu = document.getElementById("navMenu");
+    const backBtn = document.getElementById("backBtn");
+
+    menuBtn.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      menuBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
+    });
+
+    backBtn.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+      menuBtn.textContent = "☰";
+    });
+
+    document.querySelectorAll(".nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        menuBtn.textContent = "☰";
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
