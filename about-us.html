@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Canonical -->
-<link rel="canonical" href="https://meisophant.name.ng/about-us.html">
+<title>About Us | Meisophant Digital Services</title>
 
-<!-- FAQ Structured Data -->
+<!-- SEO Meta -->
+<meta name="description" content="Meisophant Digital Services provides web development, hosting, cloud services, DNS configuration, and digital solutions for individuals, startups, and businesses seeking reliable online growth.">
+<meta name="keywords" content="Meisophant Digital Services, web development, web design, hosting, DNS setup, cloud services, CDN, IT consulting, digital solutions">
+<meta name="author" content="Meisophant Digital Services">
+
+<!-- Open Graph -->
+<meta property="og:title" content="About Meisophant Digital Services">
+<meta property="og:description" content="Learn about Meisophant Digital Services — a digital solutions provider focused on web development, hosting, cloud infrastructure, and scalable online systems.">
+<meta property="og:image" content="./logo1.jpg">
+<meta property="og:type" content="website">
+
+<!-- FAQ Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -16,7 +28,7 @@
       "name": "Who is the owner and founder of Meisophant Digital Services?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Meisophant Digital Services was founded and is led by Adewale Emmanuel Oluwajomiloju, who serves as the CEO. Together with the development team, he provides practical and reliable digital solutions for individuals, startups, and businesses."
+        "text": "Meisophant Digital Services was founded and is led by Adewale Emmanuel Oluwajomiloju, who serves as the CEO. Together with the development team, he provides practical and reliable digital solutions for individuals, startups, and businesses seeking to grow their online presence."
       }
     },
     {
@@ -24,7 +36,7 @@
       "name": "What services does Meisophant Digital Services offer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Meisophant Digital Services offers web design and development, domain registration, DNS setup, hosting support, cloud services, CDN and security configuration, branding support, IT consulting, and digital transformation services."
+        "text": "Meisophant Digital Services offers web design and web development, domain registration, DNS setup, hosting support, cloud services, CDN and security configuration, branding support, IT consulting, and digital transformation services."
       }
     },
     {
@@ -53,34 +65,218 @@
     },
     {
       "@type": "Question",
-      "name": "Does Meisophant Digital Services offer training?",
+      "name": "Does Meisophant Digital Services offer training or learning support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. We guide individuals interested in learning web and application development using practical, real-world approaches."
+        "text": "Yes. We guide individuals interested in learning web and application development using practical approaches."
       }
     }
   ]
 }
 </script>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About Us | Meisophant Digital Services</title>
-
-<meta name="description" content="Learn about Meisophant Digital Services — a provider of web development, hosting, cloud services, DNS configuration, and reliable digital solutions.">
-<meta name="keywords" content="Meisophant Digital Services, web development, hosting, DNS setup, cloud services, IT consulting">
-<meta name="author" content="Meisophant Digital Services">
-
-<!-- Open Graph -->
-<meta property="og:title" content="About Meisophant Digital Services">
-<meta property="og:description" content="A digital solutions provider focused on web development, hosting, cloud infrastructure, and scalable online systems.">
-<meta property="og:image" content="https://meisophant.name.ng/logo1.jpg">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://meisophant.name.ng/about-us.html">
-
 <link rel="stylesheet" href="./style.css">
 <link rel="icon" href="./favicon1.png" type="image/png">
 
+<style>
+/* Simple responsive fixes if your CSS isn't fully mobile-friendly */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #222;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav.show {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.back-btn {
+  display: none;
+  margin-bottom: 10px;
+}
+
+/* Main content */
+.main-content {
+  padding: 20px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    padding: 10px;
+  }
+
+  .back-btn {
+    display: block;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+}
+</style>
 </head>
 <body>
+
+<header class="header">
+  <div class="logo">Meisophant</div>
+  <div class="menu-btn" id="menuBtn">☰</div>
+  <nav class="nav" id="navMenu">
+    <button class="back-btn" id="backBtn">← Back</button>
+    <a href="./index.html">Home</a>
+    <a href="./our-services.html">Our Services</a>
+    <a href="./our-catalogue.html">Catalogue</a>
+    <a href="./about-us.html">About Us</a>
+    <a href="./contact-us.html">Contact</a>
+    <a href="./promo.html">Promo</a>
+  </nav>
+</header>
+
+<img src="./logo1.jpg" alt="Meisophant Digital Services Logo" class="image" style="max-width:100%; height:auto; display:block; margin:20px auto;">
+
+<div class="main-content">
+  <div class="container">
+    <h4>Our Specialization</h4>
+    <p>Meisophant Digital Services is a digital solutions provider focused on web development, application development, and online infrastructure. We support individuals, startups, and businesses by building scalable digital systems that promote stability, accessibility, and long-term online growth.</p>
+  </div>
+
+  <div class="container">
+    <h4>What We Do</h4>
+    <p>We help clients create, manage, and improve their digital presence through structured and practical solutions. Our work includes responsive website development, hosting support, DNS configuration, and system optimization designed to improve performance and reliability.</p>
+    <p>Alongside business services, Meisophant Digital Services also supports individuals who want to learn web and application development using real-world, practical approaches.</p>
+  </div>
+
+  <div class="container">
+    <h4>Our Approach & Services</h4>
+    <p>Our services include web design and web development, domain registration, DNS setup, hosting support, cloud services, content delivery networks (CDN), and security configuration. We also assist with branding, digital identity optimization, IT consulting, and digital transformation initiatives, while gradually developing automation tools and software-based solutions.</p>
+    <p>Meisophant is built on a philosophy of clarity and precision. We focus on simplifying complex technology, reducing unnecessary digital friction, and delivering systems that operate reliably in the background. This allows clients to focus on their goals while their digital infrastructure remains efficient and manageable.</p>
+  </div>
+
+  <div class="container">
+    <h4>Our Developers / CEO</h4>
+    <p>Meisophant Digital Services is led by our CEO, <b><a href="https://ceo-adewale-emmanuel-oluwajomiloju.simdif.com/">Adewale Emmanuel Oluwajomiloju</a></b>, alongside a dedicated development team including <b>Temenu Mayowa</b> and <b>Soyingbe Abdul-Khaliq</b>. The team works collaboratively to deliver dependable and well-structured digital solutions.</p>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="container">
+    <h4>Frequently Asked Questions</h4>
+    <p><b>Who is the owner and founder of Meisophant Digital Services?</b><br>Meisophant Digital Services was founded and is led by <b>Adewale Emmanuel Oluwajomiloju</b>, who serves as the CEO. Together with the development team, he provides practical and reliable digital solutions for individuals, startups, and businesses seeking to grow their online presence.</p>
+
+    <p><b>What services does Meisophant Digital Services offer?</b><br>We provide web design and web development, domain registration, DNS setup, hosting support, cloud services, CDN and security configuration, branding support, IT consulting, and digital transformation services.</p>
+
+    <p><b>Who can work with Meisophant Digital Services?</b><br>Our services are suitable for individuals, startups, and businesses looking to build, manage, or improve their online presence in a structured and reliable way.</p>
+
+    <p><b>Do you provide hosting and domain support?</b><br>Yes. We assist with domain registration, DNS configuration, hosting setup, and ongoing support to ensure websites and applications remain stable and accessible.</p>
+
+    <p><b>Do you help with website security?</b><br>We support security configuration such as CDN integration, SSL setup, and general best practices to improve website performance and protection.</p>
+
+    <p><b>Does Meisophant Digital Services offer training?</b><br>Yes. We guide individuals interested in learning web and application development using practical, real-world approaches.</p>
+  </div>
+</div>
+
+<div class="footer_div">
+  <footer>
+    <h2>Contact Us</h2>
+    <div class="subscribe_form">
+      <div class="sub-container">
+        <h2>Subscribe to our newsletter</h2>
+        <form action="mailto:meisophant.co@gmail.com" method="post">
+          <h3>E-Mail:</h3>
+          <input type="text" name="Subscribe" placeholder="E-Mail" class="e-mail" required>
+          <button class="subscribe-button" id="subscribe-button">Subscribe</button>
+        </form>
+      </div>
+      <div class="contact-us">
+        <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services">
+          <button class="whatsapp-us">Whatsapp Us</button>
+        </a>
+      </div>
+      <div class="container-2">
+        <p>Thank You for Choosing Meisophant Digital Services.</p>
+      </div>
+    </div>
+    <p>&copy; Meisophant Digital Services, 2024. All Rights Reserved.</p>
+  </footer>
+</div>
+
+<div class="other-pages">
+  <h2>Other Pages On This Site</h2>
+  <a href="./index.html">HOME</a>
+  <a href="./our-services.html">OUR SERVICES</a>
+  <a href="./contact-us.html">CONTACT US</a>
+  <a href="./pricing.html">PRICING</a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
+  const backBtn = document.getElementById("backBtn");
+
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+    menuBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
+  });
+
+  backBtn.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+    menuBtn.textContent = "☰";
+  });
+
+  document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+      menuBtn.textContent = "☰";
+    });
+  });
+});
+</script>
+
+</body>
+</html>
