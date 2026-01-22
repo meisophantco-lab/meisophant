@@ -1,123 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Our Catalogue | Meisophant Digital Services</title>
-
-<meta name="description" content="Explore Meisophant Digital Services catalogue. Website design, mobile apps, branding, UI/UX, SEO, maintenance, and custom digital solutions for businesses and individuals.">
-<meta name="keywords" content="web design Nigeria, mobile app development, SEO services, branding, UI UX design, website maintenance, digital marketing, Meisophant Digital Services">
-
-<link rel="stylesheet" href="./cat-styles.css">
-
-<!-- Structured Data for Services -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Business Website",
-      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f",
-      "description": "Professional websites for businesses that need an online presence to attract customers.",
-      "offers": { "@type": "Offer", "price": "115000", "priceCurrency": "NGN" }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Portfolio Website",
-      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      "description": "Portfolio sites that showcase personal or professional work in an elegant way.",
-      "offers": { "@type": "Offer", "price": "100000", "priceCurrency": "NGN" }
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "E-commerce Store",
-      "image": "https://images.unsplash.com/photo-1519337265831-281ec6cc8514",
-      "description": "Full-featured online stores with payment integrations and product management.",
-      "offers": { "@type": "Offer", "price": "450000", "priceCurrency": "NGN" }
-    },
-    {
-      "@type": "ListItem",
-      "position": 4,
-      "name": "Blog / Content Site",
-      "image": "https://images.unsplash.com/photo-1501504905252-473c47e087f8",
-      "description": "Content-focused websites for writers, influencers, and news portals.",
-      "offers": { "@type": "Offer", "price": "105000", "priceCurrency": "NGN" }
-    },
-    {
-      "@type": "ListItem",
-      "position": 5,
-      "name": "Landing Page",
-      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
-      "description": "High-converting landing pages for campaigns, products, or lead generation.",
-      "offers": { "@type": "Offer", "price": "100000", "priceCurrency": "NGN" }
-    },
-    {
-      "@type": "ListItem",
-      "position": 6,
-      "name": "Custom Website",
-      "image": "https://images.unsplash.com/photo-1517433456452-f9633a875f6f",
-      "description": "Tailored websites for unique requirements. Contact us for pricing.",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "NGN" }
-    },
-    {
-      "@type": "ListItem",
-      "position": 7,
-      "name": "Mobile App Development",
-      "image": "https://images.unsplash.com/photo-1581090700227-1e37b190418e",
-      "description": "Cross-platform mobile apps for iOS and Android tailored to your business needs.",
-      "offers": { "@type": "Offer", "price": "Contact Us", "priceCurrency": "NGN" }
-    },
-    {
-      "@type": "ListItem",
-      "position": 8,
-      "name": "UI / UX Design",
-      "image": "https://images.unsplash.com/photo-1523726491678-bf852e717f6a",
-      "description": "User interface and experience design for web and mobile applications.",
-      "offers": { "@type": "Offer", "price": "Contact Us", "priceCurrency": "NGN" }
-    },
-    {
-      "@type": "ListItem",
-      "position": 9,
-      "name": "Branding & Logo Design",
-      "image": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6",
-      "description": "Visual identity creation including logos, color palettes, and branding guides.",
-      "offers": { "@type": "Offer", "price": "Contact Us", "priceCurrency": "NGN" }
-    },
-    {
-      "@type": "ListItem",
-      "position": 10,
-      "name": "SEO & Digital Marketing",
-      "image": "https://images.unsplash.com/photo-1556155092-8707de31f9c4",
-      "description": "Search engine optimization, content strategy, and advertising to boost traffic and leads.",
-      "offers": { "@type": "Offer", "price": "Contact Us", "priceCurrency": "NGN" }
-    },
-    {
-      "@type": "ListItem",
-      "position": 11,
-      "name": "Website Maintenance",
-      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
-      "description": "Regular updates, security checks, backups, and performance optimization.",
-      "offers": { "@type": "Offer", "price": "From ₦20,000/month", "priceCurrency": "NGN" }
-    }
-  ]
-}
-</script>
-
+    <link rel="stylesheet" href="./style.css">
+    <link href="./images/favicon1.png" rel="icon" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Our Catalogue || Meisophant Group Of Companies</title>
+    <script src="script.js"></script>
 </head>
 <body>
-
-<header class="header">
+        <header class="header">
   <div class="logo">Meisophant</div>
+
+  <!-- Menu Button -->
   <div class="menu-btn" id="menuBtn">☰</div>
 
+  <!-- Navigation -->
   <nav class="nav" id="navMenu">
     <button class="back-btn" id="backBtn">← Back</button>
+
     <a href="./index.html">Home</a>
     <a href="./our-services.html">Our Services</a>
     <a href="./our-catalogue.html">Catalogue</a>
@@ -126,104 +27,65 @@
     <a href="./promo.html">Promo</a>
   </nav>
 </header>
-
-<section class="hot-sales">
-  <br>
-  <h2>🔥 Hot Sales – Website Packages</h2>
-
-  <div class="slider" id="slider">
-    <!-- Original and updated website slides -->
-    <a href="business.html" class="card">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Business Website">
-      <p>Business Website<br>₦115,000</p>
-    </a>
-    <a href="portfolio.html" class="card">
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Portfolio Website">
-      <p>Portfolio Website<br>₦100,000</p>
-    </a>
-    <a href="ecommerce.html" class="card">
-      <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514" alt="E-commerce Store">
-      <p>E-commerce Store<br>₦450,000</p>
-    </a>
-    <a href="blog.html" class="card">
-      <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8" alt="Blog Site">
-      <p>Blog / Content Site<br>₦105,000</p>
-    </a>
-    <a href="landing.html" class="card">
-      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="Landing Page">
-      <p>Landing Page<br>₦100,000</p>
-    </a>
-    <a href="custom.html" class="card">
-      <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f" alt="Custom Website">
-      <p>Custom Website<br>Contact Us</p>
-    </a>
-  </div>
-</section>
-
-<div class="main-content">
-  <div class="collection">
-    <h2>More Services We Offer</h2>
-
-    <div class="slider">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e" alt="Mobile App Development">
-        <p>Mobile App Development<br>Android & iOS</p>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1523726491678-bf852e717f6a" alt="UI UX Design">
-        <p>UI / UX Design<br>Web & Mobile</p>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6" alt="Brand Identity Design">
-        <p>Branding & Logo Design<br>Visual Identity</p>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1454165205744-3b78555e5572" alt="SEO Services">
-        <p>SEO & Digital Marketing<br>Google & Bing</p>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Website Maintenance">
-        <p>Website Maintenance<br>Updates & Security</p>
-      </div>
+<br><br>
+    <div class="main-content">
+        <div class="container">
+            <p>
+                This page is still under development and maintenance. Our team of expert developers are working tiredlessly on it, and promise to make it available as soon as possible.
+            </p>
+        </div>
+        <br><br>
+    <div class="footer_div">
+        <footer>
+            <h2>
+                Contact Us
+            </h2>
+            <div class="subscribe_form">
+                <div class="sub-container">   
+                     <br><br>
+                <h2>
+                    Subscribe to our newsletter
+                </h2>
+                <br>
+                <form action="mailto:meisophant.co@gmail.com?body=I%20am%20willing%20to%20subscribe%20to%20your%20service%20at%20Meisophant%20Website%20Developers,%20and%20i%20will%20like%20to%20recieve%20mails%20from%20you%20about%20my%20website,%20and%20i%20will%20love%20to%20know%20more%20about%20your%20services,%20and%20get%20time%20to%20time%20updates%20about%20your%20services." method="post">
+                    <h3>E-Mail:</h3>
+                  <input type="text" name="Subscribe" placeholder="E-Mail" class="e-mail"  required><p></p>
+                  <button class="subscribe-button" id="subscribe-button">Subscribe</button>
+                </form>
+                </div> 
+                <div class="contact-us">
+                    <a href="‎https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services">
+                        <button class="whatsapp-us">Whatsapp Us</button>
+                    </a>
+<a href="./our_socials.html">
+            <button class="get_started-button">Our Socials</button>
+</a>
+       
+                </div>
+                <div class="container-2">
+                    <p>
+                        Thank You for Choosing Our Services.
+                    </p>
+                </div>
+            </div>
+            <p>
+                 &copyCopyright, Meisophant Group Of Companies, 2025.
+                 <br>
+                  All Right Reserved.
+            </p>
+        </footer>
     </div>
-  </div>
-</div>
+    <script>
 
-<div class="footer_div">  
-  <footer>  
-    <h2>Contact Us</h2>  
-    <div class="subscribe_form">  
-      <div class="sub-container">  
-        <h2>Subscribe to Our Newsletter</h2>  
-        <form action="mailto:meisophant.co@gmail.com" method="post">  
-          <input type="email" name="Subscribe" placeholder="E-Mail" class="e-mail" required>  
-          <button class="subscribe-button">Subscribe</button>  
-        </form>  
-      </div>  
-
-      <div class="contact-us">  
-        <a href="https://wa.me/2349029673978">
-          <button class="whatsapp-us">Whatsapp Us</button>
-        </a>
-        <a href="./our_socials.html">
-          <button class="get_started-button">Our Socials</button>
-        </a>
-      </div>  
-
-      <div class="container-2">  
-        <p>Thank you for choosing Meisophant Digital Services.</p>  
-      </div>  
-    </div>  
-
-    <p>&copy; Meisophant Digital Services 2024. All Rights Reserved.</p>  
-  </footer>  
-</div>
-
-<!-- SCRIPTS UNCHANGED -->
+window.addEventListener('scroll', function() {
+const nav = document.querySelector('.urls');
+if (window.scrollY > 50) { // Scroll threshold
+nav.classList.add('shrink');
+} else {
+nav.classList.remove('shrink');
+}
+});
+</script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const menuBtn = document.getElementById("menuBtn");
@@ -239,8 +101,14 @@
       navMenu.classList.remove("show");
       menuBtn.textContent = "☰";
     });
+
+    document.querySelectorAll(".nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        menuBtn.textContent = "☰";
+      });
+    });
   });
 </script>
-
 </body>
 </html>
