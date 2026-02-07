@@ -204,3 +204,25 @@ img {
     margin: 20px 10px;
   }
 }
+
+/* Overlay background */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
+  z-index: 8;
+  display: none;
+}
+
+.nav-overlay.show {
+  display: block;
+}
+
+/* Ensure nav appears above overlay */
+.nav {
+  z-index: 10;
+}
