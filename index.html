@@ -201,16 +201,50 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("navOverlay");
   const backBtn = document.getElementById("backBtn");
 
+  if (!menuBtn || !navMenu) return;
+
+  function openMenu() {
+    navMenu.classList.add("show");
+    overlay.classList.add("show");
+    menuBtn.textContent = "✕";
+  }
+
+  function closeMenu() {
+    navMenu.classList.remove("show");
+    overlay.classList.remove("show");
+    menuBtn.textContent = "☰";
+  }
+
   menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-    menuBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
+    navMenu.classList.contains("show") ? closeMenu() : openMenu();
   });
 
-  backBtn.addEventListener("click", () => {
-    navMenu.classList.remove("show");
-    menuBtn.textContent = "☰";
+  if (backBtn) backBtn.addEventListener("click", closeMenu);
+
+  overlay.addEventListener("click", closeMenu);
+
+  document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // Fix screen rotation + resizing
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) closeMenu();
+  });
+
+  // Swipe to close (mobile)
+  let touchStartX = 0;
+
+  navMenu.addEventListener("touchstart", e => {
+    touchStartX = e.touches[0].clientX;
+  });
+
+  navMenu.addEventListener("touchend", e => {
+    let touchEndX = e.changedTouches[0].clientX;
+    if (touchStartX - touchEndX > 60) closeMenu();
   });
 });
 </script>
