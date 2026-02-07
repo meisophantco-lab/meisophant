@@ -1,14 +1,23 @@
-*{
-    margin: 0px auto;
-    margin-bottom: 0px auto;
+/* ================= GLOBAL RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #f9f9f9;
-    width: calc(100% - 0%);
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Header layout */
+body {
+  background-color: #f9f9f9;
+}
+
+/* ================= HEADER ================= */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -16,35 +25,42 @@ body{
   padding: 15px 20px;
   background: white;
   color: black;
-              border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  border-radius: 12px;
+  position: relative;
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
 }
 
-/* Navigation */
+/* ================= NAVIGATION ================= */
+
 .nav {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .nav a {
-  color: white;
+  color: black;
   text-decoration: none;
+  font-weight: 500;
 }
 
-/* Menu button */
+/* ================= MENU BUTTON ================= */
+
 .menu-btn {
   display: none;
   font-size: 28px;
   cursor: pointer;
+  user-select: none;
 }
 
-/* Mobile view */
+/* ================= MOBILE MENU ================= */
+
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
@@ -55,10 +71,18 @@ body{
     flex-direction: column;
     background: mediumpurple;
     position: absolute;
-    top: 60px;
+    top: 100%;
     right: 0;
-    width: 200px;
-    padding: 25px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 0 0 14px 14px;
+    z-index: 9999;
+  }
+
+  .nav a {
+    color: white;
+    padding: 12px 0;
+    font-size: 18px;
   }
 
   .nav.show {
@@ -66,409 +90,117 @@ body{
   }
 }
 
-.back-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 16px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  text-align: left;
+/* ================= CONTENT ================= */
+
+.main-content {
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  border-radius: 12px;
+  max-width: 1100px;
+  text-align: center;
 }
 
-.main-content{
-    margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            align-items: center;
-            min-width: calc(100% - 15%);
-            max-width: calc(100% - 15%);
-            border-radius: 10px;
-            justify-content: center;
-            align-items: center;
-            align-self: center;
-            justify-content: center;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center;
-             justify-content: center;
-     justify-items: center;
-     justify-self: center;
-     text-align: center;
-     text-decoration: wavy;
+.container,
+.container-1,
+.container-2,
+.container-3,
+.services,
+.dev-service,
+.our-services-container {
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  border-radius: 12px;
+  max-width: 900px;
+  text-align: center;
 }
 
-.services{
-      margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            align-items: center;
-            max-width: calc(100% - 20%);
-            border-radius: 10px;
-            justify-content: center;
-            align-items: center;
-            align-self: center;
-            justify-content: center;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center;
-             justify-content: center;
-     justify-items: center;
-     justify-self: center;
-     text-align: center;
-     text-decoration: wavy;  
-}
+/* ================= BUTTONS ================= */
 
-.dev-service{
-        margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            align-items: center;
-            max-width: calc(100% - 25%);
-            border-radius: 10px;
-            justify-content: center;
-            align-items: center;
-            align-self: center;
-            justify-content: center;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center;
-             justify-content: center;
-     justify-items: center;
-     justify-self: center;
-     text-align: center;
-     text-decoration: wavy;  
-}
-
-.container{
-    max-width: calc(100% - 50%);
-    text-align: center;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.get_started-button{
-    background-color: mediumpurple;
-    color: white;
-    margin: 40px auto;
-            padding: 20px;
-            background-color: mediumpurple;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center;
-}
-
-.container-1{
-      max-width: calc(100% - 30%);
-    text-align: center;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#subscribe-button{
-    background-color: mediumpurple;
-    color: white;
-    margin: 40px auto;
-            padding: 20px;
-            background-color: mediumpurple;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center;
-            pointer-events: all;
-}
-
-.footer_div{
-      max-width: calc(100% - 10%);
-    text-align: center;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-}
-
-.sub-container{
-     max-width: calc(100% - 15%);
-    text-align: center;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: mediumpurple;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-}
-
-.whatsapp-us{
-    background-color: mediumpurple;
-    color: white;
-    margin: 40px auto;
-            padding: 20px;
-            background-color: mediumpurple;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center;
-}
-
-.container-2{
-      max-width: calc(100% - 30%);
-    text-align: center;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 50px;
-}
-
-.container-3{
-    max-width: calc(100% - 30%);
-    text-align: center;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 50px;
-}
-
-/* ==== Sidebar Navigation ==== */
-.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: mediumpurple; /* Dark background */
-  overflow-x: hidden;
-  padding-top: 60px;
-  transition: 0.5s;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: white;
-  display: block;
-  transition: 0.3s;
-}
-
-  .menu-button☰ {
-        width: calc(100% - 80%);
+.get_started-button,
+.whatsapp-us,
+#subscribe-button {
   background-color: mediumpurple;
-    color: white;
-    margin: 0px auto;
-            padding: 20px;
-            background-color: mediumpurple;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  position: fixed;
-  position-area: top;
-  }
+}
 
-  .urls{
-        background-color: mediumpurple;
-        align-items: center;
-        text-align: center;
-         background-color: mediumpurple;
-    color: white;
-    margin: 40px auto;
-            padding: 20px;
-            background-color: mediumpurple;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center;
-            position: fixed;
-  }
+/* ================= FOOTER ================= */
 
-.urls a{
-          padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: normal;
+.footer_div {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+  border-radius: 18px;
+  text-align: center;
+}
+
+.sub-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: mediumpurple;
+  border-radius: 18px;
   color: white;
-  transition: 0.3s;
 }
 
-.urls2{
-    width: calc(100% - 20%);
-    background-color: white;
-        align-items: center;
-        text-align: center;
-         background-color: white;
-    color: white;
-    margin: 40px auto;
-            padding: 20px;
-            background-color: white;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center;
-            
+.e-mail {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 300px;
 }
-.urls2 a{
-  padding: 4px;
-  text-decoration: none;
-  font-size: normal;
+
+/* ================= FOOTER LINKS ================= */
+
+.legal-links {
+  margin-top: 15px;
+}
+
+.legal-links a {
   color: mediumpurple;
-  transition: 0.3s;
-}
-
-.urls2 a:hover{
-    color: purple;
-    transition: 0.3s;
-}
-
-.other-pages{
-        width: calc(100% - 10%);
-               background-color: mediumpurple;
-        align-items: center;
-        text-align: center;
-         background-color: mediumpurple;
-    color: white;
-    margin: 40px auto;
-            padding: 20px;
-            background-color: mediumpurple;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center; 
-}
-
-.other-pages a{
-         padding: 8px 8px 8px 32px;
+  font-weight: 600;
   text-decoration: none;
-  font-size: normal;
-  color: white;
-  transition: 0.3s;
+  margin: 0 10px;
 }
 
-.e-mail{
-        background-color: transparent;
-        color: white;
-        padding: 10px;
-        border-radius: 15px;
-        transition: 0.3s;
-        border: 1px solid black;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.legal-links a:hover {
+  text-decoration: underline;
 }
 
-.our-services-container{
-         margin: 40px auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            align-items: center;
-            min-width: calc(100% - 15%);
-            max-width: calc(100% - 15%);
-            border-radius: 10px;
-            justify-content: center;
-            align-items: center;
-            align-self: center;
-            justify-content: center;
-            align-self: center;
-            justify-content: center;
-            justify-items: center;
-            justify-self: center;
-            align-content: center;
-            align-items: center;
-             justify-content: center;
-     justify-items: center;
-     justify-self: center;
-     text-align: center;
-     text-decoration: wavy;
+/* ================= IMAGES ================= */
+
+img {
+  max-width: 100%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 
-.image{
-        width: 80%;
-        justify-content: center;
-        justify-self: center;
-        justify-items: center;
-        align-self: center;
-        align-self: center;
-        align-content: center;
-        text-align: center;
-        border-top-left-radius: 50%;
-        border-bottom-right-radius: 50%;
-}
-html{
-        justify-content: center;
-        justify-self: center;
-        justify-items: center;
-        align-self: center;
-        align-self: center;
-        align-content: center;
-        text-align: center;
-}
+/* ================= RESPONSIVE FIX ================= */
 
-img{
-        border-top-left-radius: 50%;
-        border-bottom-right-radius: 50%;
+@media (max-width: 500px) {
+  .main-content,
+  .container,
+  .container-1,
+  .container-2,
+  .container-3,
+  .services,
+  .dev-service,
+  .our-services-container,
+  .footer_div {
+    margin: 20px 10px;
+  }
 }
