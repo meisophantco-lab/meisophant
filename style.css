@@ -50,6 +50,10 @@ body {
   font-weight: 500;
 }
 
+.nav a:hover{
+  color: mediumpurple;
+}
+
 /* ================= MENU BUTTON ================= */
 
 .menu-btn {
