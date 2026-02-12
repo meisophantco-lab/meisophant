@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.meisophant.name.ng/sitemap.xml
 
-User-agent: *
-Disallow:
+Sitemap: https://www.meisophant.name.ng/sitemap.xml
