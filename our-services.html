@@ -68,89 +68,11 @@
 </head>
 
 <body>
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #222;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.menu-btn {
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-}
-
-.nav {
-  display: flex;
-  gap: 15px;
-}
-
-.nav a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav.show {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.back-btn {
-  display: none;
-  margin-bottom: 10px;
-}
-
-.main-content {
-  padding: 20px;
-}
-
-.container {
-  margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-    flex-direction: column;
-    background-color: #222;
-    padding: 10px;
-  }
-
-  .back-btn {
-    display: block;
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-}
-</style>
 <div class="nav-overlay" id="navOverlay"></div>
+
 <header class="header">
   <div class="logo">Meisophant</div>
+
   <div class="menu-btn" id="menuBtn">☰</div>
 
   <nav class="nav" id="navMenu">
@@ -162,7 +84,6 @@ body {
     <a href="./promo.html">Promo</a>
   </nav>
 </header>
-
 <div class="our-services-container">
 
   <p>
@@ -292,6 +213,86 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #222;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav.show {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.back-btn {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.container {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    padding: 10px;
+  }
+
+  .back-btn {
+    display: block;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+}
+</style>
 
 </body>
 </html>
