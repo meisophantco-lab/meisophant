@@ -1,7 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Catalogue || Meisophant Group Of Companies</title>
+
+    <meta name="description" content="Official Meisophant Blog & Digital Services Platform. Web development, branding, digital marketing, and business solutions.">
+    <meta name="keywords" content="Meisophant, Meisophant Digital Services, Meisophant Blog, web development Nigeria, digital services Nigeria, Meisophant Group">
+    <meta name="author" content="Meisophant Digital Services">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" href="./style.css">
+
+<style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -46,11 +60,6 @@ body {
   gap: 10px;
 }
 
-.back-btn {
-  display: none;
-  margin-bottom: 10px;
-}
-
 .main-content {
   padding: 20px;
 }
@@ -70,26 +79,12 @@ body {
     background-color: #222;
     padding: 10px;
   }
-
-  .back-btn {
-    display: block;
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
 }
 </style>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <title>Our Catalogue || Meisophant Group Of Companies</title>
-    <script src="script.js"></script>
+
 </head>
+
 <body>
-<div class="nav-overlay" id="navOverlay"></div>
 
 <header class="header">
   <div class="logo">Meisophant</div>
@@ -104,104 +99,82 @@ body {
     <a href="./contact-us.html">Contact</a>
     <a href="./promo.html">Promo</a>
   </nav>
-</header><br><br>
-    <div class="main-content">
-        <div class="container">
-            <p>
-                This page is still under development and maintenance. Our team of expert developers are working tiredlessly on it, and promise to make it available as soon as possible.
-            </p>
-        </div>
-        <br><br>
-    <div class="footer_div">
-        <footer>
-            <h2>
-                Contact Us
-            </h2>
-            <div class="subscribe_form">
-                <div class="sub-container">   
-                     <br><br>
-                <h2>
-                    Subscribe to our newsletter
-                </h2>
-                <br>
-                <form action="mailto:info@meisophant.name.ng?body=I%20am%20willing%20to%20subscribe%20to%20your%20service%20at%20Meisophant%20Website%20Developers,%20and%20i%20will%20like%20to%20recieve%20mails%20from%20you%20about%20my%20website,%20and%20i%20will%20love%20to%20know%20more%20about%20your%20services,%20and%20get%20time%20to%20time%20updates%20about%20your%20services." method="post">
-                    <h3>E-Mail:</h3>
-                  <input type="text" name="Subscribe" placeholder="E-Mail" class="e-mail"  required><p></p>
-                  <button class="subscribe-button" id="subscribe-button">Subscribe</button>
-                </form>
-                </div> 
-                <div class="contact-us">
-                    <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services" target="_blank">
-                        <button class="whatsapp-us">Whatsapp Us</button>
-                    </a>
-<a href="./our_socials.html">
-            <button class="get_started-button">Our Socials</button>
-</a>
-       
-                </div>
-                <div class="container-2">
-                    <p>
-                        Thank You for Choosing Our Services.
-                    </p>
-                </div>
-            </div>
-            <p>
-                 &copyCopyright, Meisophant Digital Services, 2025.
-                 <br>
-                  All Right Reserved.
-            </p>
-        </footer>
+</header>
+
+<br><br>
+
+<div class="main-content">
+    <div class="container">
+        <p>
+            This page is currently under development. Our team is working tirelessly to deliver a high-quality experience.
+        </p>
     </div>
-    <script>
+</div>
+
+<br><br>
+
+<footer>
+    <h2>Contact Us</h2>
+
+    <div class="subscribe_form">
+        <div class="sub-container">   
+            <h2>Subscribe to our newsletter</h2>
+
+            <!-- SPAM-SAFE FORM -->
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- Replace this key with your own free Web3Forms key -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+
+                <h3>E-Mail:</h3>
+                <input type="email" name="email" placeholder="Your Email" required>
+
+                <button class="subscribe-button">Subscribe</button>
+            </form>
+        </div> 
+
+        <div class="contact-us">
+            <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services" target="_blank">
+                <button class="whatsapp-us">Whatsapp Us</button>
+            </a>
+
+            <a href="./our_socials.html">
+                <button class="get_started-button">Our Socials</button>
+            </a>
+        </div>
+
+        <div class="container-2">
+            <p>Thank You for Choosing Our Services.</p>
+        </div>
+    </div>
+
+    <p>
+         &copy; 2025 Meisophant Digital Services. <br>
+         All Rights Reserved.
+    </p>
+</footer>
+
+<script>
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menuBtn");
   const navMenu = document.getElementById("navMenu");
-  const overlay = document.getElementById("navOverlay");
-  const backBtn = document.getElementById("backBtn");
 
-  if (!menuBtn || !navMenu) return;
-
-  function openMenu() {
-    navMenu.classList.add("show");
-    overlay.classList.add("show");
-    menuBtn.textContent = "✕";
+  function toggleMenu() {
+    navMenu.classList.toggle("show");
+    menuBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
   }
 
-  function closeMenu() {
-    navMenu.classList.remove("show");
-    overlay.classList.remove("show");
-    menuBtn.textContent = "☰";
-  }
-
-  menuBtn.addEventListener("click", () => {
-    navMenu.classList.contains("show") ? closeMenu() : openMenu();
-  });
-
-  if (backBtn) backBtn.addEventListener("click", closeMenu);
-
-  overlay.addEventListener("click", closeMenu);
+  menuBtn.addEventListener("click", toggleMenu);
 
   document.querySelectorAll(".nav a").forEach(link => {
-    link.addEventListener("click", closeMenu);
+    link.addEventListener("click", () => navMenu.classList.remove("show"));
   });
 
-  // Fix screen rotation + resizing
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) closeMenu();
-  });
-
-  // Swipe to close (mobile)
-  let touchStartX = 0;
-
-  navMenu.addEventListener("touchstart", e => {
-    touchStartX = e.touches[0].clientX;
-  });
-
-  navMenu.addEventListener("touchend", e => {
-    let touchEndX = e.changedTouches[0].clientX;
-    if (touchStartX - touchEndX > 60) closeMenu();
+    if (window.innerWidth > 768) navMenu.classList.remove("show");
   });
 });
 </script>
+
 </body>
 </html>
