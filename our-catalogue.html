@@ -4,240 +4,299 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Website Catalogue | Meisophant Website Developers</title>
+<title>Website Catalogue | Meisophant Digital Services</title>
 
-<meta name="description" content="Explore Meisophant Website Catalogue – Business websites, eCommerce stores, blogs, portfolio websites, school portals, fintech platforms, company websites, NGO websites, and more.">
+<meta name="description" content="Explore Meisophant's website development catalogue — business websites, eCommerce stores, blogs, portfolio sites, school portals, fintech platforms, NGO websites and more.">
 
-<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="icon" type="image/png" href="./favicon.png">
+<link rel="stylesheet" href="style.css">
 
 <style>
 body{
-    margin:0;
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background:#f7f8fc;
-    color:#222;
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f6f6fb;
+  color:#222;
 }
 
+/* HEADER */
 .header{
-    background:#0b0b0b;
-    padding:15px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:12px 20px;
+  background:white;
+  border-bottom:1px solid #ddd;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 .logo{
-    font-size:1.3rem;
-    font-weight:700;
+  font-weight:700;
+  font-size:1.3rem;
+  color:mediumpurple;
+}
+
+.menu-btn{
+  font-size:1.6rem;
+  cursor:pointer;
+  display:none;
+}
+
+.nav{
+  display:flex;
+  gap:15px;
 }
 
 .nav a{
-    color:white;
-    margin-left:15px;
-    text-decoration:none;
-    font-size:.95rem;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
 }
 
+.nav a:hover{
+  color:mediumpurple;
+}
+
+/* MOBILE MENU */
+.nav-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.4);
+  display:none;
+  z-index:900;
+}
+
+.nav.show{
+  display:flex;
+  flex-direction:column;
+  background:white;
+  position:fixed;
+  top:0;
+  right:0;
+  width:75%;
+  height:100%;
+  padding:25px;
+  z-index:1000;
+}
+
+.nav-overlay.show{
+  display:block;
+}
+
+@media(max-width:768px){
+  .menu-btn{display:block;}
+  .nav{display:none;}
+}
+
+/* HERO */
 .hero{
-    background:linear-gradient(135deg,#000,#1b1b1b);
-    color:white;
-    padding:70px 20px;
-    text-align:center;
+  background:linear-gradient(135deg, mediumpurple, #7b68ee);
+  color:white;
+  text-align:center;
+  padding:80px 20px;
 }
 
 .hero h1{
-    font-size:2.4rem;
-    margin-bottom:10px;
+  font-size:2.3rem;
+  margin-bottom:10px;
 }
 
 .hero p{
-    max-width:750px;
-    margin:auto;
-    line-height:1.7;
-    opacity:.9;
+  max-width:800px;
+  margin:auto;
+  line-height:1.7;
 }
 
+/* GRID */
 .catalogue{
-    max-width:1250px;
-    margin:auto;
-    padding:60px 20px;
+  max-width:1200px;
+  margin:auto;
+  padding:50px 15px;
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
 }
 
 .card{
-    background:white;
-    border-radius:12px;
-    padding:25px;
-    box-shadow:0 6px 18px rgba(0,0,0,.08);
-    transition:.3s;
+  background:white;
+  border-radius:14px;
+  padding:22px;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+  transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-7px);
+  transform:translateY(-6px);
 }
 
 .card h3{
-    margin-top:0;
-    font-size:1.1rem;
+  margin-top:0;
+  color:mediumpurple;
 }
 
 .card p{
-    font-size:.93rem;
-    line-height:1.6;
+  font-size:.95rem;
+  line-height:1.6;
 }
 
 .btn{
-    margin-top:12px;
-    display:inline-block;
-    padding:10px 18px;
-    background:#000;
-    color:white;
-    border-radius:6px;
-    font-size:.9rem;
-    text-decoration:none;
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 18px;
+  background:mediumpurple;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:.9rem;
 }
 
+.btn:hover{
+  opacity:.9;
+}
+
+/* FOOTER */
 footer{
-    background:#0b0b0b;
-    color:white;
-    text-align:center;
-    padding:35px 15px;
+  background:white;
+  padding:40px 20px;
+  text-align:center;
+  border-top:1px solid #ddd;
 }
 
 footer p{
-    font-size:.9rem;
-    opacity:.9;
+  font-size:.9rem;
+  color:#444;
 }
 </style>
 </head>
 
 <body>
 
+<div class="nav-overlay" id="navOverlay"></div>
+
 <header class="header">
-    <div class="logo">Meisophant</div>
-    <nav class="nav">
-        <a href="./index.html">Home</a>
-        <a href="./our-services.html">Services</a>
-        <a href="./our-catalogue.html">Catalogue</a>
-        <a href="./contact-us.html">Contact</a>
-    </nav>
+  <div class="logo">Meisophant</div>
+
+  <div class="menu-btn" id="menuBtn">☰</div>
+
+  <nav class="nav" id="navMenu">
+    <a href="./index.html">Home</a>
+    <a href="./our-services.html">Services</a>
+    <a href="./our-catalogue.html">Catalogue</a>
+    <a href="./about-us.html">About</a>
+    <a href="./contact-us.html">Contact</a>
+    <a href="./promo.html">Promo</a>
+  </nav>
 </header>
 
 <section class="hero">
-    <h1>Website Development Catalogue</h1>
-    <p>Explore all the different types of websites Meisophant can professionally design and develop for businesses, startups, organizations and individuals.</p>
+  <h1>Website Development Catalogue</h1>
+  <p>Explore all the professional website solutions Meisophant builds for businesses, startups, organizations and individuals.</p>
 </section>
 
 <section class="catalogue">
+  <div class="grid">
 
-<div class="grid">
+    <div class="card">
+      <h3>Business Website</h3>
+      <p>Professional business websites for startups, SMEs and enterprises.</p>
+      <a href="./contact-us.html" class="btn">Order Now</a>
+    </div>
 
-<div class="card">
-<h3>Business Website</h3>
-<p>Professional websites for small, medium and large businesses to establish online presence and generate leads.</p>
-<a href="./contact-us.html" class="btn">Order Now</a>
-</div>
+    <div class="card">
+      <h3>Corporate Website</h3>
+      <p>High-end corporate websites with company profile, investor pages and dashboards.</p>
+      <a href="./contact-us.html" class="btn">Request Quote</a>
+    </div>
 
-<div class="card">
-<h3>Corporate Website</h3>
-<p>High-end corporate websites with modern UI, company profile, investor pages and secure backend.</p>
-<a href="./contact-us.html" class="btn">Request Quote</a>
-</div>
+    <div class="card">
+      <h3>E-Commerce Store</h3>
+      <p>Online stores with payments, inventory system and order tracking.</p>
+      <a href="./contact-us.html" class="btn">Build Store</a>
+    </div>
 
-<div class="card">
-<h3>E-Commerce Store</h3>
-<p>Fully functional online stores with payment gateway, inventory system, order tracking and admin dashboard.</p>
-<a href="./contact-us.html" class="btn">Build My Store</a>
-</div>
+    <div class="card">
+      <h3>Blog Platform</h3>
+      <p>SEO optimized blogs for content creators, influencers and publishers.</p>
+      <a href="./contact-us.html" class="btn">Start Blog</a>
+    </div>
 
-<div class="card">
-<h3>Blog Website</h3>
-<p>SEO optimized blog platforms for content creators, writers, publishers and influencers.</p>
-<a href="./contact-us.html" class="btn">Start Blogging</a>
-</div>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Creative portfolios for designers, developers, artists and freelancers.</p>
+      <a href="./contact-us.html" class="btn">Create Portfolio</a>
+    </div>
 
-<div class="card">
-<h3>Portfolio Website</h3>
-<p>Creative portfolio websites for designers, developers, photographers, artists and professionals.</p>
-<a href="./contact-us.html" class="btn">Create Portfolio</a>
-</div>
+    <div class="card">
+      <h3>School Portal</h3>
+      <p>School websites with admission systems, student dashboards and results portal.</p>
+      <a href="./contact-us.html" class="btn">Build Portal</a>
+    </div>
 
-<div class="card">
-<h3>School Website</h3>
-<p>School portals with admission system, student dashboard, staff panel, result management and CBT.</p>
-<a href="./contact-us.html" class="btn">Build School Portal</a>
-</div>
+    <div class="card">
+      <h3>NGO / Charity Website</h3>
+      <p>Donation platforms, campaigns and volunteer management portals.</p>
+      <a href="./contact-us.html" class="btn">Launch NGO Site</a>
+    </div>
 
-<div class="card">
-<h3>University Portal</h3>
-<p>Advanced academic portals with student records, fees payment, course registration and results.</p>
-<a href="./contact-us.html" class="btn">Request Demo</a>
-</div>
+    <div class="card">
+      <h3>Fintech Website</h3>
+      <p>Secure fintech platforms with payment APIs and user dashboards.</p>
+      <a href="./contact-us.html" class="btn">Build Fintech</a>
+    </div>
 
-<div class="card">
-<h3>Real Estate Website</h3>
-<p>Property listing websites with search filters, maps integration and agent dashboards.</p>
-<a href="./contact-us.html" class="btn">List Properties</a>
-</div>
+    <div class="card">
+      <h3>Real Estate Website</h3>
+      <p>Property listings with advanced filters and agent dashboards.</p>
+      <a href="./contact-us.html" class="btn">Create Site</a>
+    </div>
 
-<div class="card">
-<h3>Fintech Website</h3>
-<p>Secure fintech platforms with wallet systems, APIs, payment integrations and dashboards.</p>
-<a href="./contact-us.html" class="btn">Build Fintech App</a>
-</div>
+    <div class="card">
+      <h3>Custom Web Application</h3>
+      <p>Fully custom platforms designed specifically for your business workflow.</p>
+      <a href="./contact-us.html" class="btn">Custom Build</a>
+    </div>
 
-<div class="card">
-<h3>NGO / Charity Website</h3>
-<p>Donation platforms, campaign management, volunteer portals and reporting dashboards.</p>
-<a href="./contact-us.html" class="btn">Start NGO Website</a>
-</div>
-
-<div class="card">
-<h3>Church / Mosque Website</h3>
-<p>Religious organization websites with sermon uploads, donation systems and livestream embeds.</p>
-<a href="./contact-us.html" class="btn">Create Website</a>
-</div>
-
-<div class="card">
-<h3>Event Website</h3>
-<p>Event promotion websites with registration, ticketing and email automation systems.</p>
-<a href="./contact-us.html" class="btn">Launch Event</a>
-</div>
-
-<div class="card">
-<h3>Hotel Booking Website</h3>
-<p>Hotel reservation platforms with room management, payments and automated booking system.</p>
-<a href="./contact-us.html" class="btn">Build Booking System</a>
-</div>
-
-<div class="card">
-<h3>Hospital Website</h3>
-<p>Medical portals with appointment booking, doctor profiles and patient dashboards.</p>
-<a href="./contact-us.html" class="btn">Build Health Platform</a>
-</div>
-
-<div class="card">
-<h3>Custom Web Application</h3>
-<p>Tailor-made web platforms designed specifically for your business workflow and needs.</p>
-<a href="./contact-us.html" class="btn">Custom Build</a>
-</div>
-
-</div>
-
+  </div>
 </section>
 
 <footer>
-    <p>
-        &copy; 2026 Meisophant Website Developers. <br>
-        Where Creativity Meets Code.
-    </p>
+  <p>&copy; 2026 Meisophant Digital Services — Where Creativity Meets Code</p>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("navOverlay");
+
+  function openMenu(){
+    navMenu.classList.add("show");
+    overlay.classList.add("show");
+    menuBtn.textContent = "✕";
+  }
+
+  function closeMenu(){
+    navMenu.classList.remove("show");
+    overlay.classList.remove("show");
+    menuBtn.textContent = "☰";
+  }
+
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.contains("show") ? closeMenu() : openMenu();
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+  document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+});
+</script>
 
 </body>
 </html>
