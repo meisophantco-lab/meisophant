@@ -1,180 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Our Catalogue || Meisophant Group Of Companies</title>
+<title>Website Catalogue | Meisophant Website Developers</title>
 
-    <meta name="description" content="Official Meisophant Blog & Digital Services Platform. Web development, branding, digital marketing, and business solutions.">
-    <meta name="keywords" content="Meisophant, Meisophant Digital Services, Meisophant Blog, web development Nigeria, digital services Nigeria, Meisophant Group">
-    <meta name="author" content="Meisophant Digital Services">
+<meta name="description" content="Explore Meisophant Website Catalogue – Business websites, eCommerce stores, blogs, portfolio websites, school portals, fintech platforms, company websites, NGO websites, and more.">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
-
-    <link rel="stylesheet" href="./style.css">
+<link rel="icon" type="image/png" href="/favicon.png">
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+body{
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background:#f7f8fc;
+    color:#222;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #222;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.header{
+    background:#0b0b0b;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+.logo{
+    font-size:1.3rem;
+    font-weight:700;
 }
 
-.menu-btn {
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
+.nav a{
+    color:white;
+    margin-left:15px;
+    text-decoration:none;
+    font-size:.95rem;
 }
 
-.nav {
-  display: flex;
-  gap: 15px;
+.hero{
+    background:linear-gradient(135deg,#000,#1b1b1b);
+    color:white;
+    padding:70px 20px;
+    text-align:center;
 }
 
-.nav a {
-  color: white;
-  text-decoration: none;
+.hero h1{
+    font-size:2.4rem;
+    margin-bottom:10px;
 }
 
-.nav.show {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.hero p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.7;
+    opacity:.9;
 }
 
-.main-content {
-  padding: 20px;
+.catalogue{
+    max-width:1250px;
+    margin:auto;
+    padding:60px 20px;
 }
 
-.container {
-  margin-bottom: 20px;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
 }
 
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
+.card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
 
-  .nav {
-    display: none;
-    flex-direction: column;
-    background-color: #222;
-    padding: 10px;
-  }
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.card h3{
+    margin-top:0;
+    font-size:1.1rem;
+}
+
+.card p{
+    font-size:.93rem;
+    line-height:1.6;
+}
+
+.btn{
+    margin-top:12px;
+    display:inline-block;
+    padding:10px 18px;
+    background:#000;
+    color:white;
+    border-radius:6px;
+    font-size:.9rem;
+    text-decoration:none;
+}
+
+footer{
+    background:#0b0b0b;
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+footer p{
+    font-size:.9rem;
+    opacity:.9;
 }
 </style>
-
 </head>
 
 <body>
 
 <header class="header">
-  <div class="logo">Meisophant</div>
-
-  <div class="menu-btn" id="menuBtn">☰</div>
-
-  <nav class="nav" id="navMenu">
-    <a href="./index.html">Home</a>
-    <a href="./our-services.html">Our Services</a>
-    <a href="./our-catalogue.html">Catalogue</a>
-    <a href="./about-us.html">About Us</a>
-    <a href="./contact-us.html">Contact</a>
-    <a href="./promo.html">Promo</a>
-  </nav>
+    <div class="logo">Meisophant</div>
+    <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./our-services.html">Services</a>
+        <a href="./our-catalogue.html">Catalogue</a>
+        <a href="./contact-us.html">Contact</a>
+    </nav>
 </header>
 
-<br><br>
+<section class="hero">
+    <h1>Website Development Catalogue</h1>
+    <p>Explore all the different types of websites Meisophant can professionally design and develop for businesses, startups, organizations and individuals.</p>
+</section>
 
-<div class="main-content">
-    <div class="container">
-        <p>
-            This page is currently under development. Our team is working tirelessly to deliver a high-quality experience.
-        </p>
-    </div>
+<section class="catalogue">
+
+<div class="grid">
+
+<div class="card">
+<h3>Business Website</h3>
+<p>Professional websites for small, medium and large businesses to establish online presence and generate leads.</p>
+<a href="./contact-us.html" class="btn">Order Now</a>
 </div>
 
-<br><br>
+<div class="card">
+<h3>Corporate Website</h3>
+<p>High-end corporate websites with modern UI, company profile, investor pages and secure backend.</p>
+<a href="./contact-us.html" class="btn">Request Quote</a>
+</div>
+
+<div class="card">
+<h3>E-Commerce Store</h3>
+<p>Fully functional online stores with payment gateway, inventory system, order tracking and admin dashboard.</p>
+<a href="./contact-us.html" class="btn">Build My Store</a>
+</div>
+
+<div class="card">
+<h3>Blog Website</h3>
+<p>SEO optimized blog platforms for content creators, writers, publishers and influencers.</p>
+<a href="./contact-us.html" class="btn">Start Blogging</a>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Creative portfolio websites for designers, developers, photographers, artists and professionals.</p>
+<a href="./contact-us.html" class="btn">Create Portfolio</a>
+</div>
+
+<div class="card">
+<h3>School Website</h3>
+<p>School portals with admission system, student dashboard, staff panel, result management and CBT.</p>
+<a href="./contact-us.html" class="btn">Build School Portal</a>
+</div>
+
+<div class="card">
+<h3>University Portal</h3>
+<p>Advanced academic portals with student records, fees payment, course registration and results.</p>
+<a href="./contact-us.html" class="btn">Request Demo</a>
+</div>
+
+<div class="card">
+<h3>Real Estate Website</h3>
+<p>Property listing websites with search filters, maps integration and agent dashboards.</p>
+<a href="./contact-us.html" class="btn">List Properties</a>
+</div>
+
+<div class="card">
+<h3>Fintech Website</h3>
+<p>Secure fintech platforms with wallet systems, APIs, payment integrations and dashboards.</p>
+<a href="./contact-us.html" class="btn">Build Fintech App</a>
+</div>
+
+<div class="card">
+<h3>NGO / Charity Website</h3>
+<p>Donation platforms, campaign management, volunteer portals and reporting dashboards.</p>
+<a href="./contact-us.html" class="btn">Start NGO Website</a>
+</div>
+
+<div class="card">
+<h3>Church / Mosque Website</h3>
+<p>Religious organization websites with sermon uploads, donation systems and livestream embeds.</p>
+<a href="./contact-us.html" class="btn">Create Website</a>
+</div>
+
+<div class="card">
+<h3>Event Website</h3>
+<p>Event promotion websites with registration, ticketing and email automation systems.</p>
+<a href="./contact-us.html" class="btn">Launch Event</a>
+</div>
+
+<div class="card">
+<h3>Hotel Booking Website</h3>
+<p>Hotel reservation platforms with room management, payments and automated booking system.</p>
+<a href="./contact-us.html" class="btn">Build Booking System</a>
+</div>
+
+<div class="card">
+<h3>Hospital Website</h3>
+<p>Medical portals with appointment booking, doctor profiles and patient dashboards.</p>
+<a href="./contact-us.html" class="btn">Build Health Platform</a>
+</div>
+
+<div class="card">
+<h3>Custom Web Application</h3>
+<p>Tailor-made web platforms designed specifically for your business workflow and needs.</p>
+<a href="./contact-us.html" class="btn">Custom Build</a>
+</div>
+
+</div>
+
+</section>
 
 <footer>
-    <h2>Contact Us</h2>
-
-    <div class="subscribe_form">
-        <div class="sub-container">   
-            <h2>Subscribe to our newsletter</h2>
-
-            <!-- SPAM-SAFE FORM -->
-            <form action="https://api.web3forms.com/submit" method="POST">
-
-                <!-- Replace this key with your own free Web3Forms key -->
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
-
-                <h3>E-Mail:</h3>
-                <input type="email" name="email" placeholder="Your Email" required>
-
-                <button class="subscribe-button">Subscribe</button>
-            </form>
-        </div> 
-
-        <div class="contact-us">
-            <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services" target="_blank">
-                <button class="whatsapp-us">Whatsapp Us</button>
-            </a>
-
-            <a href="./our_socials.html">
-                <button class="get_started-button">Our Socials</button>
-            </a>
-        </div>
-
-        <div class="container-2">
-            <p>Thank You for Choosing Our Services.</p>
-        </div>
-    </div>
-
     <p>
-         &copy; 2025 Meisophant Digital Services. <br>
-         All Rights Reserved.
+        &copy; 2026 Meisophant Website Developers. <br>
+        Where Creativity Meets Code.
     </p>
 </footer>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menuBtn");
-  const navMenu = document.getElementById("navMenu");
-
-  function toggleMenu() {
-    navMenu.classList.toggle("show");
-    menuBtn.textContent = navMenu.classList.contains("show") ? "✕" : "☰";
-  }
-
-  menuBtn.addEventListener("click", toggleMenu);
-
-  document.querySelectorAll(".nav a").forEach(link => {
-    link.addEventListener("click", () => navMenu.classList.remove("show"));
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) navMenu.classList.remove("show");
-  });
-});
-</script>
 
 </body>
 </html>
