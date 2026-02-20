@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing & Order || Meisophant Digital Services</title>
+
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://checkout.flutterwave.com/v3.js"></script>
+
+<style>
+body{margin:0;font-family:Inter,Arial,sans-serif;background:#f9f9f9;color:#333}
+.header{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:#222;color:white;position:sticky;top:0;z-index:1000}
+.logo{font-weight:bold;font-size:1.3rem}
+.menu-btn{font-size:1.6rem;cursor:pointer;display:none}
+.nav{display:flex;gap:15px}
+.nav a{color:white;text-decoration:none}
+.nav.show{display:flex;flex-direction:column}
+
+.main-content{max-width:1100px;margin:40px auto;padding:0 20px}
+h1,h2{text-align:center}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:30px}
+
+.card{background:#fff;padding:25px 20px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.08)}
+.card h3{color:mediumpurple;margin-top:0}
+
+.order-form{background:white;padding:25px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.08);margin-top:40px}
+
+.order-form input,select{width:100%;padding:12px;margin-top:12px;margin-bottom:18px;border:1px solid #ccc;border-radius:6px}
+.order-form button{width:100%;background:mediumpurple;color:white;border:none;padding:13px;font-size:1rem;border-radius:6px;cursor:pointer}
+.order-form button:hover{background:#5c4bcf}
+
+.footer_div{background:#222;color:white;padding:20px;text-align:center;margin-top:60px}
+
+@media(max-width:768px){
+.menu-btn{display:block}
+.nav{display:none;flex-direction:column;background:#222;padding:10px}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+<div class="logo">Meisophant</div>
+<div class="menu-btn" id="menuBtn">☰</div>
+<nav class="nav" id="navMenu">
+<a href="./index.html">Home</a>
+<a href="./our-services.html">Services</a>
+<a href="./our-catalogue.html">Catalogue</a>
+<a href="./contact-us.html">Contact</a>
+</nav>
+</header>
+
+<main class="main-content">
+
+<h1>Website Pricing & Order</h1>
+<p style="text-align:center">Professional website development with secure Flutterwave payment.</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Landing Page</h3>
+<p>Promo & campaign websites</p>
+<b>₦80,000</b>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Personal branding websites</p>
+<b>₦100,000</b>
+</div>
+
+<div class="card">
+<h3>Business Website</h3>
+<p>Corporate business websites</p>
+<b>₦150,000</b>
+</div>
+
+<div class="card">
+<h3>NGO / Organization</h3>
+<p>Charity & organization websites</p>
+<b>₦180,000</b>
+</div>
+
+<div class="card">
+<h3>Government / Institutional</h3>
+<p>Large scale institutional platforms</p>
+<b>₦250,000+</b>
+</div>
+
+</div>
+
+<div class="order-form">
+<h2>Place Your Order</h2>
+
+<form id="paymentForm">
+
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="email" id="email" placeholder="Email Address" required>
+
+<select id="service" required onchange="updatePrice()">
+<option value="">Select Website Type</option>
+<option value="Landing Page" data-price="80000">Landing Page – ₦80,000</option>
+<option value="Portfolio Website" data-price="100000">Portfolio Website – ₦100,000</option>
+<option value="Business Website" data-price="150000">Business Website – ₦150,000</option>
+<option value="NGO Website" data-price="180000">NGO Website – ₦180,000</option>
+<option value="Government Website" data-price="250000">Government Website – ₦250,000+</option>
+</select>
+
+<input type="number" id="amount" placeholder="Amount (₦)" min="80000" readonly required>
+
+<button type="submit">Pay Securely With Flutterwave</button>
+
+</form>
+</div>
+
+</main>
+
+<div class="footer_div">
+<p>© Meisophant Digital Services 2026</p>
+</div>
+
+<script>
+document.getElementById("menuBtn").onclick = function(){
+document.getElementById("navMenu").classList.toggle("show");
+}
+
+function updatePrice(){
+let service = document.getElementById("service");
+let price = service.options[service.selectedIndex].dataset.price;
+document.getElementById("amount").value = price;
+}
+
+document.getElementById("paymentForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let service = document.getElementById("service").value;
+let amount = document.getElementById("amount").value;
+
+FlutterwaveCheckout({
+public_key: "FLWPUBK_TEST-xxxxxxxxxxxxxxxxxxxxx-X",
+tx_ref: "MEISOPHANT_" + Date.now(),
+amount: amount,
+currency: "NGN",
+payment_options: "card, banktransfer, ussd",
+customer: {
+email: email,
+name: name,
+},
+customizations: {
+title: "Meisophant Digital Services",
+description: service,
+logo: "https://meisophant.name.ng/favicon.png",
+},
+callback: function (data) {
+alert("Payment Successful! Ref: " + data.transaction_id);
+},
+onclose: function() {
+alert("Payment cancelled");
+}
+});
+});
+</script>
+
+</body>
+</html>
