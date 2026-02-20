@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Successful || Meisophant Digital Services</title>
+
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+margin:0;
+font-family:Inter,Arial,sans-serif;
+background:#f4f6ff;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.success-box{
+background:#fff;
+max-width:500px;
+width:95%;
+padding:40px 25px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.checkmark{
+width:90px;
+height:90px;
+border-radius:50%;
+background:mediumpurple;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:45px;
+color:white;
+margin:0 auto 15px;
+}
+
+h1{
+color:#333;
+margin:10px 0;
+}
+
+p{
+color:#555;
+line-height:1.6;
+}
+
+.ref{
+background:#f0f0ff;
+padding:12px;
+border-radius:8px;
+margin:15px 0;
+font-weight:bold;
+color:#333;
+word-break:break-all;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+background:mediumpurple;
+color:white;
+padding:12px 25px;
+border-radius:7px;
+text-decoration:none;
+font-weight:500;
+transition:.3s;
+}
+
+.btn:hover{
+background:#5c4bcf;
+}
+
+.whatsapp{
+background:#25D366;
+margin-left:10px;
+}
+
+.whatsapp:hover{
+background:#1ebd5a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="success-box">
+  <div class="checkmark">✓</div>
+  <h1>Payment Successful</h1>
+  <p>Thank you for choosing <b>Meisophant Digital Services</b>. Your payment was processed successfully.</p>
+
+  <div class="ref" id="reference">Loading transaction reference...</div>
+
+  <p>Our team will contact you shortly to begin your project.</p>
+
+  <a href="index.html" class="btn">Return Home</a>
+  <a href="https://wa.me/2349029673978" class="btn whatsapp">Chat on WhatsApp</a>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const ref = params.get("ref");
+
+if(ref){
+  document.getElementById("reference").textContent = "Transaction Reference: " + ref;
+}else{
+  document.getElementById("reference").textContent = "Transaction completed successfully.";
+}
+</script>
+
+</body>
+</html>
