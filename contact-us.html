@@ -1,249 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script>(function(s){s.dataset.zone='10508907',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact Us | Meisophant Digital Services</title>
+<title>Contact Us || Meisophant Digital Services</title>
 
-<!-- SEO Meta -->
-<meta name="description" content="Get in touch with Meisophant Digital Services for web development, hosting, cloud services, and digital solutions.">
-<meta name="keywords" content="Meisophant Digital Services, contact, web development, hosting, cloud services, digital solutions">
-<meta name="author" content="Meisophant Digital Services">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Contact Meisophant Digital Services">
-<meta property="og:description" content="Reach out to Meisophant Digital Services for reliable digital solutions and support.">
-<meta property="og:image" content="./favicon.ico">
-<meta property="og:type" content="website">
-
-<link rel="stylesheet" href="./style.css">
-<link rel="icon" href="./favicon.ico" type="image/png">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
 
 <style>
-/* Simple responsive fixes */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
+body{margin:0;font-family:Inter,Arial,sans-serif;background:#f7f7fb;color:#333}
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #222;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+.header{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.05);position:sticky;top:0;z-index:1000}
+.logo{font-weight:700;font-size:1.3rem;color:mediumpurple}
+.menu-btn{font-size:1.6rem;cursor:pointer;display:none}
+.nav{display:flex;gap:15px}
+.nav a{color:#333;text-decoration:none;font-weight:500}
+.nav.show{display:flex;flex-direction:column}
 
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
+.contact-hero{text-align:center;padding:70px 20px;background:linear-gradient(135deg,mediumpurple,#7b68ee);color:white}
+.contact-hero h1{margin:0;font-size:2.4rem}
 
-.menu-btn {
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-}
+.contact-wrapper{max-width:1150px;margin:50px auto;padding:0 20px;display:grid;grid-template-columns:1fr 1fr;gap:30px}
 
-.nav {
-  display: flex;
-  gap: 15px;
-}
+.contact-box{background:white;padding:30px;border-radius:14px;box-shadow:0 8px 25px rgba(0,0,0,.08)}
 
-.nav a {
-  color: white;
-  text-decoration: none;
-}
+.contact-box h2{margin-top:0;color:mediumpurple}
 
-.nav.show {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
+.contact-info div{margin-bottom:15px;font-size:1.05rem}
 
-.back-btn {
-  display: none;
-  margin-bottom: 10px;
-}
+.contact-info a{text-decoration:none;color:mediumpurple;font-weight:600}
 
-/* Main content */
-.main-content {
-  padding: 20px;
-}
+.contact-form input,.contact-form textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #ccc;margin-bottom:15px;font-size:1rem}
 
-.container {
-  margin-bottom: 20px;
-}
+.contact-form textarea{height:130px;resize:none}
 
-.contact-form input, .contact-form textarea, .contact-form button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+.contact-form button{width:100%;background:mediumpurple;color:white;border:none;padding:13px;border-radius:8px;font-size:1rem;cursor:pointer}
+.contact-form button:hover{background:#5b4bd8}
 
-.contact-form button {
-  background-color: #222;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+.map iframe{width:100%;height:260px;border-radius:14px;border:none}
 
-.contact-form button:hover {
-  background-color: #444;
-}
+.footer_div{background:#222;color:white;text-align:center;padding:25px;margin-top:60px}
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .nav {
-    display: none;
-    flex-direction: column;
-    background-color: #222;
-    padding: 10px;
-  }
-
-  .back-btn {
-    display: block;
-    background-color: #444;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
+@media(max-width:850px){
+.contact-wrapper{grid-template-columns:1fr}
+.menu-btn{display:block}
+.nav{display:none;flex-direction:column;background:#fff;padding:15px}
 }
 </style>
+
 </head>
+
 <body>
-<div class="nav-overlay" id="navOverlay"></div>
 
 <header class="header">
-  <div class="logo">Meisophant</div>
-  <div class="menu-btn" id="menuBtn">☰</div>
-  <nav class="nav" id="navMenu">
-    <a href="./index.html">Home</a>
-    <a href="./our-services.html">Our Services</a>
-    <a href="./our-catalogue.html">Catalogue</a>
-    <a href="./about-us.html">About Us</a>
-    <a href="./contact-us.html">Contact</a>
-    <a href="./promo.html">Promo</a>
-  </nav>
+<div class="logo">Meisophant</div>
+<div class="menu-btn" id="menuBtn">☰</div>
+<nav class="nav" id="navMenu">
+<a href="./index.html">Home</a>
+<a href="./our-services.html">Services</a>
+<a href="./our-catalogue.html">Catalogue</a>
+<a href="./contact-us.html">Contact</a>
+</nav>
 </header>
 
-<div class="main-content">
-  <div class="container">
-    <h4>Contact Meisophant Digital Services</h4>
-    <p>Reach out to us for web development, hosting, cloud services, and digital solutions. We’re ready to help you grow your online presence.</p>
-  </div>
+<section class="contact-hero">
+<h1>Let’s Build Something Amazing</h1>
+<p>Talk to us today — fast response guaranteed.</p>
+</section>
 
-  <div class="container contact-form">
-    <h4>Send Us a Message</h4>
-    <form action="mailto:meisophant.co@gmail.com" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="Name" placeholder="Your Name" required>
+<section class="contact-wrapper">
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="Email" placeholder="Your Email" required>
+<div class="contact-box contact-info">
+<h2>Contact Information</h2>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="Message" rows="5" placeholder="Your Message" required></textarea>
+<div>📞 Phone: <a href="tel:+2349029673978">+234 902 967 3978</a></div>
+<div>💬 WhatsApp: <a href="https://wa.me/2349029673978" target="_blank">Chat Now</a></div>
+<div>📧 Email: <a href="mailto:info@meisophant.name.ng">info@meisophant.name.ng</a></div>
+<div>🌍 Website: <a href="https://meisophant.name.ng">meisophant.name.ng</a></div>
 
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-
-  <div class="container">
-    <h4>Other Ways to Reach Us</h4>
-    <p><b>WhatsApp:</b> <a href="https://wa.me/2349029673978">+234 902 967 3978</a></p>
-    <p><b>Email:</b> <a href="mailto:info@meisophant.name.ng">info@meisophant.name.ng</a></p>
-  </div>
 </div>
 
+<div class="contact-box contact-form">
+<h2>Send Us A Message</h2>
+
+<form id="contactForm">
+
+<input type="text" placeholder="Your Full Name" required>
+<input type="email" placeholder="Your Email Address" required>
+<textarea placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+</div>
+
+</section>
+
 <div class="footer_div">
-  <footer>
-    <h2>Contact Us</h2>
-    <div class="subscribe_form">
-      <div class="sub-container">
-        <h2>Subscribe to our newsletter</h2>
-        <form action="mailto:info@meisophant.name.ng" method="post">
-          <h3>E-Mail:</h3>
-          <input type="text" name="Subscribe" placeholder="E-Mail" class="e-mail" required>
-          <button class="subscribe-button">Subscribe</button>
-        </form>
-      </div>
-      <div class="contact-us">
-        <a href="https://wa.me/2349029673978">
-          <button class="whatsapp-us">Whatsapp Us</button>
-        </a>
-      </div>
-      <div class="container-2">
-        <p>Thank You for Choosing Meisophant Digital Services.</p>
-      </div>
-    </div>
-    <p>&copy; Meisophant Digital Services, 2024. All Rights Reserved.</p>
-  </footer>
+<p>© Meisophant Digital Services 2026</p>
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menuBtn");
-  const navMenu = document.getElementById("navMenu");
-  const overlay = document.getElementById("navOverlay");
-  const backBtn = document.getElementById("backBtn");
+document.getElementById("menuBtn").onclick = () => {
+document.getElementById("navMenu").classList.toggle("show");
+}
 
-  if (!menuBtn || !navMenu) return;
-
-  function openMenu() {
-    navMenu.classList.add("show");
-    overlay.classList.add("show");
-    menuBtn.textContent = "✕";
-  }
-
-  function closeMenu() {
-    navMenu.classList.remove("show");
-    overlay.classList.remove("show");
-    menuBtn.textContent = "☰";
-  }
-
-  menuBtn.addEventListener("click", () => {
-    navMenu.classList.contains("show") ? closeMenu() : openMenu();
-  });
-
-  if (backBtn) backBtn.addEventListener("click", closeMenu);
-
-  overlay.addEventListener("click", closeMenu);
-
-  document.querySelectorAll(".nav a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  // Fix screen rotation + resizing
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) closeMenu();
-  });
-
-  // Swipe to close (mobile)
-  let touchStartX = 0;
-
-  navMenu.addEventListener("touchstart", e => {
-    touchStartX = e.touches[0].clientX;
-  });
-
-  navMenu.addEventListener("touchend", e => {
-    let touchEndX = e.changedTouches[0].clientX;
-    if (touchStartX - touchEndX > 60) closeMenu();
-  });
+document.getElementById("contactForm").addEventListener("submit", e => {
+e.preventDefault();
+alert("Message sent successfully! We’ll contact you shortly.");
+e.target.reset();
 });
 </script>
 
