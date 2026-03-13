@@ -18,17 +18,16 @@
   }
 }
 </script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>About Us | Meisophant Digital Services</title>
 
-<!-- SEO Meta -->
 <meta name="description" content="Meisophant Digital Services provides web development, hosting, cloud services, DNS configuration, and digital solutions for individuals, startups, and businesses seeking reliable online growth.">
 <meta name="keywords" content="Meisophant Digital Services, web development, web design, hosting, DNS setup, cloud services, CDN, IT consulting, digital solutions">
 <meta name="author" content="Meisophant Digital Services">
 
-<!-- Open Graph -->
 <meta property="og:title" content="About Meisophant Digital Services">
 <meta property="og:description" content="Learn about Meisophant Digital Services — a digital solutions provider focused on web development, hosting, cloud infrastructure, and scalable online systems.">
 <meta property="og:image" content="./favicon.png">
@@ -95,7 +94,23 @@ body {
   margin-bottom: 20px;
 }
 
+.nav-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 999;
+}
+
+.nav-overlay.show{
+  display:block;
+}
+
 @media (max-width: 768px) {
+
   .menu-btn {
     display: block;
   }
@@ -118,12 +133,15 @@ body {
 }
 </style>
 </head>
+
 <body>
+
 <div class="nav-overlay" id="navOverlay"></div>
 
 <header class="header">
   <div class="logo">Meisophant</div>
   <div class="menu-btn" id="menuBtn">☰</div>
+
   <nav class="nav" id="navMenu">
     <a href="./index.html">Home</a>
     <a href="./our-services.html">Our Services</a>
@@ -134,108 +152,159 @@ body {
   </nav>
 </header>
 
-<img src="./favicon.ico" alt="Meisophant Digital Services Logo" class="image" style="max-width:100%; height:auto; display:block; margin:20px auto;">
+<img src="./favicon.png" alt="Meisophant Digital Services official company logo" style="max-width:100%; height:auto; display:block; margin:20px auto;" loading="lazy">
 
-<div class="main-content">
-  <div class="container">
-    <h4>Our Specialization</h4>
-    <p>Meisophant Digital Services is a digital solutions provider focused on web development, application development, and online infrastructure. We support individuals, startups, and businesses by building scalable digital systems that promote stability, accessibility, and long-term online growth.</p>
-  </div>
+<main class="main-content">
 
-  <div class="container">
-    <h4>What We Do</h4>
-    <p>We help clients create, manage, and improve their digital presence through structured and practical solutions. Our work includes responsive website development, hosting support, DNS configuration, and system optimization designed to improve performance and reliability.</p>
-    <p>Alongside business services, Meisophant Digital Services also supports individuals who want to learn web and application development using real-world, practical approaches.</p>
-  </div>
-
-  <div class="container">
-    <h4>Our Approach & Services</h4>
-    <p>Our services include web design and web development, domain registration, DNS setup, hosting support, cloud services, content delivery networks (CDN), and security configuration. We also assist with branding, digital identity optimization, IT consulting, and digital transformation initiatives, while gradually developing automation tools and software-based solutions.</p>
-    <p>Meisophant is built on a philosophy of clarity and precision. We focus on simplifying complex technology, reducing unnecessary digital friction, and delivering systems that operate reliably in the background. This allows clients to focus on their goals while their digital infrastructure remains efficient and manageable.</p>
-  </div>
-
-  <div class="container">
-    <h4>Our Developers / CEO</h4>
-    <p>Meisophant Digital Services is led by our CEO, <b><a href="https://ceo-adewale-emmanuel-oluwajomiloju.simdif.com/">Adewale Emmanuel Oluwajomiloju</a></b>, alongside a dedicated development team including <b>Temenu Mayowa</b> and <b>Soyingbe Abdul-Khaliq</b>. The team works collaboratively to deliver dependable and well-structured digital solutions.</p>
-  </div>
+<div class="container">
+<h4>Our Specialization</h4>
+<p>Meisophant Digital Services is a digital solutions provider focused on web development, application development, and online infrastructure. We support individuals, startups, and businesses by building scalable digital systems that promote stability, accessibility, and long-term online growth.</p>
 </div>
 
+<div class="container">
+<h4>What We Do</h4>
+<p>We help clients create, manage, and improve their digital presence through structured and practical solutions. Our work includes responsive website development, hosting support, DNS configuration, and system optimization designed to improve performance and reliability.</p>
+
+<p>Alongside business services, Meisophant Digital Services also supports individuals who want to learn web and application development using real-world, practical approaches.</p>
+</div>
+
+<div class="container">
+<h4>Our Approach & Services</h4>
+
+<p>Our services include web design and web development, domain registration, DNS setup, hosting support, cloud services, content delivery networks (CDN), and security configuration. We also assist with branding, digital identity optimization, IT consulting, and digital transformation initiatives, while gradually developing automation tools and software-based solutions.</p>
+
+<p>Meisophant is built on a philosophy of clarity and precision. We focus on simplifying complex technology, reducing unnecessary digital friction, and delivering systems that operate reliably in the background. This allows clients to focus on their goals while their digital infrastructure remains efficient and manageable.</p>
+</div>
+
+<div class="container">
+<h4>Leadership</h4>
+
+<p>Meisophant Digital Services is led by its CEO, <b><a href="https://ceo-adewale-emmanuel-oluwajomiloju.simdif.com/" target="_blank" rel="noopener">Adewale Emmanuel Oluwajomiloju</a></b>. Under his leadership, the company focuses on delivering reliable digital solutions including web development, hosting support, cloud services, and digital infrastructure for individuals, startups, and businesses.</p>
+
+</div>
+
+</main>
+
 <div class="footer_div">
-  <footer>
-    <h2>Contact Us</h2>
-    <div class="subscribe_form">
-      <div class="sub-container">
-        <h2>Subscribe to our newsletter</h2>
-        <form action="mailto:info@meisophant.name.ng" method="post">
-          <h3>E-Mail:</h3>
-          <input type="text" name="Subscribe" placeholder="E-Mail" class="e-mail" required>
-          <button class="subscribe-button" id="subscribe-button">Subscribe</button>
-        </form>
-      </div>
-      <div class="contact-us">
-        <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services">
-          <button class="whatsapp-us">Whatsapp Us</button>
-        </a>
-      </div>
-      <div class="container-2">
-        <p>Thank You for Choosing Meisophant Digital Services.</p>
-      </div>
-    </div>
-    <p>&copy; Meisophant Digital Services, 2024. All Rights Reserved.</p>
-  </footer>
+
+<footer>
+
+<h2>Contact Us</h2>
+
+<div class="subscribe_form">
+
+<div class="sub-container">
+
+<h2>Subscribe to our newsletter</h2>
+
+<form action="mailto:info@meisophant.name.ng" method="post">
+
+<h3>E-Mail:</h3>
+
+<input type="text" name="Subscribe" placeholder="E-Mail" class="e-mail" required>
+
+<button class="subscribe-button" id="subscribe-button">Subscribe</button>
+
+</form>
+
+</div>
+
+<div class="contact-us">
+
+<a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services">
+
+<button class="whatsapp-us">Whatsapp Us</button>
+
+</a>
+
+</div>
+
+<div class="container-2">
+
+<p>Thank You for Choosing Meisophant Digital Services.</p>
+
+</div>
+
+</div>
+
+<p>&copy; Meisophant Digital Services, 2024. All Rights Reserved.</p>
+
+</footer>
+
 </div>
 
 <script>
+
 document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menuBtn");
-  const navMenu = document.getElementById("navMenu");
-  const overlay = document.getElementById("navOverlay");
-  const backBtn = document.getElementById("backBtn");
 
-  if (!menuBtn || !navMenu) return;
+const menuBtn = document.getElementById("menuBtn");
 
-  function openMenu() {
-    navMenu.classList.add("show");
-    overlay.classList.add("show");
-    menuBtn.textContent = "✕";
-  }
+const navMenu = document.getElementById("navMenu");
 
-  function closeMenu() {
-    navMenu.classList.remove("show");
-    overlay.classList.remove("show");
-    menuBtn.textContent = "☰";
-  }
+const overlay = document.getElementById("navOverlay");
 
-  menuBtn.addEventListener("click", () => {
-    navMenu.classList.contains("show") ? closeMenu() : openMenu();
-  });
+if (!menuBtn || !navMenu) return;
 
-  if (backBtn) backBtn.addEventListener("click", closeMenu);
+function openMenu() {
 
-  overlay.addEventListener("click", closeMenu);
+navMenu.classList.add("show");
 
-  document.querySelectorAll(".nav a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
+overlay.classList.add("show");
 
-  // Fix screen rotation + resizing
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) closeMenu();
-  });
+menuBtn.textContent = "✕";
 
-  // Swipe to close (mobile)
-  let touchStartX = 0;
+}
 
-  navMenu.addEventListener("touchstart", e => {
-    touchStartX = e.touches[0].clientX;
-  });
+function closeMenu() {
 
-  navMenu.addEventListener("touchend", e => {
-    let touchEndX = e.changedTouches[0].clientX;
-    if (touchStartX - touchEndX > 60) closeMenu();
-  });
+navMenu.classList.remove("show");
+
+overlay.classList.remove("show");
+
+menuBtn.textContent = "☰";
+
+}
+
+menuBtn.addEventListener("click", () => {
+
+navMenu.classList.contains("show") ? closeMenu() : openMenu();
+
 });
+
+overlay.addEventListener("click", closeMenu);
+
+document.querySelectorAll(".nav a").forEach(link => {
+
+link.addEventListener("click", closeMenu);
+
+});
+
+window.addEventListener("resize", () => {
+
+if (window.innerWidth > 768) closeMenu();
+
+});
+
+let touchStartX = 0;
+
+navMenu.addEventListener("touchstart", e => {
+
+touchStartX = e.touches[0].clientX;
+
+});
+
+navMenu.addEventListener("touchend", e => {
+
+let touchEndX = e.changedTouches[0].clientX;
+
+if (touchStartX - touchEndX > 60) closeMenu();
+
+});
+
+});
+
 </script>
 
 </body>
+
 </html>
