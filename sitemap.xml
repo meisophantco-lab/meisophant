@@ -3,42 +3,42 @@
 
   <!-- Home Page -->
   <url>
-    <loc>https://www.meisophant.name.ng/</loc>
+    <loc>https://meisophant.name.ng/</loc>
     <priority>1.0</priority>
     <changefreq>daily</changefreq>
   </url>
 
   <!-- Services Page -->
   <url>
-    <loc>https://www.meisophant.name.ng/our-services.html</loc>
+    <loc>https://meisophant.name.ng/our-services/index.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <!-- Catalogue Page -->
   <url>
-    <loc>https://www.meisophant.name.ng/our-catalogue.html</loc>
+    <loc>https://meisophant.name.ng/our-catalogue/index.html</loc>
     <priority>0.8</priority>
     <changefreq>weekly</changefreq>
   </url>
 
   <!-- Contact Us Page -->
   <url>
-    <loc>https://www.meisophant.name.ng/contact-us.html</loc>
+    <loc>https://meisophant.name.ng/contact-us/index.html</loc>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- About Us Page -->
   <url>
-    <loc>https://www.meisophant.name.ng/about-us.html</loc>
+    <loc>https://meisophant.name.ng/about-us/index.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
 
   <!-- Promo Page -->
   <url>
-    <loc>https://www.meisophant.name.ng/promo.html</loc>
+    <loc>https://meisophant.name.ng/promo/index.html</loc>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
@@ -48,13 +48,6 @@
     <loc>https://www.meisophant.name.ng/our_socials.html</loc>
     <priority>0.5</priority>
     <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Commission Program Page -->
-  <url>
-    <loc>https://www.meisophant.name.ng/commission.html</loc>
-    <priority>0.7</priority>
-    <changefreq>weekly</changefreq>
   </url>
 
 </urlset>
