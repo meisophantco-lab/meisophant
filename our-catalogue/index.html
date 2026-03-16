@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Website Catalogue | Meisophant Digital Services</title>
+<meta name="description" content="Explore Meisophant's website development catalogue — business websites, eCommerce stores, blogs, portfolio sites, school portals, fintech platforms, NGO websites and more.">
+
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<header class="header">
+  <div class="logo">Meisophant</div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <nav class="nav" id="navMenu">
+    <a href="../index.html">Home</a>
+    <a href="../our-services/index.html">Services</a>
+    <a href="./index.html">Catalogue</a>
+    <a href="../about-us/index.html">About</a>
+    <a href="../contact-us/index.html">Contact</a>
+    <a href="../promo/index.html">Promo</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Website Development Catalogue</h1>
+  <p>Explore all the professional website solutions Meisophant builds for businesses, startups, organizations and individuals.</p>
+</section>
+
+<section class="catalogue">
+  <div class="grid">
+    <div class="card">
+      <h3>Business Website</h3>
+      <p>Professional business websites for startups, SMEs and enterprises.</p>
+      <a href="./contact-us.html" class="btn">Order Now</a>
+    </div>
+
+    <div class="card">
+      <h3>Corporate Website</h3>
+      <p>High-end corporate websites with company profile, investor pages and dashboards.</p>
+      <a href="./contact-us.html" class="btn">Request Quote</a>
+    </div>
+
+    <div class="card">
+      <h3>E-Commerce Store</h3>
+      <p>Online stores with payments, inventory system and order tracking.</p>
+      <a href="./contact-us.html" class="btn">Build Store</a>
+    </div>
+
+    <div class="card">
+      <h3>Blog Platform</h3>
+      <p>SEO optimized blogs for content creators, influencers and publishers.</p>
+      <a href="./contact-us.html" class="btn">Start Blog</a>
+    </div>
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Creative portfolios for designers, developers, artists and freelancers.</p>
+      <a href="./contact-us.html" class="btn">Create Portfolio</a>
+    </div>
+
+    <div class="card">
+      <h3>School Portal</h3>
+      <p>School websites with admission systems, student dashboards and results portal.</p>
+      <a href="./contact-us.html" class="btn">Build Portal</a>
+    </div>
+
+    <div class="card">
+      <h3>NGO / Charity Website</h3>
+      <p>Donation platforms, campaigns and volunteer management portals.</p>
+      <a href="./contact-us.html" class="btn">Launch NGO Site</a>
+    </div>
+
+    <div class="card">
+      <h3>Fintech Website</h3>
+      <p>Secure fintech platforms with payment APIs and user dashboards.</p>
+      <a href="./contact-us.html" class="btn">Build Fintech</a>
+    </div>
+
+    <div class="card">
+      <h3>Real Estate Website</h3>
+      <p>Property listings with advanced filters and agent dashboards.</p>
+      <a href="./contact-us.html" class="btn">Create Site</a>
+    </div>
+
+    <div class="card">
+      <h3>Custom Web Application</h3>
+      <p>Fully custom platforms designed specifically for your business workflow.</p>
+      <a href="./contact-us.html" class="btn">Custom Build</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer_div">
+  <p>&copy; 2026 Meisophant Digital Services — Where Creativity Meets Code</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("navOverlay");
+
+  function openMenu(){
+    navMenu.classList.add("show");
+    overlay.classList.add("show");
+    menuBtn.textContent = "✕";
+  }
+
+  function closeMenu(){
+    navMenu.classList.remove("show");
+    overlay.classList.remove("show");
+    menuBtn.textContent = "☰";
+  }
+
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.contains("show") ? closeMenu() : openMenu();
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+  document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+});
+</script>
+
+</body>
+</html>
