@@ -1,1 +1,117 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Meisophant Digital Services</title>
+  <meta name="description" content="Learn about Meisophant Digital Services — expert in web development, cloud solutions, and digital growth for startups and businesses.">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="nav-overlay" id="navOverlay"></div>
+
+<header class="header">
+  <div class="logo">Meisophant</div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <nav class="nav" id="navMenu">
+    <a href="../index.html">Home</a>
+    <a href="../our-services/INDEX.html">Services</a>
+    <a href="../our-catalogue/index.html">Catalogue</a>
+    <a href="./index.html">About Us</a>
+    <a href="../contact-us/index.html">Contact</a>
+    <a href="../promo/index.html">Promo</a>
+  </nav>
+</header>
+
+<main class="main-content">
+
+  <img src="favicon.png" alt="Meisophant Logo" class="about-image">
+
+  <div class="container">
+    <h4>Our Specialization</h4>
+    <p>We specialize in building scalable digital systems for startups, businesses, and individuals, focusing on performance, stability, and long-term online growth.</p>
+  </div>
+
+  <div class="container">
+    <h4>What We Do</h4>
+    <p>From responsive website development to cloud services and DNS configuration, we provide structured, practical solutions that elevate your digital presence.</p>
+    <p>We also mentor individuals aspiring to learn web and application development using hands-on, real-world projects.</p>
+  </div>
+
+  <div class="container">
+    <h4>Our Approach & Services</h4>
+    <p>We deliver web design, hosting support, cloud infrastructure, CDN setup, IT consulting, branding, and digital transformation. Our approach emphasizes clarity, precision, and automation to ensure efficient, reliable systems.</p>
+  </div>
+
+  <div class="container">
+    <h4>Leadership</h4>
+    <p>Led by <b><a href="https://ceo-adewale-emmanuel-oluwajomiloju.simdif.com/" target="_blank" rel="noopener">Adewale Emmanuel Oluwajomiloju</a></b>, Meisophant Digital Services delivers modern, reliable digital solutions that empower businesses and individuals online.</p>
+  </div>
+
+</main>
+
+<footer class="footer_div">
+  <h2>Contact Us</h2>
+  <div class="newsletter">
+    <form action="mailto:info@meisophant.name.ng" method="post">
+      <input type="email" placeholder="Your Email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+  <div style="margin-top:20px;">
+    <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services">
+      <button class="whatsapp-us">Whatsapp Us</button>
+    </a>
+  </div>
+  <p style="margin-top:20px;">Thank You for Choosing Meisophant Digital Services.</p>
+  <p>&copy; 2024 Meisophant Digital Services. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("navOverlay");
+
+  function openMenu() {
+    navMenu.classList.add("show");
+    overlay.classList.add("show");
+    menuBtn.textContent = "✕";
+  }
+
+  function closeMenu() {
+    navMenu.classList.remove("show");
+    overlay.classList.remove("show");
+    menuBtn.textContent = "☰";
+  }
+
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.contains("show") ? closeMenu() : openMenu();
+  });
+
+  overlay.addEventListener("click", closeMenu);
+
+  document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  window.addEventListener("resize", () => {
+    if(window.innerWidth > 768) closeMenu();
+  });
+
+  let touchStartX = 0;
+  navMenu.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; });
+  navMenu.addEventListener("touchend", e => {
+    let touchEndX = e.changedTouches[0].clientX;
+    if(touchStartX - touchEndX > 60) closeMenu();
+  });
+});
+</script>
+
+</body>
+</html>
