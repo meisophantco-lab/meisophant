@@ -1,27 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Contact Us || Meisophant Digital Services</title>
-
-<!-- SEO -->
-<meta name="description"
-content="Contact Meisophant Digital Services for website design, branding, and digital solutions. Fast response guaranteed.">
-
-<meta name="keywords"
-content="web design Nigeria, digital services, website development, branding">
-
-<meta name="author"
-content="Meisophant Digital Services">
-
+<meta name="description" content="Contact Meisophant Digital Services for web development, branding, and digital solutions. Fast response guaranteed.">
+<meta name="author" content="Meisophant Digital Services">
+<meta name="robots" content="index, follow">
 <link rel="icon" href="../favicon.png">
+
 <link rel="stylesheet" href="../style.css">
 
-</head>
+<style>
+  /* HERO SECTION */
+  .hero{
+    text-align:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg, mediumpurple, rebeccapurple);
+    color:white;
+  }
 
+  .hero h1{
+    font-size:2.4rem;
+    margin-bottom:20px;
+  }
+
+  .hero p{
+    font-size:1.05rem;
+    opacity:0.95;
+    max-width:600px;
+    margin:auto;
+  }
+
+  /* CONTACT PAGE STYLING */
+  .container.contact-box{
+    background:white;
+    padding:30px 25px;
+    margin:20px auto;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    max-width:900px;
+    transition: transform 0.25s;
+  }
+
+  .container.contact-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.12);
+  }
+
+  .container.contact-box h4{
+    color:mediumpurple;
+    margin-bottom:15px;
+    font-size:1.5rem;
+  }
+
+  .container.contact-box p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:12px;
+  }
+
+  .container.contact-box a{
+    color:rebeccapurple;
+    text-decoration:none;
+    transition:0.2s;
+  }
+
+  .container.contact-box a:hover{
+    color:mediumpurple;
+    text-decoration:underline;
+  }
+
+  /* CONTACT FORM */
+  .contact-form input,
+  .contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:1rem;
+  }
+
+  .contact-form textarea{
+    resize:vertical;
+    min-height:120px;
+  }
+
+  .contact-form button{
+    width:100%;
+    padding:14px 0;
+    background:mediumpurple;
+    border:none;
+    color:white;
+    font-size:1rem;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.2s;
+  }
+
+  .contact-form button:hover{
+    background:rebeccapurple;
+  }
+
+  /* WHATSAPP BUTTON */
+  .contact-whatsapp a button{
+    background:#25D366;
+    border:none;
+    color:white;
+    padding:12px 22px;
+    border-radius:6px;
+    font-size:1rem;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.2s;
+  }
+
+  .contact-whatsapp a button:hover{
+    opacity:0.9;
+  }
+
+  /* FOOTER */
+  footer{
+    background:#111;
+    color:#bbb;
+    text-align:center;
+    padding:45px 8%;
+    margin-top:40px;
+  }
+
+  footer a{
+    color:mediumpurple;
+    text-decoration:none;
+  }
+
+  footer a:hover{
+    text-decoration:underline;
+  }
+
+  @media(max-width:768px){
+    .hero h1{
+      font-size:2rem;
+    }
+
+    .container.contact-box{
+      padding:20px;
+    }
+
+    .contact-form button{
+      padding:12px 0;
+    }
+  }
+</style>
+</head>
 <body>
 
 <!-- NAV OVERLAY -->
@@ -29,48 +161,20 @@ content="Meisophant Digital Services">
 
 <!-- HEADER -->
 <header class="header">
-
-  <div class="logo">
-    Meisophant
-  </div>
-
-  <button class="menu-btn" id="menuBtn">
-    ☰
-  </button>
-
+  <div class="logo">Meisophant</div>
+  <button class="menu-btn" id="menuBtn">☰</button>
   <nav class="nav" id="navMenu">
-
-    <a href="../index.html">
-      Home
-    </a>
-
-    <a href="../our-services/index.html">
-      Services
-    </a>
-
-    <a href="../our-catalogue/index.html">
-      Catalogue
-    </a>
-
-    <a href="./index.html">
-      Contact
-    </a>
-
+    <a href="../index.html">Home</a>
+    <a href="../our-services/index.html">Services</a>
+    <a href="../our-catalogue/index.html">Catalogue</a>
+    <a href="./index.html">Contact</a>
   </nav>
-
 </header>
 
 <!-- HERO -->
-<section class="hero" style="padding:80px 8%;">
-
-  <h1>
-    Let’s Build Something Amazing
-  </h1>
-
-  <p>
-    Talk to us today — fast response guaranteed.
-  </p>
-
+<section class="hero">
+  <h1>Let’s Build Something Amazing</h1>
+  <p>Talk to us today — fast response guaranteed.</p>
 </section>
 
 <!-- MAIN -->
@@ -78,169 +182,104 @@ content="Meisophant Digital Services">
 
   <!-- CONTACT INFO -->
   <div class="container contact-box">
-
-    <h4>
-      Contact Information
-    </h4>
-
-    <p>
-      📞 Phone:
-      <a href="tel:+2349029673978">
-        +234 902 967 3978
-      </a>
-    </p>
-
-    <p>
-      💬 WhatsApp:
-      <a
-        href="https://wa.me/2349029673978"
-        target="_blank"
-        rel="noopener"
-      >
-        Chat Now
-      </a>
-    </p>
-
-    <p>
-      📧 Email:
-      <a href="mailto:info@meisophant.name.ng">
-        info@meisophant.name.ng
-      </a>
-    </p>
-
-    <p>
-      🌍 Website:
-      <a
-        href="https://meisophant.name.ng"
-        target="_blank"
-        rel="noopener"
-      >
-        meisophant.name.ng
-      </a>
-    </p>
-
+    <h4>Contact Information</h4>
+    <p>📞 Phone: <a href="tel:+2349029673978">+234 902 967 3978</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/2349029673978" target="_blank" rel="noopener">Chat Now</a></p>
+    <p>📧 Email: <a href="mailto:info@meisophant.name.ng">info@meisophant.name.ng</a></p>
+    <p>🌍 Website: <a href="https://meisophant.name.ng" target="_blank" rel="noopener">meisophant.name.ng</a></p>
   </div>
 
   <!-- CONTACT FORM -->
   <div class="container contact-box">
-
-    <h4>
-      Send Us A Message
-    </h4>
-
-    <form id="contactForm">
-
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Full Name"
-        required
-      >
-
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email Address"
-        required
-      >
-
-      <textarea
-        name="message"
-        placeholder="Your Message"
-        required
-      ></textarea>
-
-      <button type="submit">
-        Send Message
-      </button>
-
+    <h4>Send Us A Message</h4>
+    <form id="contactForm" class="contact-form">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
-
   </div>
 
 </main>
 
+<!-- WHATSAPP BUTTON -->
+<div class="contact-whatsapp" style="text-align:center; margin-bottom:40px;">
+  <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services" target="_blank" rel="noopener">
+    <button>Whatsapp Us</button>
+  </a>
+</div>
+
 <!-- FOOTER -->
-<footer class="footer_div">
-
-  <p>
-    © Meisophant Digital Services 2026
-  </p>
-
+<footer>
+  <p>&copy; 2026 Meisophant Digital Services. All Rights Reserved.</p>
 </footer>
 
 <!-- SCRIPT -->
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("navOverlay");
 
-const menuBtn =
-  document.getElementById("menuBtn");
-
-const navMenu =
-  document.getElementById("navMenu");
-
-const navOverlay =
-  document.getElementById("navOverlay");
-
-menuBtn.onclick = () => {
-
-  navMenu.classList.toggle("show");
-  navOverlay.classList.toggle("show");
-
-};
-
-navOverlay.onclick = () => {
-
-  navMenu.classList.remove("show");
-  navOverlay.classList.remove("show");
-
-};
-
-document
-.getElementById("contactForm")
-.addEventListener("submit", e => {
-
-  e.preventDefault();
-
-  const name =
-    e.target.name.value.trim();
-
-  const email =
-    e.target.email.value.trim();
-
-  const message =
-    e.target.message.value.trim();
-
-  if (!name || !email || !message) {
-
-    alert(
-      "Please fill all fields."
-    );
-
-    return;
-
+  function openMenu() {
+    navMenu.classList.add("show");
+    overlay.classList.add("show");
+    menuBtn.textContent = "✕";
   }
 
-  const button =
-    e.target.querySelector("button");
+  function closeMenu() {
+    navMenu.classList.remove("show");
+    overlay.classList.remove("show");
+    menuBtn.textContent = "☰";
+  }
 
-  button.disabled = true;
-  button.textContent = "Sending...";
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.contains("show") ? closeMenu() : openMenu();
+  });
 
-  setTimeout(() => {
+  overlay.addEventListener("click", closeMenu);
 
-    alert(
-      "Message sent successfully! We’ll contact you shortly."
-    );
+  document.querySelectorAll(".nav a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
 
-    e.target.reset();
+  window.addEventListener("resize", () => {
+    if(window.innerWidth > 768) closeMenu();
+  });
 
-    button.disabled = false;
-    button.textContent = "Send Message";
+  // Swipe to close on mobile
+  let touchStartX = 0;
+  navMenu.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; });
+  navMenu.addEventListener("touchend", e => {
+    let touchEndX = e.changedTouches[0].clientX;
+    if(touchStartX - touchEndX > 60) closeMenu();
+  });
 
-  }, 1500);
+  // Contact form submission
+  const form = document.getElementById("contactForm");
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
 
+    if(!name || !email || !message){
+      alert("Please fill all fields.");
+      return;
+    }
+
+    const button = form.querySelector("button");
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    setTimeout(() => {
+      alert("Message sent successfully! We’ll contact you shortly.");
+      form.reset();
+      button.disabled = false;
+      button.textContent = "Send Message";
+    }, 1500);
+  });
 });
-
 </script>
 
 </body>
