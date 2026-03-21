@@ -1,77 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contact Us || Meisophant Digital Services</title>
 
+<!-- SEO -->
+<meta name="description"
+content="Contact Meisophant Digital Services for website design, branding, and digital solutions. Fast response guaranteed.">
+
+<meta name="keywords"
+content="web design Nigeria, digital services, website development, branding">
+
+<meta name="author"
+content="Meisophant Digital Services">
+
 <link rel="icon" href="../favicon.png">
 <link rel="stylesheet" href="../style.css">
+
 </head>
 
 <body>
 
+<!-- NAV OVERLAY -->
 <div class="nav-overlay" id="navOverlay"></div>
 
+<!-- HEADER -->
 <header class="header">
-  <div class="logo">Meisophant</div>
-  <button class="menu-btn" id="menuBtn">☰</button>
-  <nav class="nav" id="navMenu">
-    <a href="../index.html">Home</a>
-    <a href="../our-services/index.html">Services</a>
-    <a href="../our-catalogue/index.html">Catalogue</a>
-    <a href="./index.html">Contact</a>
-  </nav>
-</header>
 
-<section class="hero" style="padding:80px 8%;">
-  <h1>Let’s Build Something Amazing</h1>
-  <p>Talk to us today — fast response guaranteed.</p>
-</section>
-
-<main class="main-content">
-
-  <div class="container contact-box">
-    <h4>Contact Information</h4>
-    <p>📞 Phone: <a href="tel:+2349029673978">+234 902 967 3978</a></p>
-    <p>💬 WhatsApp: <a href="https://wa.me/2349029673978" target="_blank">Chat Now</a></p>
-    <p>📧 Email: <a href="mailto:info@meisophant.name.ng">info@meisophant.name.ng</a></p>
-    <p>🌍 Website: <a href="https://meisophant.name.ng">meisophant.name.ng</a></p>
+  <div class="logo">
+    Meisophant
   </div>
 
+  <button class="menu-btn" id="menuBtn">
+    ☰
+  </button>
+
+  <nav class="nav" id="navMenu">
+
+    <a href="../index.html">
+      Home
+    </a>
+
+    <a href="../our-services/index.html">
+      Services
+    </a>
+
+    <a href="../our-catalogue/index.html">
+      Catalogue
+    </a>
+
+    <a href="./index.html">
+      Contact
+    </a>
+
+  </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding:80px 8%;">
+
+  <h1>
+    Let’s Build Something Amazing
+  </h1>
+
+  <p>
+    Talk to us today — fast response guaranteed.
+  </p>
+
+</section>
+
+<!-- MAIN -->
+<main class="main-content">
+
+  <!-- CONTACT INFO -->
   <div class="container contact-box">
-    <h4>Send Us A Message</h4>
+
+    <h4>
+      Contact Information
+    </h4>
+
+    <p>
+      📞 Phone:
+      <a href="tel:+2349029673978">
+        +234 902 967 3978
+      </a>
+    </p>
+
+    <p>
+      💬 WhatsApp:
+      <a
+        href="https://wa.me/2349029673978"
+        target="_blank"
+        rel="noopener"
+      >
+        Chat Now
+      </a>
+    </p>
+
+    <p>
+      📧 Email:
+      <a href="mailto:info@meisophant.name.ng">
+        info@meisophant.name.ng
+      </a>
+    </p>
+
+    <p>
+      🌍 Website:
+      <a
+        href="https://meisophant.name.ng"
+        target="_blank"
+        rel="noopener"
+      >
+        meisophant.name.ng
+      </a>
+    </p>
+
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="container contact-box">
+
+    <h4>
+      Send Us A Message
+    </h4>
+
     <form id="contactForm">
-      <input type="text" placeholder="Your Full Name" required>
-      <input type="email" placeholder="Your Email Address" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Full Name"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email Address"
+        required
+      >
+
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        required
+      ></textarea>
+
+      <button type="submit">
+        Send Message
+      </button>
+
     </form>
+
   </div>
 
 </main>
 
+<!-- FOOTER -->
 <footer class="footer_div">
-  <p>© Meisophant Digital Services 2026</p>
+
+  <p>
+    © Meisophant Digital Services 2026
+  </p>
+
 </footer>
 
+<!-- SCRIPT -->
 <script>
-document.getElementById("menuBtn").onclick = () => {
-  document.getElementById("navMenu").classList.toggle("show");
-  document.getElementById("navOverlay").classList.toggle("show");
-}
 
-document.getElementById("navOverlay").onclick = () => {
-  document.getElementById("navMenu").classList.remove("show");
-  document.getElementById("navOverlay").classList.remove("show");
-}
+const menuBtn =
+  document.getElementById("menuBtn");
 
-document.getElementById("contactForm").addEventListener("submit", e => {
+const navMenu =
+  document.getElementById("navMenu");
+
+const navOverlay =
+  document.getElementById("navOverlay");
+
+menuBtn.onclick = () => {
+
+  navMenu.classList.toggle("show");
+  navOverlay.classList.toggle("show");
+
+};
+
+navOverlay.onclick = () => {
+
+  navMenu.classList.remove("show");
+  navOverlay.classList.remove("show");
+
+};
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", e => {
+
   e.preventDefault();
-  alert("Message sent successfully! We’ll contact you shortly.");
-  e.target.reset();
+
+  const name =
+    e.target.name.value.trim();
+
+  const email =
+    e.target.email.value.trim();
+
+  const message =
+    e.target.message.value.trim();
+
+  if (!name || !email || !message) {
+
+    alert(
+      "Please fill all fields."
+    );
+
+    return;
+
+  }
+
+  const button =
+    e.target.querySelector("button");
+
+  button.disabled = true;
+  button.textContent = "Sending...";
+
+  setTimeout(() => {
+
+    alert(
+      "Message sent successfully! We’ll contact you shortly."
+    );
+
+    e.target.reset();
+
+    button.disabled = false;
+    button.textContent = "Send Message";
+
+  }, 1500);
+
 });
+
 </script>
 
 </body>
