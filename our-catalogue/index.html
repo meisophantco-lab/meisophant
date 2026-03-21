@@ -12,6 +12,98 @@
 </head>
 
 <body>
+<style>
+/* HERO */
+.hero {
+  text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(135deg, mediumpurple, rebeccapurple);
+  color:white;
+}
+.hero h1 {
+  font-size:2.4rem;
+  margin-bottom:15px;
+}
+.hero p {
+  font-size:1.05rem;
+  max-width:650px;
+  margin:auto;
+  opacity:0.9;
+}
+
+/* CATALOGUE GRID */
+.catalogue .grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  padding:40px 8%;
+}
+
+.catalogue .card {
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  transition:transform 0.25s, box-shadow 0.25s;
+  text-align:center;
+}
+.catalogue .card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+.catalogue .card h3 {
+  color:mediumpurple;
+  margin-bottom:10px;
+  font-size:1.4rem;
+}
+.catalogue .card p {
+  color:#555;
+  font-size:0.95rem;
+  margin-bottom:20px;
+  line-height:1.6;
+}
+
+/* BUTTONS */
+.catalogue .card a.btn {
+  display:inline-block;
+  padding:10px 20px;
+  background:mediumpurple;
+  color:white;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:6px;
+  transition:0.25s;
+}
+.catalogue .card a.btn:hover {
+  background:rebeccapurple;
+  transform:translateY(-2px);
+}
+
+/* FOOTER */
+footer.footer_div {
+  background:#111;
+  color:#bbb;
+  text-align:center;
+  padding:45px 8%;
+  margin-top:40px;
+}
+footer.footer_div a {
+  color:mediumpurple;
+  text-decoration:none;
+}
+footer.footer_div a:hover {
+  text-decoration:underline;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1 { font-size:2rem; }
+  .catalogue .grid { padding:20px 4%; gap:18px; }
+  .catalogue .card h3 { font-size:1.2rem; }
+  .catalogue .card p { font-size:0.9rem; }
+  .catalogue .card a.btn { padding:8px 16px; font-size:0.95rem; }
+}
+</style>
 
 <div class="nav-overlay" id="navOverlay"></div>
 
