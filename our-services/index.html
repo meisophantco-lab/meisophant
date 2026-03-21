@@ -69,6 +69,101 @@
 </head>
 
 <body>
+<style>
+/* HERO */
+.hero {
+  text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(135deg, mediumpurple, rebeccapurple);
+  color:white;
+}
+.hero h1 {
+  font-size:2.4rem;
+  margin-bottom:15px;
+}
+.hero p {
+  font-size:1.05rem;
+  max-width:650px;
+  margin:auto;
+  opacity:0.95;
+}
+
+/* SERVICE CONTAINERS */
+.container {
+  background:white;
+  padding:30px 25px;
+  margin:20px auto;
+  border-radius:12px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  max-width:900px;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.container:hover {
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+.container h4 {
+  color:mediumpurple;
+  margin-bottom:15px;
+  font-size:1.5rem;
+}
+.container p {
+  color:#555;
+  line-height:1.7;
+  font-size:1rem;
+  margin-bottom:12px;
+}
+
+/* BUTTONS */
+.subscribe-button, .whatsapp-us {
+  padding:12px 20px;
+  border:none;
+  border-radius:6px;
+  font-weight:600;
+  font-size:1rem;
+  cursor:pointer;
+  transition:0.25s;
+}
+.subscribe-button {
+  background:mediumpurple;
+  color:white;
+}
+.subscribe-button:hover {
+  background:rebeccapurple;
+}
+.whatsapp-us {
+  background:#25D366;
+  color:white;
+}
+.whatsapp-us:hover {
+  opacity:0.9;
+}
+
+/* FOOTER */
+footer {
+  background:#111;
+  color:#bbb;
+  text-align:center;
+  padding:45px 8%;
+  margin-top:40px;
+}
+footer a {
+  color:mediumpurple;
+  text-decoration:none;
+}
+footer a:hover {
+  text-decoration:underline;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1 { font-size:2rem; }
+  .container { padding:20px; }
+  .container h4 { font-size:1.3rem; }
+  .container p { font-size:0.95rem; }
+  .subscribe-button, .whatsapp-us { font-size:0.95rem; padding:10px 18px; }
+}
+</style>
 
 <div class="nav-overlay" id="navOverlay"></div>
 
