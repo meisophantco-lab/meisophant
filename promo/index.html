@@ -1,1 +1,146 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEISOPHANT Promotion Programme</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" href="../favicon.png" type="image/png">
+
+<style>
+/* HERO */
+.hero {
+  text-align:center;
+  padding:80px 20px;
+  background:linear-gradient(135deg, mediumpurple, rebeccapurple);
+  color:white;
+}
+.hero h1 { font-size:2.4rem; margin-bottom:15px; }
+.hero p { font-size:1.05rem; max-width:650px; margin:auto; opacity:0.95; }
+
+/* PROGRAMME CARDS */
+.programme-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  padding:40px 8%;
+}
+.programme-card {
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  transition:transform 0.25s, box-shadow 0.25s;
+  text-align:center;
+}
+.programme-card:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.12);
+}
+.programme-card h3 { color:mediumpurple; margin-bottom:10px; font-size:1.4rem; }
+.programme-card p { color:#555; font-size:0.95rem; margin-bottom:20px; line-height:1.6; }
+
+/* BUTTONS */
+.programme-card a.btn {
+  display:inline-block;
+  padding:10px 20px;
+  background:mediumpurple;
+  color:white;
+  font-weight:600;
+  text-decoration:none;
+  border-radius:6px;
+  transition:0.25s;
+}
+.programme-card a.btn:hover {
+  background:rebeccapurple;
+  transform:translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+  background:#111;
+  color:#bbb;
+  text-align:center;
+  padding:45px 8%;
+  margin-top:40px;
+}
+footer a { color:mediumpurple; text-decoration:none; }
+footer a:hover { text-decoration:underline; }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1 { font-size:2rem; }
+  .programme-grid { padding:20px 4%; gap:18px; }
+  .programme-card h3 { font-size:1.2rem; }
+  .programme-card p { font-size:0.9rem; }
+  .programme-card a.btn { padding:8px 16px; font-size:0.95rem; }
+}
+</style>
+</head>
+
+<body>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<header class="header">
+  <div class="logo">Meisophant</div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+  <nav class="nav" id="navMenu">
+    <a href="../index.html">Home</a>
+    <a href="../our-services/index.html">Services</a>
+    <a href="../our-catalogue/index.html">Catalogue</a>
+    <a href="../about-us/index.html">About Us</a>
+    <a href="../contact-us/index.html">Contact</a>
+    <a href="./index.html">Promo Programme</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>MEISOPHANT Promotion Programme</h1>
+  <p>Join our program to enjoy exclusive offers, referral rewards, mentorship perks, and priority support for your digital projects.</p>
+</section>
+
+<main class="main-content">
+  <section class="programme-grid">
+    <div class="programme-card">
+      <h3>Referral Rewards</h3>
+      <p>Refer clients or friends and earn discounts or free services for every successful referral.</p>
+      <a href="https://formspree.io/f/mpqyezlv?message=I%20want%20to%20join%20the%20MEISOPHANT%20Promotion%20Programme%20-%20Referral%20Rewards" target="_blank" class="btn">Join Now</a>
+    </div>
+    <div class="programme-card">
+      <h3>Exclusive Mentorship</h3>
+      <p>Get priority access to web development workshops, tutorials, and personal mentorship sessions.</p>
+      <a href="https://formspree.io/f/mpqyezlv?message=I%20want%20to%20join%20the%20MEISOPHANT%20Promotion%20Programme%20-%20Mentorship" target="_blank" class="btn">Join Now</a>
+    </div>
+    <div class="programme-card">
+      <h3>Discount Packages</h3>
+      <p>Special promo prices on websites, hosting bundles, and digital solutions exclusively for program members.</p>
+      <a href="https://formspree.io/f/mpqyezlv?message=I%20want%20to%20join%20the%20MEISOPHANT%20Promotion%20Programme%20-%20Discount%20Packages" target="_blank" class="btn">Join Now</a>
+    </div>
+    <div class="programme-card">
+      <h3>Priority Support</h3>
+      <p>Receive fast-track technical support and guidance for your projects as a valued program member.</p>
+      <a href="https://formspree.io/f/mpqyezlv?message=I%20want%20to%20join%20the%20MEISOPHANT%20Promotion%20Programme%20-%20Priority%20Support" target="_blank" class="btn">Join Now</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Meisophant Digital Services — Where Creativity Meets Code</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const navMenu = document.getElementById("navMenu");
+  const overlay = document.getElementById("navOverlay");
+  function openMenu(){ navMenu.classList.add("show"); overlay.classList.add("show"); menuBtn.textContent = "✕"; }
+  function closeMenu(){ navMenu.classList.remove("show"); overlay.classList.remove("show"); menuBtn.textContent = "☰"; }
+  menuBtn.addEventListener("click", () => { navMenu.classList.contains("show") ? closeMenu() : openMenu(); });
+  overlay.addEventListener("click", closeMenu);
+  document.querySelectorAll(".nav a").forEach(link => { link.addEventListener("click", closeMenu); });
+});
+</script>
+
+</body>
+</html>
