@@ -1,226 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Catalogue | Meisophant Digital Services</title>
+  <meta name="description" content="Explore Meisophant's website development catalogue — business websites, eCommerce stores, blogs, portfolio sites, school portals, fintech platforms, NGO websites and more.">
+  <meta name="author" content="Meisophant Digital Services">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="../favicon.png">
 
-<title>Website Catalogue | Meisophant Digital Services</title>
-<meta name="description" content="Explore Meisophant's website development catalogue — business websites, eCommerce stores, blogs, portfolio sites, school portals, fintech platforms, NGO websites and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
-<link rel="icon" type="image/png" href="../favicon.png">
-<link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../meisophant.css">
 </head>
 
 <body>
-<style>
-/* HERO */
-.hero {
-  text-align:center;
-  padding:80px 20px;
-  background:linear-gradient(135deg, mediumpurple, rebeccapurple);
-  color:white;
-}
-.hero h1 {
-  font-size:2.4rem;
-  margin-bottom:15px;
-}
-.hero p {
-  font-size:1.05rem;
-  max-width:650px;
-  margin:auto;
-  opacity:0.9;
-}
 
-/* CATALOGUE GRID */
-.catalogue .grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-  padding:40px 8%;
-}
+  <div class="nav-overlay" id="navOverlay"></div>
 
-.catalogue .card {
-  background:white;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.08);
-  transition:transform 0.25s, box-shadow 0.25s;
-  text-align:center;
-}
-.catalogue .card:hover {
-  transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.12);
-}
-.catalogue .card h3 {
-  color:mediumpurple;
-  margin-bottom:10px;
-  font-size:1.4rem;
-}
-.catalogue .card p {
-  color:#555;
-  font-size:0.95rem;
-  margin-bottom:20px;
-  line-height:1.6;
-}
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="logo">
+      <div class="logo-dot"></div>
+      Meiso<span class="logo-accent">phant</span>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle mode">🌙</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav class="nav" id="navMenu">
+      <a href="../index.html">Home</a>
+      <a href="../our-services/index.html">Services</a>
+      <a href="./index.html" class="active">Catalogue</a>
+      <a href="../about-us/index.html">About</a>
+      <a href="../contact-us/" class="nav-cta">Get In Touch →</a>
+    </nav>
+  </header>
 
-/* BUTTONS */
-.catalogue .card a.btn {
-  display:inline-block;
-  padding:10px 20px;
-  background:mediumpurple;
-  color:white;
-  font-weight:600;
-  text-decoration:none;
-  border-radius:6px;
-  transition:0.25s;
-}
-.catalogue .card a.btn:hover {
-  background:rebeccapurple;
-  transform:translateY(-2px);
-}
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero-orb"></div>
+    <p class="section-label reveal">What We Build</p>
+    <h1 class="page-title reveal">Website Development <em>Catalogue</em></h1>
+    <p class="page-subtitle reveal">Explore all the professional website solutions Meisophant builds for businesses, startups, organisations and individuals.</p>
+  </section>
 
-/* FOOTER */
-footer.footer_div {
-  background:#111;
-  color:#bbb;
-  text-align:center;
-  padding:45px 8%;
-  margin-top:40px;
-}
-footer.footer_div a {
-  color:mediumpurple;
-  text-decoration:none;
-}
-footer.footer_div a:hover {
-  text-decoration:underline;
-}
+  <!-- ===== CATALOGUE GRID ===== -->
+  <section class="section catalogue-section">
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  .hero h1 { font-size:2rem; }
-  .catalogue .grid { padding:20px 4%; gap:18px; }
-  .catalogue .card h3 { font-size:1.2rem; }
-  .catalogue .card p { font-size:0.9rem; }
-  .catalogue .card a.btn { padding:8px 16px; font-size:0.95rem; }
-}
-</style>
-
-<div class="nav-overlay" id="navOverlay"></div>
-
-<header class="header">
-  <div class="logo">Meisophant</div>
-  <button class="menu-btn" id="menuBtn">☰</button>
-  <nav class="nav" id="navMenu">
-    <a href="../index.html">Home</a>
-    <a href="../our-services/index.html">Services</a>
-    <a href="./index.html">Catalogue</a>
-    <a href="../about-us/index.html">About</a>
-    <a href="../contact-us/">Contact</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Website Development Catalogue</h1>
-  <p>Explore all the professional website solutions Meisophant builds for businesses, startups, organizations and individuals.</p>
-</section>
-
-<section class="catalogue">
-  <div class="grid">
-    <div class="card">
-      <h3>Business Website</h3>
-      <p>Professional business websites for startups, SMEs and enterprises.</p>
-      <a href="../contact-us/" class="btn">Order Now</a>
+    <div class="services-header reveal">
+      <p class="section-label">Browse Solutions</p>
+      <h2 class="section-title">Every Site Type, Built Right</h2>
+      <p class="section-sub">Pick the solution that fits your goals — or reach out and we'll advise you.</p>
     </div>
 
-    <div class="card">
-      <h3>Corporate Website</h3>
-      <p>High-end corporate websites with company profile, investor pages and dashboards.</p>
-      <a href="../contact-us/" class="btn">Request Quote</a>
+    <div class="catalogue-grid">
+
+      <div class="catalogue-card reveal">
+        <div class="catalogue-card-icon">🏢</div>
+        <h3>Business Website</h3>
+        <p>Professional business websites for startups, SMEs and enterprises — built to convert and impress.</p>
+        <a href="../contact-us/" class="catalogue-btn">Order Now →</a>
+      </div>
+
+      <div class="catalogue-card reveal">
+        <div class="catalogue-card-icon">🏛️</div>
+        <h3>Corporate Website</h3>
+        <p>High-end corporate websites with company profiles, investor pages and executive dashboards.</p>
+        <a href="../contact-us/" class="catalogue-btn">Request Quote →</a>
+      </div>
+
+      <div class="catalogue-card reveal">
+        <div class="catalogue-card-icon">🛒</div>
+        <h3>E-Commerce Store</h3>
+        <p>Online stores with payment integration, inventory management and order tracking built in.</p>
+        <a href="../contact-us/" class="catalogue-btn">Build Store →</a>
+      </div>
+
+      <div class="catalogue-card reveal">
+        <div class="catalogue-card-icon">✍️</div>
+        <h3>Blog Platform</h3>
+        <p>SEO-optimised blogs for content creators, influencers and publishers who want to grow.</p>
+        <a href="../contact-us/" class="catalogue-btn">Start Blog →</a>
+      </div>
+
+      <div class="catalogue-card reveal">
+        <div class="catalogue-card-icon">🎨</div>
+        <h3>Portfolio Website</h3>
+        <p>Creative portfolios for designers, developers, artists and freelancers that stand out.</p>
+        <a href="../contact-us/" class="catalogue-btn">Create Portfolio →</a>
+      </div>
+
+      <div class="catalogue-card reveal">
+        <div class="catalogue-card-icon">🏫</div>
+        <h3>School Portal</h3>
+        <p>School websites with admission systems, student dashboards and a results portal.</p>
+        <a href="../contact-us/" class="catalogue-btn">Build Portal →</a>
+      </div>
+
+      <div class="catalogue-card reveal">
+        <div class="catalogue-card-icon">🤝</div>
+        <h3>NGO / Charity Website</h3>
+        <p>Donation platforms, campaign pages and volunteer management portals for nonprofits.</p>
+        <a href="../contact-us/" class="catalogue-btn">Launch NGO Site →</a>
+      </div>
+
+      <div class="catalogue-card reveal">
+        <div class="catalogue-card-icon">💳</div>
+        <h3>Fintech Website</h3>
+        <p>Secure fintech platforms with payment APIs, KYC flows and user dashboards.</p>
+        <a href="../contact-us/" class="catalogue-btn">Build Fintech →</a>
+      </div>
+
+      <div class="catalogue-card reveal">
+        <div class="catalogue-card-icon">🏠</div>
+        <h3>Real Estate Website</h3>
+        <p>Property listing sites with advanced filters, map views and agent dashboards.</p>
+        <a href="../contact-us/" class="catalogue-btn">Create Site →</a>
+      </div>
+
+      <div class="catalogue-card reveal">
+        <div class="catalogue-card-icon">⚙️</div>
+        <h3>Custom Web Application</h3>
+        <p>Fully custom platforms designed specifically around your business workflow and needs.</p>
+        <a href="../contact-us/" class="catalogue-btn">Custom Build →</a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="card">
-      <h3>E-Commerce Store</h3>
-      <p>Online stores with payments, inventory system and order tracking.</p>
-      <a href="../contact-us/" class="btn">Build Store</a>
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <p class="section-label cta-label">Ready To Start?</p>
+    <h2>Don't See What<br>You Need?</h2>
+    <p>We build custom digital solutions for any industry. Let's talk about your project.</p>
+    <a href="https://wa.me/2349029673978" class="btn-primary">
+      💬 Chat on WhatsApp
+    </a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-logo">Meiso<span>phant</span></div>
+    <p>Subscribe to our newsletter</p>
+    <div class="newsletter">
+      <input type="email" placeholder="your@email.com">
+      <button>Subscribe</button>
     </div>
-
-    <div class="card">
-      <h3>Blog Platform</h3>
-      <p>SEO optimized blogs for content creators, influencers and publishers.</p>
-      <a href="../contact-us/" class="btn">Start Blog</a>
+    <div class="footer-links">
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="../terms.html">Terms &amp; Conditions</a>
     </div>
+    <p>© 2026 Meisophant Digital Services — Where Creativity Meets Code</p>
+  </footer>
 
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Creative portfolios for designers, developers, artists and freelancers.</p>
-      <a href="../contact-us/" class="btn">Create Portfolio</a>
-    </div>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/2349029673978" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
-    <div class="card">
-      <h3>School Portal</h3>
-      <p>School websites with admission systems, student dashboards and results portal.</p>
-      <a href="../contact-us/" class="btn">Build Portal</a>
-    </div>
+  <script>
+    /* ===== SCROLL REVEAL ===== */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
 
-    <div class="card">
-      <h3>NGO / Charity Website</h3>
-      <p>Donation platforms, campaigns and volunteer management portals.</p>
-      <a href="../contact-us/" class="btn">Launch NGO Site</a>
-    </div>
+    /* ===== MOBILE MENU ===== */
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('menuBtn');
+      const navMenu = document.getElementById('navMenu');
+      const overlay = document.getElementById('navOverlay');
 
-    <div class="card">
-      <h3>Fintech Website</h3>
-      <p>Secure fintech platforms with payment APIs and user dashboards.</p>
-      <a href="../contact-us/" class="btn">Build Fintech</a>
-    </div>
+      function openMenu() {
+        navMenu.classList.add('show');
+        overlay.classList.add('show');
+        menuBtn.textContent = '✕';
+      }
 
-    <div class="card">
-      <h3>Real Estate Website</h3>
-      <p>Property listings with advanced filters and agent dashboards.</p>
-      <a href="../contact-us/" class="btn">Create Site</a>
-    </div>
+      function closeMenu() {
+        navMenu.classList.remove('show');
+        overlay.classList.remove('show');
+        menuBtn.textContent = '☰';
+      }
 
-    <div class="card">
-      <h3>Custom Web Application</h3>
-      <p>Fully custom platforms designed specifically for your business workflow.</p>
-      <a href="../contact-us/" class="btn">Custom Build</a>
-    </div>
-  </div>
-</section>
+      menuBtn.addEventListener('click', () => {
+        navMenu.classList.contains('show') ? closeMenu() : openMenu();
+      });
 
-<footer class="footer_div">
-  <p>&copy; 2026 Meisophant Digital Services — Where Creativity Meets Code</p>
-</footer>
+      overlay.addEventListener('click', closeMenu);
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menuBtn");
-  const navMenu = document.getElementById("navMenu");
-  const overlay = document.getElementById("navOverlay");
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
 
-  function openMenu(){
-    navMenu.classList.add("show");
-    overlay.classList.add("show");
-    menuBtn.textContent = "✕";
-  }
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) closeMenu();
+      });
 
-  function closeMenu(){
-    navMenu.classList.remove("show");
-    overlay.classList.remove("show");
-    menuBtn.textContent = "☰";
-  }
+      let touchStartX = 0;
+      navMenu.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+      navMenu.addEventListener('touchend', e => {
+        if (touchStartX - e.changedTouches[0].clientX > 60) closeMenu();
+      });
+    });
 
-  menuBtn.addEventListener("click", () => {
-    navMenu.classList.contains("show") ? closeMenu() : openMenu();
-  });
-
-  overlay.addEventListener("click", closeMenu);
-
-  document.querySelectorAll(".nav a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-});
-</script>
+    /* ===== THEME TOGGLE ===== */
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      document.body.classList.toggle('light-override');
+      this.textContent = document.body.classList.contains('light-override') ? '🌙' : '☀️';
+    });
+  </script>
 
 </body>
 </html>
