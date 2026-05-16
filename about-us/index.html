@@ -9,232 +9,174 @@
   <meta name="robots" content="index, follow">
   <link rel="icon" href="../favicon.png" type="image/png">
 
-  <!-- Link external CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="../style.css">
-
-  <style>
-    /* ABOUT PAGE STYLING */
-    .main-content h1{
-      text-align:center;
-      font-size:2.4rem;
-      color:mediumpurple;
-      margin-bottom:40px;
-    }
-
-    .about-image{
-      display:block;
-      margin:20px auto 40px auto;
-      max-width:150px;
-      border-radius:12px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.1);
-    }
-
-    .container{
-      background:white;
-      padding:30px 25px;
-      margin:20px auto;
-      border-radius:12px;
-      box-shadow:0 8px 25px rgba(0,0,0,0.08);
-      max-width:900px;
-      transition: transform 0.25s;
-    }
-
-    .container:hover{
-      transform:translateY(-5px);
-      box-shadow:0 12px 30px rgba(0,0,0,0.12);
-    }
-
-    .container h4{
-      color:mediumpurple;
-      margin-bottom:15px;
-      font-size:1.5rem;
-    }
-
-    .container p{
-      color:#555;
-      line-height:1.7;
-      margin-bottom:12px;
-    }
-
-    .container b a{
-      color:rebeccapurple;
-      text-decoration:none;
-      transition:0.2s;
-    }
-
-    .container b a:hover{
-      color:mediumpurple;
-      text-decoration:underline;
-    }
-
-    /* Newsletter and WhatsApp buttons */
-    .newsletter input{
-      padding:12px;
-      width:250px;
-      border:none;
-      border-radius:6px;
-      margin-right:6px;
-    }
-
-    .newsletter button,
-    .whatsapp-us{
-      padding:12px 22px;
-      border:none;
-      border-radius:6px;
-      cursor:pointer;
-      font-weight:600;
-      transition:0.2s;
-    }
-
-    .newsletter button{
-      background:mediumpurple;
-      color:white;
-    }
-
-    .newsletter button:hover{
-      background:rebeccapurple;
-    }
-
-    .whatsapp-us{
-      background:#25D366;
-      color:white;
-    }
-
-    .whatsapp-us:hover{
-      opacity:0.9;
-    }
-
-    footer h2{
-      color:white;
-      margin-bottom:15px;
-    }
-
-    @media(max-width:768px){
-      .main-content h1{
-        font-size:2rem;
-      }
-
-      .container{
-        padding:20px;
-      }
-
-      .newsletter input{
-        width:100%;
-        margin-bottom:10px;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-<!-- NAV OVERLAY -->
-<div class="nav-overlay" id="navOverlay"></div>
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="logo">
+      <div class="logo-dot"></div>
+      Meiso<span class="logo-accent">phant</span>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle mode">🌙</button>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav class="nav" id="navMenu">
+      <a href="../">Home</a>
+      <a href="../our-services/">Services</a>
+      <a href="../our-catalogue/">Catalogue</a>
+      <a href="./" class="active">About</a>
+      <a href="../contact-us/" class="nav-cta">Get In Touch →</a>
+    </nav>
+  </header>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="logo">Meisophant</div>
-  <button class="menu-btn" id="menuBtn">☰</button>
-  <nav class="nav" id="navMenu">
-    <a href="../index.html">Home</a>
-    <a href="../our-services/index.html">Services</a>
-    <a href="../our-catalogue/index.html">Catalogue</a>
-    <a href="./index.html">About</a>
-    <a href="../contact-us/index.html">Contact</a>
-  </nav>
-</header>
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="page-hero-orb"></div>
 
-<main class="main-content">
+    <div class="about-logo-wrap reveal">
+      <img src="../favicon.png" alt="Meisophant Digital Services Logo" class="about-logo-img" loading="lazy" width="100" height="100">
+    </div>
 
-  <h1>About Meisophant Digital Services</h1>
+    <p class="section-label reveal">Who We Are</p>
+    <h1 class="page-title reveal">About <em>Meisophant</em><br>Digital Services</h1>
+    <p class="page-subtitle reveal">Building reliable, scalable digital systems for startups, businesses, and individuals — with precision, clarity, and purpose.</p>
+  </section>
 
-  <img src="../favicon.png" alt="Meisophant Digital Services Logo" class="about-image" loading="lazy" width="150" height="150">
+  <!-- ===== ABOUT CARDS ===== -->
+  <section class="section">
+    <div class="about-grid">
 
-  <div class="container">
-    <h4>Our Specialization</h4>
-    <p>We specialize in building scalable digital systems for startups, businesses, and individuals, focusing on performance, stability, and long-term online growth.</p>
-  </div>
+      <div class="about-card reveal">
+        <div class="about-card-icon">🎯</div>
+        <h3>Our Specialization</h3>
+        <p>We specialize in building scalable digital systems for startups, businesses, and individuals — focusing on performance, stability, and long-term online growth.</p>
+      </div>
 
-  <div class="container">
-    <h4>What We Do</h4>
-    <p>From responsive website development to cloud services and DNS configuration, we provide structured, practical solutions that elevate your digital presence.</p>
-    <p>We also mentor individuals aspiring to learn web and application development using hands-on, real-world projects.</p>
-  </div>
+      <div class="about-card reveal">
+        <div class="about-card-icon">⚙️</div>
+        <h3>What We Do</h3>
+        <p>From responsive website development to cloud services and DNS configuration, we provide structured, practical solutions that elevate your digital presence. We also mentor individuals learning web and application development through real-world projects.</p>
+      </div>
 
-  <div class="container">
-    <h4>Our Approach & Services</h4>
-    <p>We deliver web design, hosting support, cloud infrastructure, CDN setup, IT consulting, branding, and digital transformation. Our approach emphasizes clarity, precision, and automation to ensure efficient, reliable systems.</p>
-  </div>
+      <div class="about-card reveal">
+        <div class="about-card-icon">🛠️</div>
+        <h3>Our Approach & Services</h3>
+        <p>We deliver web design, hosting support, cloud infrastructure, CDN setup, IT consulting, branding, and digital transformation. Our approach emphasises clarity, precision, and automation to ensure efficient, reliable systems.</p>
+      </div>
 
-  <div class="container">
-    <h4>Leadership</h4>
-    <p>Led by <b><a href="https://ceo-adewale-emmanuel-oluwajomiloju.simdif.com/" target="_blank" rel="noopener">Adewale Emmanuel Oluwajomiloju</a></b>, Meisophant Digital Services delivers modern, reliable digital solutions that empower businesses and individuals online.</p>
-  </div>
+      <div class="about-card reveal">
+        <div class="about-card-icon">👤</div>
+        <h3>Leadership</h3>
+        <p>Led by <a href="https://ceo-adewale-emmanuel-oluwajomiloju.simdif.com/" target="_blank" rel="noopener">Adewale Emmanuel Oluwajomiloju</a>, Meisophant Digital Services delivers modern, reliable digital solutions that empower businesses and individuals online.</p>
+      </div>
 
-  <div class="container">
-    <h4>Our Mission</h4>
-    <p>Our mission is to build reliable, scalable digital systems that help businesses grow, operate efficiently, and succeed in the modern digital economy.</p>
-  </div>
+    </div>
+  </section>
 
-</main>
+  <!-- ===== MISSION BANNER ===== -->
+  <section class="mission-banner">
+    <div class="mission-inner">
+      <div class="reveal">
+        <p class="section-label">Our Mission</p>
+        <p class="mission-quote">Building digital systems that help businesses <em>grow, operate efficiently,</em> and succeed.</p>
+      </div>
+      <div class="reveal">
+        <p class="mission-body">
+          We exist to remove the complexity between your vision and your digital presence. Whether you're a first-time founder or an established business scaling up, Meisophant brings the <strong>technical depth</strong> and <strong>strategic clarity</strong> to make it happen — on time, reliably, and built to last.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<footer class="footer_div">
-  <h2>Contact Us</h2>
-  <div class="newsletter">
-    <form action="mailto:info@meisophant.name.ng" method="post" enctype="text/plain">
-      <input type="email" name="email" placeholder="Your Email" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-  <div style="margin-top:20px;">
-    <a href="https://wa.me/2349029673978?text=Hello%20I%20would%20like%20more%20information%20about%20your%20services" target="_blank" rel="noopener">
-      <button class="whatsapp-us">Whatsapp Us</button>
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <p class="section-label cta-label">Let's Build Together</p>
+    <h2>Ready To Work<br>With Us?</h2>
+    <p>Reach out today and let's turn your digital goals into reality.</p>
+    <a href="https://wa.me/2349029673978" class="btn-primary">
+      💬 Chat on WhatsApp
     </a>
-  </div>
-  <p style="margin-top:20px;">Thank You for Choosing Meisophant Digital Services.</p>
-  <p>&copy; 2026 Meisophant Digital Services. All Rights Reserved.</p>
-</footer>
+  </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menuBtn");
-  const navMenu = document.getElementById("navMenu");
-  const overlay = document.getElementById("navOverlay");
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-logo">Meiso<span>phant</span></div>
+    <p>Subscribe to our newsletter</p>
+    <div class="newsletter">
+      <input type="email" placeholder="your@email.com">
+      <button>Subscribe</button>
+    </div>
+    <div class="footer-links">
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      &nbsp;·&nbsp;
+      <a href="../terms.html">Terms &amp; Conditions</a>
+    </div>
+    <p>© 2026 Meisophant Digital Services. All Rights Reserved.</p>
+  </footer>
 
-  function openMenu() {
-    navMenu.classList.add("show");
-    overlay.classList.add("show");
-    menuBtn.textContent = "✕";
-  }
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/2349029673978" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
-  function closeMenu() {
-    navMenu.classList.remove("show");
-    overlay.classList.remove("show");
-    menuBtn.textContent = "☰";
-  }
+  <script>
+    /* ===== SCROLL REVEAL ===== */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
 
-  menuBtn.addEventListener("click", () => {
-    navMenu.classList.contains("show") ? closeMenu() : openMenu();
-  });
+    /* ===== MOBILE MENU ===== */
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('menuBtn');
+      const navMenu = document.getElementById('navMenu');
 
-  overlay.addEventListener("click", closeMenu);
+      menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+        menuBtn.textContent = navMenu.classList.contains('show') ? '✕' : '☰';
+      });
 
-  document.querySelectorAll(".nav a").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('show');
+          menuBtn.textContent = '☰';
+        });
+      });
 
-  window.addEventListener("resize", () => {
-    if(window.innerWidth > 768) closeMenu();
-  });
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+          navMenu.classList.remove('show');
+          menuBtn.textContent = '☰';
+        }
+      });
 
-  // Swipe to close on mobile
-  let touchStartX = 0;
-  navMenu.addEventListener("touchstart", e => { touchStartX = e.touches[0].clientX; });
-  navMenu.addEventListener("touchend", e => {
-    let touchEndX = e.changedTouches[0].clientX;
-    if(touchStartX - touchEndX > 60) closeMenu();
-  });
-});
-</script>
+      /* Swipe to close */
+      let touchStartX = 0;
+      navMenu.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; });
+      navMenu.addEventListener('touchend', e => {
+        if (touchStartX - e.changedTouches[0].clientX > 60) {
+          navMenu.classList.remove('show');
+          menuBtn.textContent = '☰';
+        }
+      });
+    });
+
+    /* ===== THEME TOGGLE ===== */
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      document.body.classList.toggle('light-override');
+      this.textContent = document.body.classList.contains('light-override') ? '🌙' : '☀️';
+    });
+  </script>
 
 </body>
 </html>
