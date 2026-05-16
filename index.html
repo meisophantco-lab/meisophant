@@ -1,204 +1,333 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Meisophant Digital Services | Web, Cloud & Digital Solutions</title>
 <meta name="description" content="Meisophant Digital Services builds fast websites, cloud systems and digital tools for startups and businesses.">
 <link rel="icon" href="favicon.png" type="image/png">
-<link rel="stylesheet" href="style.css"><style>
-/* Mobile menu styling */
-.menu-btn{
-display:none;
-font-size:1.6rem;
-background:none;
-border:none;
-cursor:pointer;
-color:mediumpurple;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+</head>
 
-@media(max-width:768px){
-.menu-btn{
-display:block;
-}
+<body>
 
-.nav{
-display:none;
-position:absolute;
-top:70px;
-right:0;
-background:white;
-width:220px;
-flex-direction:column;
-padding:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-border-radius:8px;
-z-index:100;
-}
+<!-- Animated grid background -->
+<canvas id="grid-canvas"></canvas>
 
-.nav.show{
-display:flex;
-}
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="logo">
+    <div class="logo-dot"></div>
+    Meiso<span>phant</span>
+  </div>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle mode">🌙</button>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  <nav class="nav" id="navMenu">
+    <a href="./">Home</a>
+    <a href="./our-services/">Services</a>
+    <a href="./our-catalogue/">Catalogue</a>
+    <a href="./about-us/">About</a>
+    <a href="./contact-us/" class="nav-cta">Get In Touch →</a>
+  </nav>
+</header>
 
-.nav a{
-margin:12px 0;
-font-size:1rem;
-}
-}
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-orb"></div>
 
+  <div class="hero-badge">
+    <div class="hero-badge-dot"></div>
+    Building the future of digital business
+  </div>
 
-/* Reviews section styling */
-.reviews-container{
-margin-top:20px;
-}
+  <h1>Build <em>Powerful Digital</em> Platforms For Your Business</h1>
+  <p>Meisophant launches fast websites, scalable cloud systems, and reliable digital tools — built for startups and growing businesses.</p>
 
-/* Floating WhatsApp button */
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-border-radius:50%;
-width:60px;
-height:60px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-z-index:999;
-}
+  <div class="hero-btns">
+    <a href="https://wa.me/2349029673978" class="btn-primary">
+      💬 Start Your Project
+    </a>
+    <a href="./our-services/index.html" class="btn-secondary">
+      Explore Services →
+    </a>
+  </div>
 
-.whatsapp-float:hover{
-transform:scale(1.05);
-}
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-num">50<span>+</span></span>
+      <span class="stat-label">Projects Delivered</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">100<span>%</span></span>
+      <span class="stat-label">Uptime Focus</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">24<span>h</span></span>
+      <span class="stat-label">Response Time</span>
+    </div>
+  </div>
+</section>
 
+<!-- ===== SERVICES ===== -->
+<section class="section">
+  <div class="services-header reveal">
+    <p class="section-label">What We Build</p>
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">Solutions designed to help businesses build, launch, and grow online.</p>
+  </div>
 
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-icon">🌐</div>
+      <h3>Website Development</h3>
+      <p>Fast, modern websites designed to represent your brand and attract customers — built with clean, performant code.</p>
+      <div class="service-arrow">Explore → </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">🚀</div>
+      <h3>Hosting & Deployment</h3>
+      <p>Professional setup of domains, hosting environments, and CI/CD deployments that keep your site live 24/7.</p>
+      <div class="service-arrow">Explore → </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">☁️</div>
+      <h3>Cloud Infrastructure</h3>
+      <p>Secure and scalable cloud systems built for performance, reliability, and growth as your business scales.</p>
+      <div class="service-arrow">Explore → </div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-icon">💡</div>
+      <h3>Digital Consulting</h3>
+      <p>Expert advice to help you choose the right technology stack, architecture, and digital strategy for your goals.</p>
+      <div class="service-arrow">Explore → </div>
+    </div>
+  </div>
+</section>
 
-/* Dark mode styles */
-body.dark-mode{
-background:#0f172a;
-color:#e5e7eb;
-}
+<!-- ===== WHY MEISOPHANT ===== -->
+<section class="section why-section">
+  <div class="why-inner">
+    <div>
+      <p class="section-label reveal">Why Choose Us</p>
+      <h2 class="section-title reveal">Built for Reliability, Speed & Scale</h2>
+      <p class="section-sub reveal" style="margin-bottom: 44px;">We understand the needs of startups and growing businesses — and we build for where you're going, not just where you are.</p>
+      <div class="why-list">
+        <div class="why-item reveal">
+          <div class="why-num">01</div>
+          <div>
+            <h3>Reliable Systems</h3>
+            <p>We focus on stable, long‑lasting solutions rather than quick fixes that break under pressure.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">02</div>
+          <div>
+            <h3>Modern Technology</h3>
+            <p>Our solutions use current technologies designed for speed, security, and future-proofing.</p>
+          </div>
+        </div>
+        <div class="why-item reveal">
+          <div class="why-num">03</div>
+          <div>
+            <h3>Startup Friendly</h3>
+            <p>We speak your language — lean budgets, fast timelines, and big ambitions. Let's build together.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-body.dark-mode .header,
-body.dark-mode .section,
-body.dark-mode .cta-section,
-body.dark-mode footer{
-background:#020617;
-color:#e5e7eb;
-}
+    <div class="why-visual reveal">
+      <div class="why-visual-inner">
+        <div class="circle-ring">
+          <div class="ring-dot"></div>
+          <div class="circle-ring-inner">
+            <div class="circle-center">⚡</div>
+          </div>
+        </div>
+        <div class="ring-stat">99.9%</div>
+        <div class="ring-stat-sub">System Uptime</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-.theme-toggle{
-margin-left:12px;
-font-size:1.2rem;
-background:none;
-border:none;
-cursor:pointer;
-color:mediumpurple;
-}
+<!-- ===== REVIEWS ===== -->
+<section class="section reviews-section">
+  <div class="services-header reveal">
+    <p class="section-label">Testimonials</p>
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p class="section-sub">Real feedback from real businesses we've helped grow.</p>
+  </div>
+  <div class="elfsight-app-b8f8631f-6d3b-4986-88d3-a3e634e8c031" data-elfsight-app-lazy></div>
+</section>
 
-.theme-toggle:hover{
-transform:scale(1.1);
-}
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <p class="section-label" style="justify-content: center; margin-bottom: 20px;">Let's Build Together</p>
+  <h2>Ready To Launch<br>Your Project?</h2>
+  <p>Contact Meisophant Digital Services today and let's build something extraordinary.</p>
+  <a href="https://wa.me/2349029673978" class="btn-primary" style="font-size: 1rem; padding: 15px 32px;">
+    💬 Chat on WhatsApp
+  </a>
+</section>
 
-</style><!-- SEO: Structured Data for Google Reviews --><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Meisophant Digital Services",
-  "url": "https://meisophant.com",
-  "description": "Web development, cloud infrastructure, and digital consulting services.",
-  "areaServed": "Nigeria"
-}
-</script></head><body><header class="header">
-<div class="logo">Meisophant</div>
-<button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
-<button class="menu-btn" id="menuBtn">☰</button>
-<nav class="nav" id="navMenu">
-<a href="index.html">Home</a>
-<a href="./our-services/index.html">Services</a>
-<a href="./our-catalogue/index.html">Catalogue</a>
-<a href="./about-us/index.html">About</a>
-<a href="./contact-us/index.html">Contact</a>
-</nav>
-</header><section class="hero">
-<h1>Build Powerful Digital Platforms For Your Business</h1>
-<p>Meisophant Digital Services helps startups and businesses launch fast websites, scalable cloud systems, and reliable digital tools.</p>
-<div class="cta-buttons">
-<a href="https://wa.me/2349029673978"><button class="primary-btn">Start Your Project</button></a>
-<a href="./our-services/index.html"><button class="secondary-btn">Explore Services</button></a>
-</div>
-</section><section class="section">
-<h2>Our Services</h2>
-<p class="section-intro">Solutions designed to help businesses build, launch, and grow online.</p>
-<div class="services"><div class="service-card">
-<h3>Website Development</h3>
-<p>Fast, modern websites designed to represent your brand and attract customers.</p>
-</div><div class="service-card">
-<h3>Hosting & Deployment</h3>
-<p>Professional setup of domains, hosting environments, and deployments.</p>
-</div><div class="service-card">
-<h3>Cloud Infrastructure</h3>
-<p>Secure and scalable cloud systems built for performance and reliability.</p>
-</div><div class="service-card">
-<h3>Digital Consulting</h3>
-<p>Advice and guidance to help you choose the right technology solutions.</p>
-</div></div>
-</section><section class="section">
-<h2>Why Choose Meisophant</h2><div class="why"><div class="why-box">
-<h3>Reliable Systems</h3>
-<p>We focus on stable, long‑lasting solutions rather than quick fixes.</p>
-</div><div class="why-box">
-<h3>Modern Technology</h3>
-<p>Our solutions use current technologies designed for speed and security.</p>
-</div><div class="why-box">
-<h3>Startup Friendly</h3>
-<p>We understand the needs of startups and growing businesses.</p>
-</div></div>
-</section><!-- BEST PLACEMENT: GOOGLE REVIEWS RIGHT BEFORE CTA --><section class="section">
-<h2>What Our Clients Say</h2><!-- Elfsight Google Reviews | Untitled Google Reviews --><div class="elfsight-app-b8f8631f-6d3b-4986-88d3-a3e634e8c031" data-elfsight-app-lazy></div></section><section class="cta-section">
-<h2>Ready To Launch Your Project?</h2>
-<p>Contact Meisophant Digital Services today and let's build something great.</p>
-<a href="https://wa.me/2349029673978">
-<button>Chat on WhatsApp</button>
-</a>
-</section><footer><p>Subscribe to our newsletter</p><div class="newsletter">
-<input type="email" placeholder="Your email" required>
-<button>Subscribe</button>
-</div><p>
-<a href="privacy-policy.html">Privacy Policy</a> |
-<a href="terms.html">Terms & Conditions</a>
-</p><p style="margin-top:10px">
-© Meisophant Digital Services 2024
-</p></footer><!-- Mobile Menu Script --><script>
-const menuBtn=document.getElementById("menuBtn");
-const navMenu=document.getElementById("navMenu");
-menuBtn.addEventListener("click",()=>{
- navMenu.classList.toggle("show");
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">Meiso<span>phant</span></div>
+  <p>Subscribe to our newsletter</p>
+  <div class="newsletter">
+    <input type="email" placeholder="your@email.com">
+    <button>Subscribe</button>
+  </div>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="terms.html">Terms & Conditions</a>
+  </div>
+  <p style="margin-top: 16px; font-size: 0.8rem;">© Meisophant Digital Services 2024</p>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/2349029673978" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<!-- Elfsight -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+
+<script>
+/* ===== ANIMATED GRID CANVAS ===== */
+(function () {
+  const canvas = document.getElementById('grid-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, dots = [], frame;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function initDots() {
+    dots = [];
+    const count = Math.floor((W * H) / 18000);
+    for (let i = 0; i < count; i++) {
+      dots.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 1.5 + 0.3,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        alpha: Math.random() * 0.5 + 0.2
+      });
+    }
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    // Draw grid lines
+    ctx.strokeStyle = 'rgba(147,112,219,0.07)';
+    ctx.lineWidth = 0.5;
+    const gridSize = 80;
+    for (let x = 0; x < W; x += gridSize) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+    }
+    for (let y = 0; y < H; y += gridSize) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+    }
+
+    // Connections
+    for (let i = 0; i < dots.length; i++) {
+      for (let j = i + 1; j < dots.length; j++) {
+        const dx = dots[i].x - dots[j].x;
+        const dy = dots[i].y - dots[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 130) {
+          ctx.strokeStyle = `rgba(147,112,219,${0.15 * (1 - dist / 130)})`;
+          ctx.lineWidth = 0.6;
+          ctx.beginPath();
+          ctx.moveTo(dots[i].x, dots[i].y);
+          ctx.lineTo(dots[j].x, dots[j].y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Dots
+    dots.forEach(d => {
+      d.x += d.vx; d.y += d.vy;
+      if (d.x < 0) d.x = W;
+      if (d.x > W) d.x = 0;
+      if (d.y < 0) d.y = H;
+      if (d.y > H) d.y = 0;
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(147,112,219,${d.alpha})`;
+      ctx.fill();
+    });
+
+    frame = requestAnimationFrame(draw);
+  }
+
+  resize();
+  initDots();
+  draw();
+
+  window.addEventListener('resize', () => {
+    cancelAnimationFrame(frame);
+    resize();
+    initDots();
+    draw();
+  });
+})();
+
+/* ===== SCROLL REVEAL ===== */
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+
+/* ===== MOBILE MENU ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  const menuBtn = document.getElementById('menuBtn');
+  const navMenu = document.getElementById('navMenu');
+
+  menuBtn.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+    menuBtn.textContent = navMenu.classList.contains('show') ? '✕' : '☰';
+  });
+
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show');
+      menuBtn.textContent = '☰';
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navMenu.classList.remove('show');
+      menuBtn.textContent = '☰';
+    }
+  });
 });
-</script><!-- Elfsight Platform Script (LOAD ONCE AT BOTTOM FOR PERFORMANCE) --><script src="https://elfsightcdn.com/platform.js" async></script><!-- Floating WhatsApp Button --><a href="https://wa.me/2349029673978" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
-💬
-</a><!-- Dark Mode Toggle Script --><script>
-const themeToggle=document.getElementById("themeToggle");
 
-// Load saved theme
-if(localStorage.getItem("theme")==="dark"){
- document.body.classList.add("dark-mode");
- themeToggle.textContent="☀️";
-}
-
-themeToggle.addEventListener("click",()=>{
- document.body.classList.toggle("dark-mode");
-
- if(document.body.classList.contains("dark-mode")){
-  localStorage.setItem("theme","dark");
-  themeToggle.textContent="☀️";
- }else{
-  localStorage.setItem("theme","light");
-  themeToggle.textContent="🌙";
- }
+/* ===== THEME TOGGLE (dark-only site, toggle is cosmetic) ===== */
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+  const light = document.body.classList.toggle('light-override');
+  themeToggle.textContent = light ? '🌙' : '☀️';
 });
-</script></body>
+</script>
+
+</body>
 </html>
