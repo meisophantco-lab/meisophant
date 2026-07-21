@@ -1196,3 +1196,31 @@ button {
   .form-row { grid-template-columns: 1fr; }
   .form-submit { width: 100%; justify-content: center; }
 }
+
+/* ===== FOOTER BRAND IMAGE ===== */
+
+.footer-brand-image{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:20px;
+    display:block;
+    margin:0 auto 20px;
+
+    border:1px solid rgba(147,112,219,.25);
+
+    background:rgba(255,255,255,.03);
+
+    box-shadow:
+        0 0 30px rgba(147,112,219,.25),
+        0 20px 60px rgba(0,0,0,.35);
+
+    transition:.35s ease;
+}
+
+.footer-brand-image:hover{
+    transform:translateY(-6px) scale(1.03);
+    box-shadow:
+        0 0 45px rgba(147,112,219,.45),
+        0 30px 80px rgba(0,0,0,.45);
+}
