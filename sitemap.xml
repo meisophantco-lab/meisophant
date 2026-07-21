@@ -1,51 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+    http://www.google.com/schemas/sitemap-image/1.1
+    http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
 
+    <url>
+        <loc>https://meisophant.name.ng/</loc>
+        <lastmod>2026-07-21</lastmod>
+        <priority>1.00</priority>
 
-<url>
-  <loc>https://meisophant.name.ng/</loc>
-  <lastmod>2026-03-30T14:51:44+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://meisophant.name.ng/index.html</loc>
-  <lastmod>2026-03-30T14:51:44+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://meisophant.name.ng/our-services/index.html</loc>
-  <lastmod>2026-03-30T14:51:44+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://meisophant.name.ng/our-catalogue/index.html</loc>
-  <lastmod>2026-03-30T14:51:44+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://meisophant.name.ng/about-us/index.html</loc>
-  <lastmod>2026-03-30T14:51:44+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://meisophant.name.ng/contact-us/index.html</loc>
-  <lastmod>2026-03-30T14:51:44+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://meisophant.name.ng/privacy-policy.html</loc>
-  <lastmod>2026-03-30T14:51:44+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://meisophant.name.ng/terms.html</loc>
-  <lastmod>2026-03-30T14:51:44+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+        <image:image>
+            <image:loc>https://meisophant.name.ng/images/digital-business-solutions.webp</image:loc>
+            <image:title>Digital Business Solutions</image:title>
+            <image:caption>Professional digital business solutions by Meisophant Digital Services.</image:caption>
+        </image:image>
 
+        <image:image>
+            <image:loc>https://meisophant.name.ng/images/website-development.webp</image:loc>
+            <image:title>Website Development</image:title>
+            <image:caption>Professional website development by Meisophant Digital Services.</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://meisophant.name.ng/images/hosting-deployment.webp</image:loc>
+            <image:title>Hosting and Deployment</image:title>
+            <image:caption>Reliable hosting and deployment services.</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://meisophant.name.ng/images/cloud-infrastructure.webp</image:loc>
+            <image:title>Cloud Infrastructure</image:title>
+            <image:caption>Scalable cloud infrastructure for businesses.</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://meisophant.name.ng/images/digital-consulting.webp</image:loc>
+            <image:title>Digital Consulting</image:title>
+            <image:caption>Technology consulting for startups and businesses.</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://meisophant.name.ng/images/technology-solutions.webp</image:loc>
+            <image:title>Technology Solutions</image:title>
+            <image:caption>Innovative technology solutions by Meisophant.</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://meisophant.name.ng/images/launch-your-project.webp</image:loc>
+            <image:title>Launch Your Project</image:title>
+            <image:caption>Launch your next digital project with Meisophant.</image:caption>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://meisophant.name.ng/images/about-meisophant.webp</image:loc>
+            <image:title>About Meisophant</image:title>
+            <image:caption>Meisophant Digital Services company branding.</image:caption>
+        </image:image>
+
+    </url>
+
+    <url>
+        <loc>https://meisophant.name.ng/our-services/</loc>
+        <lastmod>2026-07-21</lastmod>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://meisophant.name.ng/our-catalogue/</loc>
+        <lastmod>2026-07-21</lastmod>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://meisophant.name.ng/about-us/</loc>
+        <lastmod>2026-07-21</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://meisophant.name.ng/contact-us/</loc>
+        <lastmod>2026-07-21</lastmod>
+        <priority>0.80</priority>
+    </url>
+
+    <url>
+        <loc>https://meisophant.name.ng/privacy-policy.html</loc>
+        <lastmod>2026-07-21</lastmod>
+        <priority>0.60</priority>
+    </url>
+
+    <url>
+        <loc>https://meisophant.name.ng/terms.html</loc>
+        <lastmod>2026-07-21</lastmod>
+        <priority>0.60</priority>
+    </url>
 
 </urlset>
