@@ -1229,46 +1229,30 @@ button {
    Meisophant Anniversary Banner
    ========================== */
 
-.anniversary-banner {
-    position: relative;
+.anniversary-banner{
+    display: block;
     width: 100%;
-    overflow: hidden;
     background: #000;
+    color: #fff;
     border-top: 2px solid mediumpurple;
     border-bottom: 2px solid mediumpurple;
+    overflow: hidden;
     padding: 12px 0;
-    white-space: nowrap;
+    z-index: 9999;
 }
 
-.banner-track {
+.banner-track{
     display: inline-block;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    animation: marquee 22s linear infinite;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    font-weight: bold;
 }
 
-.banner-track:hover {
-    animation-play-state: paused;
-}
-
-.banner-track span {
-    color: mediumpurple;
-}
-
-@keyframes marquee {
-    from {
+@keyframes marquee{
+    from{
         transform: translateX(100%);
     }
-    to {
+    to{
         transform: translateX(-100%);
-    }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .banner-track {
-        font-size: 14px;
     }
 }
