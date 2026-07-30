@@ -3,10 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Meisophant Anniversary Promo</title>
 
+<link rel="icon" type="image/png" href="https://meisophant.name.ng/favicon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,53 +19,117 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#050505;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    overflow:hidden;
-    position:relative;
+
+font-family:'Poppins',sans-serif;
+background:#050505;
+color:#fff;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+overflow-x:hidden;
+position:relative;
+
 }
 
-/* Background */
+/* Animated Background */
 
-body::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-    radial-gradient(circle at top left, rgba(147,112,219,.25), transparent 35%),
-    radial-gradient(circle at bottom right, rgba(147,112,219,.18), transparent 35%);
-    z-index:-2;
+.background{
+
+position:fixed;
+inset:0;
+overflow:hidden;
+z-index:-2;
+background:#050505;
+
 }
 
-body::after{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    background:mediumpurple;
-    border-radius:50%;
-    filter:blur(180px);
-    opacity:.25;
-    animation:float 10s ease-in-out infinite;
-    z-index:-1;
+.glow{
+
+position:absolute;
+width:500px;
+height:500px;
+border-radius:50%;
+background:mediumpurple;
+filter:blur(180px);
+opacity:.18;
+animation:float 10s ease-in-out infinite;
+
+}
+
+.glow:nth-child(1){
+
+top:-120px;
+left:-150px;
+
+}
+
+.glow:nth-child(2){
+
+bottom:-120px;
+right:-120px;
+animation-delay:2s;
+
 }
 
 @keyframes float{
 
 0%,100%{
+
 transform:translateY(0);
+
 }
 
 50%{
+
 transform:translateY(-50px);
+
+}
+
+}
+
+/* Floating Particles */
+
+.particle{
+
+position:absolute;
+width:4px;
+height:4px;
+background:mediumpurple;
+border-radius:50%;
+opacity:.5;
+animation:rise linear infinite;
+
+}
+
+@keyframes rise{
+
+from{
+
+transform:translateY(120vh);
+opacity:0;
+
+}
+
+20%{
+
+opacity:.7;
+
+}
+
+to{
+
+transform:translateY(-120vh);
+opacity:0;
+
 }
 
 }
@@ -69,67 +138,108 @@ transform:translateY(-50px);
 
 .ally{
 
-width:min(95%,700px);
-padding:45px;
-border-radius:25px;
+width:100%;
+max-width:760px;
 background:rgba(255,255,255,.05);
+border:1px solid rgba(147,112,219,.25);
 backdrop-filter:blur(20px);
-border:1px solid rgba(147,112,219,.3);
-box-shadow:0 0 60px rgba(147,112,219,.2);
+padding:50px;
+border-radius:30px;
+box-shadow:0 0 60px rgba(147,112,219,.18);
 text-align:center;
+position:relative;
+overflow:hidden;
 animation:fadeUp 1s ease;
 
 }
 
-.logo{
+.ally::before{
 
-font-size:3rem;
-margin-bottom:15px;
+content:"";
+position:absolute;
+inset:-150%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.08),
+transparent
+);
+
+animation:shine 7s linear infinite;
+
+}
+
+@keyframes shine{
+
+0%{
+
+transform:translateX(-120%) rotate(20deg);
+
+}
+
+100%{
+
+transform:translateX(120%) rotate(20deg);
+
+}
+
+}
+
+.badge{
+
+display:inline-block;
+padding:10px 20px;
+border-radius:50px;
+background:rgba(147,112,219,.18);
+border:1px solid mediumpurple;
+margin-bottom:25px;
+font-size:.9rem;
 
 }
 
 h1{
 
-font-size:2.3rem;
-margin-bottom:15px;
+font-size:clamp(2rem,5vw,3.5rem);
+margin-bottom:20px;
 color:mediumpurple;
 
 }
 
-p{
+.subtitle{
 
-line-height:1.8;
 color:#ddd;
-margin-bottom:30px;
+line-height:1.8;
+font-size:1.05rem;
 
 }
 
 .timer{
 
+margin:40px 0;
+
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:15px;
-margin:35px 0;
+gap:18px;
 
 }
 
-.box{
+.time-box{
 
 background:#111;
-padding:20px 10px;
-border-radius:15px;
 border:1px solid mediumpurple;
+border-radius:18px;
+padding:22px 10px;
 
 }
 
-.box h2{
+.time-box h2{
 
 font-size:2rem;
 color:mediumpurple;
 
 }
 
-.box span{
+.time-box span{
 
 font-size:.9rem;
 color:#bbb;
@@ -140,19 +250,25 @@ color:#bbb;
 
 display:flex;
 justify-content:center;
-gap:20px;
 flex-wrap:wrap;
-margin-top:30px;
+gap:20px;
+margin-top:35px;
 
 }
 
 .btn{
 
 text-decoration:none;
-padding:16px 28px;
-border-radius:50px;
+padding:16px 30px;
+border-radius:60px;
 font-weight:600;
 transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
 
 }
 
@@ -170,18 +286,24 @@ color:#fff;
 
 }
 
-.btn:hover{
+.note{
 
-transform:translateY(-5px);
+margin-top:30px;
+font-size:.95rem;
+color:#bbb;
 
 }
 
 .expired{
 
-font-size:2rem;
-color:#ff4d4d;
-font-weight:bold;
 display:none;
+margin-top:40px;
+padding:18px;
+border-radius:15px;
+background:#1a0000;
+border:1px solid #ff4d4d;
+color:#ff7070;
+font-weight:600;
 
 }
 
@@ -205,6 +327,18 @@ transform:translateY(0);
 
 @media(max-width:700px){
 
+body{
+
+padding:20px;
+
+}
+
+.ally{
+
+padding:35px 25px;
+
+}
+
 .timer{
 
 grid-template-columns:repeat(2,1fr);
@@ -214,72 +348,89 @@ grid-template-columns:repeat(2,1fr);
 }
 
 </style>
+
 </head>
+
 <body>
+
+<div class="background">
+
+<div class="glow"></div>
+<div class="glow"></div>
+
+</div>
 
 <div class="ally">
 
-<div class="logo">🎉</div>
+<div class="badge">
+🎉 2nd Anniversary Promotion
+</div>
 
-<h1>Meisophant Anniversary Promo</h1>
+<h1>Celebrate With Meisophant</h1>
 
-<p>
-Celebrate 2 years of innovation with our limited-time anniversary promotion.
-Offer ends on <strong>9 August 2026</strong>.
-Don't miss this opportunity!
+<p class="subtitle">
+We're celebrating our 2nd Anniversary with a limited-time promotion.
+Claim your offer before the countdown reaches zero.
+Once the timer expires, the promotion ends automatically.
 </p>
 
 <div class="timer">
 
-<div class="box">
+<div class="time-box">
 <h2 id="days">00</h2>
 <span>Days</span>
 </div>
 
-<div class="box">
+<div class="time-box">
 <h2 id="hours">00</h2>
 <span>Hours</span>
 </div>
 
-<div class="box">
+<div class="time-box">
 <h2 id="minutes">00</h2>
 <span>Minutes</span>
 </div>
 
-<div class="box">
+<div class="time-box">
 <h2 id="seconds">00</h2>
 <span>Seconds</span>
 </div>
 
 </div>
 
-<div class="expired" id="expired">
-🚫 This promotion has ended.
-</div>
-
 <div class="buttons" id="buttons">
 
 <a class="btn whatsapp"
-href="https://wa.me/2349029673978?text=Hello%20Meisophant,%20I'm%20interested%20in%20the%20Anniversary%20Promo."
+href="https://wa.me/2349029673978?text=Hello%20Meisophant!%20I'm%20interested%20in%20the%202nd%20Anniversary%20Promotion."
 target="_blank">
-WhatsApp
+💬 WhatsApp
 </a>
 
 <a class="btn telegram"
-href="https://t.me/+2349029673978"
+href="https://t.me/"
 target="_blank">
-Telegram
+✈ Telegram
 </a>
 
+</div>
+
+<p class="note">
+Promotion ends on <strong>9 August 2026 • 11:59:59 PM (WAT)</strong>
+</p>
+
+<div class="expired" id="expired">
+🚫 The anniversary promotion has ended. Thank you for your interest.
 </div>
 
 </div>
 
 <script>
 
-const endDate=new Date("August 9, 2026 23:59:59 GMT+0100").getTime();
+// Countdown
 
-const timer=setInterval(function(){
+const endDate=new Date("2026-08-09T23:59:59+01:00").getTime();
+
+const countdown=setInterval(()=>{
 
 const now=new Date().getTime();
 
@@ -287,7 +438,7 @@ const distance=endDate-now;
 
 if(distance<=0){
 
-clearInterval(timer);
+clearInterval(countdown);
 
 document.querySelector(".timer").style.display="none";
 document.getElementById("buttons").style.display="none";
@@ -297,17 +448,48 @@ return;
 
 }
 
-const days=Math.floor(distance/(1000*60*60*24));
-const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
-const seconds=Math.floor((distance%(1000*60))/1000);
+document.getElementById("days").textContent=Math.floor(distance/(1000*60*60*24));
 
-document.getElementById("days").innerHTML=days;
-document.getElementById("hours").innerHTML=hours;
-document.getElementById("minutes").innerHTML=minutes;
-document.getElementById("seconds").innerHTML=seconds;
+document.getElementById("hours").textContent=
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").textContent=
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").textContent=
+Math.floor((distance%(1000*60))/1000);
 
 },1000);
+
+
+// Floating Particles
+
+function particle(){
+
+const p=document.createElement("div");
+
+p.className="particle";
+
+p.style.left=Math.random()*100+"vw";
+
+const size=Math.random()*5+3;
+
+p.style.width=size+"px";
+p.style.height=size+"px";
+
+p.style.animationDuration=(Math.random()*10+8)+"s";
+
+document.querySelector(".background").appendChild(p);
+
+setTimeout(()=>{
+
+p.remove();
+
+},18000);
+
+}
+
+setInterval(particle,300);
 
 </script>
 
