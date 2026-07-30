@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meisophant Anniversary Promo</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+    position:relative;
+}
+
+/* Background */
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at top left, rgba(147,112,219,.25), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(147,112,219,.18), transparent 35%);
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:mediumpurple;
+    border-radius:50%;
+    filter:blur(180px);
+    opacity:.25;
+    animation:float 10s ease-in-out infinite;
+    z-index:-1;
+}
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-50px);
+}
+
+}
+
+/* Card */
+
+.ally{
+
+width:min(95%,700px);
+padding:45px;
+border-radius:25px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(147,112,219,.3);
+box-shadow:0 0 60px rgba(147,112,219,.2);
+text-align:center;
+animation:fadeUp 1s ease;
+
+}
+
+.logo{
+
+font-size:3rem;
+margin-bottom:15px;
+
+}
+
+h1{
+
+font-size:2.3rem;
+margin-bottom:15px;
+color:mediumpurple;
+
+}
+
+p{
+
+line-height:1.8;
+color:#ddd;
+margin-bottom:30px;
+
+}
+
+.timer{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin:35px 0;
+
+}
+
+.box{
+
+background:#111;
+padding:20px 10px;
+border-radius:15px;
+border:1px solid mediumpurple;
+
+}
+
+.box h2{
+
+font-size:2rem;
+color:mediumpurple;
+
+}
+
+.box span{
+
+font-size:.9rem;
+color:#bbb;
+
+}
+
+.buttons{
+
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+
+}
+
+.btn{
+
+text-decoration:none;
+padding:16px 28px;
+border-radius:50px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.whatsapp{
+
+background:#25D366;
+color:#fff;
+
+}
+
+.telegram{
+
+background:#229ED9;
+color:#fff;
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+.expired{
+
+font-size:2rem;
+color:#ff4d4d;
+font-weight:bold;
+display:none;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.timer{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="ally">
+
+<div class="logo">🎉</div>
+
+<h1>Meisophant Anniversary Promo</h1>
+
+<p>
+Celebrate 2 years of innovation with our limited-time anniversary promotion.
+Offer ends on <strong>9 August 2026</strong>.
+Don't miss this opportunity!
+</p>
+
+<div class="timer">
+
+<div class="box">
+<h2 id="days">00</h2>
+<span>Days</span>
+</div>
+
+<div class="box">
+<h2 id="hours">00</h2>
+<span>Hours</span>
+</div>
+
+<div class="box">
+<h2 id="minutes">00</h2>
+<span>Minutes</span>
+</div>
+
+<div class="box">
+<h2 id="seconds">00</h2>
+<span>Seconds</span>
+</div>
+
+</div>
+
+<div class="expired" id="expired">
+🚫 This promotion has ended.
+</div>
+
+<div class="buttons" id="buttons">
+
+<a class="btn whatsapp"
+href="https://wa.me/2349029673978?text=Hello%20Meisophant,%20I'm%20interested%20in%20the%20Anniversary%20Promo."
+target="_blank">
+WhatsApp
+</a>
+
+<a class="btn telegram"
+href="https://t.me/+2349029673978"
+target="_blank">
+Telegram
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+const endDate=new Date("August 9, 2026 23:59:59 GMT+0100").getTime();
+
+const timer=setInterval(function(){
+
+const now=new Date().getTime();
+
+const distance=endDate-now;
+
+if(distance<=0){
+
+clearInterval(timer);
+
+document.querySelector(".timer").style.display="none";
+document.getElementById("buttons").style.display="none";
+document.getElementById("expired").style.display="block";
+
+return;
+
+}
+
+const days=Math.floor(distance/(1000*60*60*24));
+const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+const seconds=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML=days;
+document.getElementById("hours").innerHTML=hours;
+document.getElementById("minutes").innerHTML=minutes;
+document.getElementById("seconds").innerHTML=seconds;
+
+},1000);
+
+</script>
+
+</body>
+</html>
