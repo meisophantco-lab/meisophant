@@ -11,26 +11,44 @@
 }
 
 :root {
+  /* Brand Purple Scale */
   --mp: #9370DB;
   --mp-light: #b89ee8;
   --mp-dark: #6a4fc5;
-  --mp-glow: rgba(147, 112, 219, 0.35);
+  --mp-glow: rgba(147, 112, 219, 0.25);
   --mp-faint: rgba(147, 112, 219, 0.08);
-  --bg: #07050f;
-  --bg2: #0d0a1a;
-  --bg3: #120e22;
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-hover: rgba(147, 112, 219, 0.1);
-  --text: #f0ecff;
-  --text-muted: rgba(240, 236, 255, 0.55);
-  --border: rgba(147, 112, 219, 0.2);
-  --border-bright: rgba(147, 112, 219, 0.5);
+
+  /* Light Backgrounds - 60% */
+  --bg: #FFFFFF;
+  --bg2: #F8F7FC; /* very faint purple tint */
+  --bg3: #EDE9FE; /* soft lavender for sections */
+  
+  /* Surfaces */
+  --surface: #FFFFFF;
+  --surface-hover: #F8F7FC;
+  --card: rgba(255, 255, 255, 0.7);
+
+  /* Text - high contrast for conversion */
+  --text: #1E1B4B; /* Deep Navy - easier to read than black */
+  --text-muted: #64748B; /* Slate gray */
+
+  /* Borders */
+  --border: rgba(147, 112, 219, 0.15);
+  --border-bright: rgba(147, 112, 219, 0.35);
+
+  /* CONVERSION COLORS - 10% */
+  --cta: #FACC15; /* Soft Yellow - highest contrast vs purple + white */
+  --cta-text: #1E1B4B; /* Dark text on yellow */
+  --cta-hover: #FDE047;
+  
+  --accent: #14B8A6; /* Teal - for secondary buttons/links */
+
+  /* Fonts */
   --font-display: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
   --banner-height: 42px;
   --header-height: 70px;
 }
-
 html {
   scroll-behavior: smooth;
 }
