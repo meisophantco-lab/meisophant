@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,17 +9,20 @@
 
     <title>SudoBot AI | AI Project by Meisophant Digital Services</title>
 
-    <meta name="description" content="Discover Kyro AI, an intelligent conversational system engineered by Meisophant Digital Services as part of the technology foundation behind the upcoming Kyro Wears ecosystem.">
+    <meta name="description"
+        content="Explore SudoBot AI, a live intelligent conversational system developed and deployed by Meisophant Digital Services, with a long-term connection to the future Kyro Wears ecosystem.">
 
-    <meta name="keywords" content="SudoBot AI, Kyro Wears, Meisophant Digital Services, Artificial Intelligence, AI Assistant, Conversational AI, Nigerian Technology">
+    <meta name="keywords"
+        content="SudoBot, SudoBot AI, Meisophant Digital Services, Artificial Intelligence, AI Assistant, Conversational AI, Kyro Wears, Nigerian Technology">
 
     <!-- Canonical & Open Graph -->
-    <link rel="canonical" href="https://meisophant.name.ng/projects/sudoBot/">
+    <link rel="canonical" href="https://meisophant.name.ng/projects/kyro/sudoBot-ai/">
 
-    <meta property="og:title" content="Kyro AI | AI System by Meisophant">
-    <meta property="og:description" content="Explore SudoBot AI, an intelligent conversational system developed by Meisophant Digital Services as an early technological foundation for the upcoming Kyro Wears ecosystem.">
+    <meta property="og:title" content="SudoBot AI | AI System by Meisophant">
+    <meta property="og:description"
+        content="Explore SudoBot AI, a live intelligent conversational system developed by Meisophant Digital Services.">
     <meta property="og:image" content="https://meisophant.name.ng/favicon.png">
-    <meta property="og:url" content="https://meisophant.name.ng/projects/sudoBot/">
+    <meta property="og:url" content="https://meisophant.name.ng/projects/kyro/sudoBot-ai/">
     <meta property="og:type" content="website">
 
     <!-- Favicon -->
@@ -33,6 +36,10 @@
             --accent-color: #9b5de5;
             --card-bg: #ffffff;
             --border-color: #e2daf0;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -80,6 +87,12 @@
             color: var(--primary-color);
         }
 
+        .project-header p {
+            text-align: center;
+            color: #7b728c;
+            margin: 0.5rem 0 1.5rem;
+        }
+
         .project-badge {
             display: inline-block;
             background-color: #f0ebf7;
@@ -106,13 +119,62 @@
             font-style: italic;
         }
 
+        .launch-card {
+            background: linear-gradient(135deg, #6a4c93, #9b5de5);
+            color: white;
+            border-radius: 14px;
+            padding: 1.8rem;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(106, 76, 147, 0.18);
+        }
+
+        .launch-card h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.35rem;
+        }
+
+        .launch-card p {
+            color: white;
+            text-align: center;
+            font-size: 0.98rem;
+            margin: 0 0 1.2rem;
+        }
+
+        .launch-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+            padding: 0.75rem 1.4rem;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .launch-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .url-label {
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .url-label a {
+            color: white;
+            text-decoration: underline;
+        }
+
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
         }
 
         .card h3 {
@@ -132,6 +194,26 @@
             margin-bottom: 0.6rem;
         }
 
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: #f0ebf7;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.35rem 0.7rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #4caf50;
+        }
+
         footer {
             text-align: center;
             padding: 2rem;
@@ -141,13 +223,32 @@
             margin-top: 4rem;
             background-color: var(--card-bg);
         }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 1.5rem auto;
+                padding: 0 1rem;
+            }
+
+            .project-header h2 {
+                font-size: 1.9rem;
+            }
+
+            .card {
+                padding: 1.2rem;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <h1><a href="https://meisophant.name.ng/">Meisophant Digital Services</a></h1>
+        <h1>
+            <a href="https://meisophant.name.ng/">
+                Meisophant Digital Services
+            </a>
+        </h1>
     </header>
 
     <div class="container">
@@ -155,42 +256,91 @@
 
             <section class="project-header">
                 <h2>SudoBot AI</h2>
-                <div class="project-badge">INTELLIGENT AI SYSTEM</div>
+
+                <div class="project-badge">
+                    LIVE AI SYSTEM
+                </div>
+
+                <p>
+                    An intelligent conversational system engineered and developed by
+                    <strong>Meisophant Digital Services</strong>.
+                </p>
             </section>
 
             <p>
-                <strong>SudoBot AI</strong> is an intelligent conversational system engineered, developed, and deployed by
-                <strong>Meisophant Digital Services</strong>. The project represents Meisophant's exploration into
-                practical artificial intelligence, conversational interfaces, persistent user experiences, and
-                intelligent digital systems.
+                <strong>SudoBot AI</strong> is an intelligent conversational system
+                engineered, developed, and deployed by
+                <strong>Meisophant Digital Services</strong>.
+                The project represents Meisophant's work in practical artificial
+                intelligence, conversational interfaces, persistent user experiences,
+                and intelligent digital systems.
             </p>
 
+            <div class="launch-card">
+                <h3>SudoBot is Live</h3>
+
+                <p>
+                    Experience SudoBot AI directly through its live platform.
+                </p>
+
+                <a class="launch-button"
+                    href="https://sudobot.gt.tc/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Launch SudoBot →
+                </a>
+
+                <div class="url-label">
+                    <a href="https://sudobot.gt.tc/"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        sudobot.gt.tc
+                    </a>
+                </div>
+            </div>
+
             <div class="highlight-box">
-                "SudoBot AI was not built simply as another chatbot. It is part of a larger technological direction —
-                laying the groundwork for what will eventually become the Kyro Wears ecosystem."
+                "SudoBot AI is more than a chatbot. It represents Meisophant's
+                exploration into practical artificial intelligence and the future
+                of intelligent human-computer interaction."
             </div>
 
             <p>
-                The idea behind SudoBot AI is closely connected to <strong>Kyro Wears</strong>, an upcoming wearable
-                technology concept being developed by Meisophant. Kyro Wears is envisioned as a technology ecosystem
-                where intelligent assistance can exist beyond the traditional screen.
-            </p>
-
-            <p>
-                Rather than waiting for the hardware ecosystem to arrive before experimenting with its intelligence
-                layer, Meisophant began developing SudoBot AI as an early foundation for the software, interaction,
-                conversational intelligence, and user experience concepts that may eventually support Kyro Wears.
+                SudoBot is also connected to a broader technological direction at
+                Meisophant. Its development provides a foundation for exploring
+                how intelligent software can eventually interact with new forms
+                of hardware and human-computer interaction.
             </p>
 
             <section class="project-details">
 
                 <div class="card">
                     <h3>Core AI Framework</h3>
+
                     <ul>
-                        <li><strong>Conversational Interface:</strong> A web-based environment designed for natural interaction between users and an AI system.</li>
-                        <li><strong>Multi-Model Architecture:</strong> Built with the ability to work with external AI model providers and APIs.</li>
-                        <li><strong>User Accounts:</strong> Authentication and account-based experiences allow SudoBot to move beyond a simple anonymous chatbot.</li>
-                        <li><strong>Conversation History:</strong> Designed to retain relevant conversational context and provide a more continuous user experience.</li>
+                        <li>
+                            <strong>Conversational Interface:</strong>
+                            A web-based environment designed for natural interaction
+                            between users and an AI system.
+                        </li>
+
+                        <li>
+                            <strong>Multi-Model Architecture:</strong>
+                            Built with the ability to work with external AI model
+                            providers and APIs.
+                        </li>
+
+                        <li>
+                            <strong>User Accounts:</strong>
+                            Authentication and account-based experiences allow
+                            SudoBot to move beyond a simple anonymous chatbot.
+                        </li>
+
+                        <li>
+                            <strong>Conversation History:</strong>
+                            Designed to retain relevant conversational context
+                            and provide a more continuous user experience.
+                        </li>
                     </ul>
                 </div>
 
@@ -198,35 +348,69 @@
                     <h3>The Kyro Wears Connection</h3>
 
                     <p style="font-size:1rem; text-align:left; margin:0;">
-                        <strong>Kyro Wears</strong> is an upcoming wearable technology concept from Meisophant.
-                        The project is intended to explore how artificial intelligence can become more naturally
-                        integrated into everyday technology through wearable hardware.
+                        <strong>Kyro Wears</strong> is a separate upcoming wearable
+                        technology concept from Meisophant.
+                        The project explores how artificial intelligence could become
+                        more naturally integrated into everyday technology through
+                        wearable hardware.
                     </p>
 
                     <p style="font-size:1rem; text-align:left; margin:1rem 0 0 0;">
-                        SudoBot AI serves as an early software foundation for that vision. The wearable itself is
-                        still under development and may come up sooner or later as the technology, hardware,
-                        resources, and ecosystem mature.
+                        SudoBot provides a practical software environment for exploring
+                        intelligent interaction and AI experiences that may eventually
+                        contribute to the broader Kyro vision.
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>Engineering Pillars</h3>
+
                     <ul>
-                        <li><strong>Practical AI:</strong> Focused on building a usable AI experience rather than a purely conceptual demonstration.</li>
-                        <li><strong>Modular Architecture:</strong> Designed so the system can evolve as new models, capabilities, and technologies become available.</li>
-                        <li><strong>Human Interaction:</strong> Built around making technology easier and more natural for people to interact with.</li>
-                        <li><strong>Future Hardware Integration:</strong> Developed with the longer-term possibility of extending intelligent interaction beyond conventional screens.</li>
+                        <li>
+                            <strong>Practical AI:</strong>
+                            Focused on building a usable AI experience rather than
+                            a purely conceptual demonstration.
+                        </li>
+
+                        <li>
+                            <strong>Modular Architecture:</strong>
+                            Designed so the system can evolve as new models,
+                            capabilities, and technologies become available.
+                        </li>
+
+                        <li>
+                            <strong>Human Interaction:</strong>
+                            Built around making technology easier and more natural
+                            for people to interact with.
+                        </li>
+
+                        <li>
+                            <strong>Future Hardware Integration:</strong>
+                            Exploring the possibility of extending intelligent
+                            interaction beyond conventional screens.
+                        </li>
                     </ul>
                 </div>
 
                 <div class="card">
                     <h3>Development Status</h3>
 
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        LIVE &amp; OPERATIONAL
+                    </div>
+
                     <p style="font-size:1rem; text-align:left; margin:0;">
-                        The core SudoBot AI system is <strong>fully live and operational</strong>. Its development
-                        provides Meisophant with a working environment for experimenting with conversational AI,
-                        account systems, memory, API integration, and future intelligent-device concepts.
+                        The core <strong>SudoBot AI</strong> system is fully live
+                        and operational at
+                        <a href="https://sudobot.gt.tc/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            sudobot.gt.tc
+                        </a>.
+                        Its development provides Meisophant with a working environment
+                        for experimenting with conversational AI, account systems,
+                        memory, API integration, and future intelligent-device concepts.
                     </p>
                 </div>
 
@@ -234,17 +418,17 @@
                     <h3>What's Next</h3>
 
                     <p style="font-size:1rem; text-align:left; margin:0;">
-                        SudoBot AI is only one part of the broader Kyro vision. As development continues, Meisophant
-                        intends to explore how the intelligence behind Kyro can eventually connect with new forms
-                        of hardware and human-computer interaction.
+                        SudoBot will continue to evolve as Meisophant explores new
+                        possibilities in artificial intelligence, intelligent
+                        interfaces, and human-computer interaction.
                     </p>
 
                     <p style="font-size:1rem; text-align:left; margin:1rem 0 0 0;">
-                        <strong>Kyro Wears will come.</strong> The timing depends on the development of the necessary
-                        technology, hardware, infrastructure, and resources — but the work toward that vision has
-                        already begun with SudoBot AI.
+                        Beyond the software itself, Meisophant is also developing
+                        the long-term <strong>Kyro Wears</strong> vision — exploring
+                        how intelligent technology could eventually move beyond
+                        traditional screens and into everyday wearable hardware.
                     </p>
-
                 </div>
 
             </section>
@@ -259,3 +443,4 @@
 </body>
 
 </html>
+```
